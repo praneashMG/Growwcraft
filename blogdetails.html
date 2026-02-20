@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogdetails-GrowwCare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+             <link rel="icon" href="growwpark_logo.jpg">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+
+</head>
+<body>
+       <div id="navbar"></div>
+
+
+    <style>
+      
+        
+        /* Theme Colors */
+        .bg-purple { background-color: #7B2CBF; }
+        .text-purple { color: #7B2CBF; }
+        .border-purple { border-color: #7B2CBF; }
+        
+        .bg-teal { background-color: #0b8482; }
+        .text-teal { color: #0b8482; }
+        .border-teal { border-color: #0b8482; }
+        
+        /* Dark mode variables */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        body.dark-mode .bg-white,
+        body.dark-mode .bg-white\/90,
+        body.dark-mode .bg-white\/80 {
+            background-color: #1e1e1e !important;
+            border-color: #7B2CBF40 !important;
+        }
+        body.dark-mode .bg-gray-50 {
+            background-color: #2a2a2a !important;
+        }
+        body.dark-mode .text-gray-900 {
+            color: #f0f0f0 !important;
+        }
+        body.dark-mode .text-gray-700 {
+            color: #d0d0d0 !important;
+        }
+        body.dark-mode .text-gray-600 {
+            color: #b0b0b0 !important;
+        }
+        body.dark-mode .text-gray-500 {
+            color: #909090 !important;
+        }
+        body.dark-mode .border-gray-200 {
+            border-color: #7B2CBF40 !important;
+        }
+        
+        /* RTL support */
+        body.rtl-mode {
+            direction: rtl;
+            text-align: right;
+        }
+        body.rtl-mode .ml-3 {
+            margin-left: 0 !important;
+            margin-right: 0.75rem !important;
+        }
+        body.rtl-mode .mr-2 {
+            margin-right: 0 !important;
+            margin-left: 0.5rem !important;
+        }
+        body.rtl-mode .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+            --tw-space-x-reverse: 1;
+        }
+        
+        /* toggle buttons */
+        .toggle-base {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .rtl-active {
+            background: #7B2CBF;
+            color: white;
+            border-color: #7B2CBF;
+        }
+        
+        .dark-active {
+            background: #1e1e1e;
+            color: #FFC300;
+            border-color: #7B2CBF;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden bg-white">
+
+    <!-- Navbar placeholder (your navbar.js will inject here) -->
+    <div id="navbar"></div>
+
+<!-- BLOG DETAILS HERO BANNER -->
+<section class="relative pt-24 pb-12 md:pt-72 md:pb-56 overflow-hidden">
+    <!-- Simple Gradient Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[#7B2CBF] to-[#0b8482]"></div>
+    
+    <!-- Subtle Pattern Overlay -->
+    <div class="absolute inset-0 opacity-5">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="details-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <circle cx="20" cy="20" r="1" fill="white"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#details-pattern)"/>
+        </svg>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Centered Container -->
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Breadcrumb - Centered -->
+            <div class="flex items-center justify-center gap-2 text-sm text-white/80 mb-6">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="blog.html" class="hover:text-white transition-colors">Blog</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-white">Article</span>
+            </div>
+
+            <!-- Categories - Centered -->
+            <div class="flex flex-wrap justify-center gap-2 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-medium bg-white/20 backdrop-blur-sm text-white border border-white/30">Tutorial</span>
+                <span class="px-3 py-1 rounded-full text-xs font-medium bg-white/20 backdrop-blur-sm text-white border border-white/30">Beginner Friendly</span>
+                <span class="px-3 py-1 rounded-full text-xs font-medium bg-white/20 backdrop-blur-sm text-white border border-white/30">Watercolor</span>
+            </div>
+
+            <!-- Article Title - Centered -->
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight text-center">
+                Watercolor Techniques: A Beginner's Guide to Creating Beautiful Art
+            </h1>
+
+            <!-- Article Meta - Centered -->
+            <div class="flex flex-wrap items-center justify-center gap-4 text-white/90 mb-6">
+                <div class="flex items-center gap-2">
+                    <img src="images\profile4.avif" 
+                         alt="Author" 
+                         class="w-8 h-8 rounded-full object-cover border-2 border-white">
+                    <span class="text-sm">Sarah Chen</span>
+                </div>
+                <span class="text-sm flex items-center gap-1"><i class="far fa-calendar"></i> April 8, 2026</span>
+                <span class="text-sm flex items-center gap-1"><i class="far fa-clock"></i> 8 min read</span>
+            </div>
+
+            <!-- Social Share - Centered -->
+            <div class="flex items-center justify-center gap-3">
+                <span class="text-sm text-white/80">Share:</span>
+                <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+                    <i class="fab fa-facebook-f text-sm"></i>
+                </a>
+                <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+                    <i class="fab fa-twitter text-sm"></i>
+                </a>
+                <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+                    <i class="fab fa-pinterest text-sm"></i>
+                </a>
+                <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+                    <i class="far fa-bookmark text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Wave -->
+    <div class="absolute bottom-0 left-0 right-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" class="w-full h-auto" preserveAspectRatio="none">
+            <path fill="white" d="M0,32L80,37.3C160,43,320,53,480,48C640,43,800,21,960,16C1120,11,1280,21,1360,26.7L1440,32L1440,60L1360,60C1280,60,1120,60,960,60C800,60,640,60,480,60C320,60,160,60,80,60L0,60Z"></path>
+        </svg>
+    </div>
+</section>
+
+    <!-- BLOG CONTENT SECTION -->
+    <section class="py-12 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Main Content - Left Column -->
+                <div class="lg:col-span-2">
+                    <!-- Featured Image -->
+                    <div class="rounded-2xl overflow-hidden shadow-xl mb-8 border-4" style="border-color: #7B2CBF40;">
+                        <img src="images\craft2.avif" 
+                             alt="Watercolor painting supplies"
+                             class="w-full h-auto object-cover">
+                    </div>
+                    
+                    <!-- Article Content -->
+                    <div class="prose prose-lg max-w-none dark:prose-invert">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Watercolor painting is one of the most accessible and rewarding art forms for beginners. With just a few basic supplies, you can create beautiful, ethereal pieces that capture light and emotion. In this comprehensive guide, we'll walk you through everything you need to know to start your watercolor journey.
+                        </p>
+                        
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 mt-8">Essential Supplies</h2>
+                        
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            Before you start painting, you'll need to gather a few essential supplies. The quality of your materials can make a significant difference in your experience and results.
+                        </p>
+                        
+                        <ul class="list-disc pl-6 mb-6 text-gray-700 dark:text-gray-300">
+                            <li class="mb-2"><span class="font-semibold" style="color: #7B2CBF;">Watercolor Paints:</span> Start with a basic set of 12 colors. Student-grade paints are perfect for beginners.</li>
+                            <li class="mb-2"><span class="font-semibold" style="color: #0b8482;">Brushes:</span> A few round brushes in sizes 2, 6, and 10 will cover most techniques.</li>
+                            <li class="mb-2"><span class="font-semibold" style="color: #7B2CBF;">Paper:</span> 100% cotton, cold-pressed paper (at least 140lb/300gsm) is ideal.</li>
+                            <li class="mb-2"><span class="font-semibold" style="color: #0b8482;">Palette:</span> A mixing palette with wells for your colors.</li>
+                            <li class="mb-2"><span class="font-semibold" style="color: #7B2CBF;">Water Containers:</span> Two jars of clean water - one for rinsing, one for mixing.</li>
+                        </ul>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border-l-4 mb-8" style="border-left-color: #7B2CBF;">
+                            <p class="text-sm italic text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-lightbulb mr-2" style="color: #FFC300;"></i>
+                                <span class="font-semibold">Pro Tip:</span> Invest in the best paper you can afford. Good paper makes learning techniques much easier and more enjoyable.
+                            </p>
+                        </div>
+                        
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Basic Techniques</h2>
+                        
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">1. Wet-on-Wet</h3>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            This technique involves applying wet paint onto wet paper. It creates soft, diffused edges and is perfect for backgrounds, skies, and water. Simply wet your paper with clean water, then drop in your paint and watch it spread.
+                        </p>
+                        
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">2. Wet-on-Dry</h3>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            Apply wet paint onto dry paper for crisp, defined edges. This technique gives you more control and is ideal for details, layering, and creating sharp lines.
+                        </p>
+                        
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">3. Dry Brush</h3>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            Use a brush with very little water and paint to create textured, scratchy marks. This technique is great for adding texture like grass, fur, or rough surfaces.
+                        </p>
+                        
+                        <!-- Image Grid -->
+                        <div class="grid grid-cols-2 gap-4 my-8">
+                            <img src="images\craft18.webp" 
+                                 alt="Watercolor technique" 
+                                 class="rounded-xl w-full h-40 object-cover border-2" style="border-color: #7B2CBF40;">
+                            <img src="images\watercolor.webp" 
+                                 alt="Watercolor painting" 
+                                 class="rounded-xl w-full h-40 object-cover border-2" style="border-color: #0b848240;">
+                        </div>
+                        
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 mt-8">Common Mistakes to Avoid</h2>
+                        
+                        <ol class="list-decimal pl-6 mb-6 text-gray-700 dark:text-gray-300">
+                            <li class="mb-2"><span class="font-semibold">Using too much water</span> - This can cause your paper to buckle and colors to become washed out.</li>
+                            <li class="mb-2"><span class="font-semibold">Not waiting for layers to dry</span> - Patience is key! Let each layer dry completely before adding another.</li>
+                            <li class="mb-2"><span class="font-semibold">Using low-quality paper</span> - Student-grade paper can't handle multiple layers and will pill.</li>
+                            <li class="mb-2"><span class="font-semibold">Overworking the paint</span> - Watercolor is meant to be fresh and spontaneous.</li>
+                        </ol>
+                        
+                        <div class="bg-gradient-to-r from-[#7B2CBF10] to-[#0b848210] p-6 rounded-xl my-8">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Ready to Start?</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                Check out our beginner's watercolor kit, which includes everything you need to get started with your first project.
+                            </p>
+                            <a href="blog.html" class="inline-flex items-center gap-2 px-6 py-3 text-white font-medium rounded-xl hover:opacity-90 transition-all" style="background: linear-gradient(135deg, #7B2CBF, #0b8482);">
+                              <i class="fas fa-arrow-left"></i> View Blog 
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags -->
+                    <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8">
+                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-3">Tags:</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-sm text-gray-700 dark:text-gray-300">#watercolor</span>
+                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-sm text-gray-700 dark:text-gray-300">#beginner</span>
+                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-sm text-gray-700 dark:text-gray-300">#tutorial</span>
+                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-sm text-gray-700 dark:text-gray-300">#painting</span>
+                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-sm text-gray-700 dark:text-gray-300">#arttips</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Author Bio -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 mt-8 border" style="border-color: #7B2CBF40;">
+                        <div class="flex items-start gap-4">
+                            <img src="images\profile4.avif" 
+                                 alt="Sarah Chen" 
+                                 class="w-16 h-16 rounded-full object-cover border-2" style="border-color: #7B2CBF;">
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Sarah Chen</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Artist & Educator</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">Sarah is a watercolor artist with over 10 years of experience teaching beginners. She believes that anyone can learn to paint with the right guidance and encouragement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar - Right Column -->
+                <div class="lg:col-span-1">
+                    <!-- Table of Contents -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 mb-6 border" style="border-color: #7B2CBF40;">
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                            <i class="fas fa-list-ul" style="color: #7B2CBF;"></i> In This Article
+                        </h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-[#7B2CBF] transition-colors">• Essential Supplies</a></li>
+                            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-[#7B2CBF] transition-colors">• Basic Techniques</a></li>
+                            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-[#7B2CBF] transition-colors">• Common Mistakes</a></li>
+                            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-[#7B2CBF] transition-colors">• Practice Projects</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Related Products -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 mb-6 border" style="border-color: #7B2CBF40;">
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                            <i class="fas fa-shopping-bag" style="color: #0b8482;"></i> Shop This Article
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg overflow-hidden border" style="border-color: #7B2CBF40;">
+                                    <img src="images/craft3.jpg" alt="Product" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-900 dark:text-white">Beginner Watercolor Set</p>
+                                    <p class="text-xs" style="color: #7B2CBF;">$34.99</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg overflow-hidden border" style="border-color: #7B2CBF40;">
+                                    <img src="images/storage.avif" alt="Product" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-900 dark:text-white">Cotton Watercolor Paper</p>
+                                    <p class="text-xs" style="color: #0b8482;">$18.50</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Related Posts -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 border" style="border-color: #7B2CBF40;">
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                            <i class="fas fa-newspaper" style="color: #7B2CBF;"></i> You Might Also Like
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <a href="#" class="text-sm font-semibold text-gray-900 dark:text-white hover:text-[#7B2CBF] transition-colors">10 Essential Painting Techniques for Beginners</a>
+                                <p class="text-xs text-gray-500">4 min read</p>
+                            </div>
+                            <div>
+                                <a href="#" class="text-sm font-semibold text-gray-900 dark:text-white hover:text-[#7B2CBF] transition-colors">Choosing the Right Paint: Acrylic vs Watercolor</a>
+                                <p class="text-xs text-gray-500">6 min read</p>
+                            </div>
+                            <div>
+                                <a href="#" class="text-sm font-semibold text-gray-900 dark:text-white hover:text-[#7B2CBF] transition-colors">How to Clean and Care for Your Paint Brushes</a>
+                                <p class="text-xs text-gray-500">3 min read</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMENTS SECTION -->
+    <section class="py-12 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Comments (4)</h2>
+            
+            <!-- Comment Form -->
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 mb-8 border" style="border-color: #7B2CBF40;">
+                <textarea rows="3" placeholder="Leave a comment..." class="w-full px-4 py-3 border rounded-xl bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-[#7B2CBF] focus:ring-1 focus:ring-[#7B2CBF] outline-none transition mb-3"></textarea>
+                <button class="px-6 py-2 text-white font-medium rounded-xl hover:opacity-90 transition-all" style="background: linear-gradient(135deg, #7B2CBF, #0b8482);">
+                    Post Comment
+                </button>
+            </div>
+            
+            <!-- Comments List -->
+            <div class="space-y-6">
+                <div class="flex gap-4">
+                    <img src="images\profile1.avif" alt="User" class="w-10 h-10 rounded-full object-cover border-2" style="border-color: #7B2CBF;">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="font-semibold text-gray-900 dark:text-white">Emily Parker</span>
+                            <span class="text-xs text-gray-500">2 hours ago</span>
+                        </div>
+                        <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">This is so helpful! I've been struggling with watercolor for months. The wet-on-wet technique explanation finally made it click for me.</p>
+                        <button class="text-xs font-medium hover:underline" style="color: #7B2CBF;">Reply</button>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <img src="images\profile2.webp" alt="User" class="w-10 h-10 rounded-full object-cover border-2" style="border-color: #0b8482;">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="font-semibold text-gray-900 dark:text-white">David Chen</span>
+                            <span class="text-xs text-gray-500">Yesterday</span>
+                        </div>
+                        <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">Great article! Would love to see more about color mixing techniques. Thanks for sharing!</p>
+                        <button class="text-xs font-medium hover:underline" style="color: #7B2CBF;">Reply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+ 
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const body = document.body;
+        
+        function setDarkMode(isDark) {
+            if (isDark) {
+                body.classList.add('dark-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                themeIcon.style.color = '#FFC300';
+                darkToggle.style.background = '#1e1e1e';
+            } else {
+                body.classList.remove('dark-mode');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                themeIcon.style.color = '#7B2CBF';
+                darkToggle.style.background = 'white';
+            }
+        }
+        
+        // Check for saved preference
+        const savedDark = localStorage.getItem('craft-blogdetails-dark') === 'true';
+        setDarkMode(savedDark);
+        
+        darkToggle.addEventListener('click', function() {
+            const isDark = !body.classList.contains('dark-mode');
+            setDarkMode(isDark);
+            localStorage.setItem('craft-blogdetails-dark', isDark);
+        });
+        
+        // RTL Toggle
+        const rtlToggle = document.getElementById('rtlToggle');
+        
+        function setRTL(isRTL) {
+            if (isRTL) {
+                body.classList.add('rtl-mode');
+                document.documentElement.setAttribute('dir', 'rtl');
+            } else {
+                body.classList.remove('rtl-mode');
+                document.documentElement.setAttribute('dir', 'ltr');
+            }
+        }
+        
+        const savedRTL = localStorage.getItem('craft-blogdetails-rtl') === 'true';
+        setRTL(savedRTL);
+        
+        rtlToggle.addEventListener('click', function() {
+            const isRTL = body.classList.contains('rtl-mode');
+            setRTL(!isRTL);
+            localStorage.setItem('craft-blogdetails-rtl', !isRTL);
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+       
+              <div id="footer"></div>
+      <script src="navbar.js"> </script>
+        <script src="footer.js"> </script>
+</body>
+</html>

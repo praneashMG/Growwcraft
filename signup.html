@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup-GrowwCare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+             <link rel="icon" href="growwpark_logo.jpg">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+
+</head>
+<body>
+
+    <style>
+        /* Custom focus ring - Purple theme */
+        .focus-ring-purple:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(123, 44, 191, 0.15);
+            border-color: #7B2CBF;
+        }
+        
+        /* Craft pattern dots */
+        .craft-dots {
+            background-image: radial-gradient(#7B2CBF20 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
+        }
+        
+        /* Dark mode dots - subtle purple */
+        .dark-craft-dots {
+            background-image: radial-gradient(#7B2CBF40 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
+        }
+        
+        /* Smooth transitions */
+        body, div, button, input, a, p, h2, h3, span, label, svg {
+            transition: background-color 0.3s ease, border-color 0.2s ease, color 0.2s ease, fill 0.2s ease;
+        }
+        
+        /* RTL specific overrides */
+        html[dir="rtl"] .flex-row {
+            flex-direction: row-reverse;
+        }
+        html[dir="rtl"] .lg\:flex-row {
+            flex-direction: row-reverse;
+        }
+        html[dir="rtl"] .ml-2 {
+            margin-left: 0;
+            margin-right: 0.5rem;
+        }
+        html[dir="rtl"] .mr-2 {
+            margin-right: 0;
+            margin-left: 0.5rem;
+        }
+        html[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+            --tw-space-x-reverse: 1;
+        }
+        html[dir="rtl"] .absolute.right-4 {
+            right: auto;
+            left: 1rem;
+        }
+        
+        /* Responsive visibility */
+        @media (max-width: 820px) {
+            .craft-side {
+                display: none !important;
+            }
+        }
+        
+        /* Custom craft elements */
+        .craft-shadow {
+            box-shadow: 0 10px 30px -5px rgba(123, 44, 191, 0.2);
+        }
+        
+        /* Password strength indicator */
+        .strength-weak { background-color: #ff4d4d; }
+        .strength-medium { background-color: #ffc107; }
+        .strength-strong { background-color: #28a745; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex items-center justify-center p-4 transition-colors duration-300 bg-white craft-dots"
+      id="theme-body">
+  
+    <!-- MAIN CARD - fully responsive, theme-aware, RTL ready -->
+    <div class="w-full max-w-5xl rounded-3xl craft-shadow overflow-hidden relative transition-all duration-300 bg-white/95 backdrop-blur-sm border-2"
+         id="main-card" style="border-color: #7B2CBF40;">
+        
+        <!-- ===== THEME & RTL CONTROL BUTTONS ===== -->
+        <div class="absolute top-4 right-4 z-30 flex items-center gap-2 rtl:left-4 rtl:right-auto" id="control-panel">
+            <!-- RTL / LTR toggle button -->
+            <button id="rtl-toggle" class="border text-[#7B2CBF] hover:bg-white p-2.5 rounded-full shadow-md transition-all duration-200 flex items-center justify-center group"
+                    style="background: white; border-color: #7B2CBF40;" aria-label="Toggle RTL/LTR">
+                <i class="fas fa-exchange-alt text-sm transition-transform group-hover:scale-110" style="color: #7B2CBF;"></i>
+                <span class="sr-only">Switch RTL/LTR</span>
+            </button>
+            
+            <!-- Dark / Light toggle button -->
+            <button id="theme-toggle" class="border text-[#7B2CBF] hover:bg-white p-2.5 rounded-full shadow-md transition-all duration-200 flex items-center justify-center group"
+                    style="background: white; border-color: #7B2CBF40;" aria-label="Toggle dark/light mode">
+                <i id="theme-icon" class="fas fa-moon text-sm transition-transform group-hover:rotate-12" style="color: #7B2CBF;"></i>
+                <span class="sr-only">Toggle theme</span>
+            </button>
+        </div>
+    
+        <!-- flex container -->
+        <div class="flex flex-col lg:flex-row" id="main-flex">
+            
+            <!-- LEFT: Sign Up form -->
+            <div class="w-full lg:w-1/2 p-6 sm:p-8 md:p-10 transition-colors bg-white" id="signup-panel">
+                
+                <!-- Logo area -->
+                <div class="flex items-center gap-2 mb-6 sm:mb-8">
+                    <span class="text-xl font-bold" style="color: #7B2CBF;">
+                        <a href="index.html">Groww<span style="color: #0b8482;">Craft</span></a>
+                    </span>
+                </div>
+
+                <p class="text-gray-500 mb-6 sm:mb-8 text-sm sm:text-base">Create your free account and start creating</p>
+
+                <!-- signup form -->
+                <form class="space-y-4">
+                    <!-- Name field -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1.5">
+                            <span class="flex items-center gap-1.5">
+                                <i class="fas fa-user" style="color: #7B2CBF;"></i>
+                                <span class="text-gray-800">Full Name</span>
+                            </span>
+                        </label>
+                        <input type="text" placeholder="Alex Rivera" 
+                               class="w-full px-4 py-3 border rounded-xl transition-all
+                                      bg-gray-50 border-gray-200 
+                                      placeholder:text-gray-400 text-gray-800
+                                      focus-ring-purple focus:border-[#7B2CBF]">
+                    </div>
+
+                    <!-- Email field -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1.5">
+                            <span class="flex items-center gap-1.5">
+                                <i class="fas fa-envelope" style="color: #0b8482;"></i>
+                                <span class="text-gray-800">Email</span>
+                            </span>
+                        </label>
+                        <input type="email" placeholder="crafts@creative.com" 
+                               class="w-full px-4 py-3 border rounded-xl transition-all
+                                      bg-gray-50 border-gray-200 
+                                      placeholder:text-gray-400 text-gray-800
+                                      focus-ring-purple focus:border-[#7B2CBF]">
+                    </div>
+
+                    <!-- Password field -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1.5">
+                            <span class="flex items-center gap-1.5">
+                                <i class="fas fa-lock" style="color: #7B2CBF;"></i>
+                                <span class="text-gray-800">Password</span>
+                            </span>
+                        </label>
+                        <input type="password" id="password" placeholder="••••••••" 
+                               class="w-full px-4 py-3 border rounded-xl transition-all
+                                      bg-gray-50 border-gray-200 
+                                      placeholder:text-gray-400 text-gray-800
+                                      focus-ring-purple focus:border-[#7B2CBF]">
+                        <!-- Password strength indicator -->
+                        <div class="flex gap-1 mt-2">
+                            <div class="h-1 w-1/3 rounded-full bg-gray-200" id="strength-1"></div>
+                            <div class="h-1 w-1/3 rounded-full bg-gray-200" id="strength-2"></div>
+                            <div class="h-1 w-1/3 rounded-full bg-gray-200" id="strength-3"></div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">Use at least 8 characters with letters & numbers</p>
+                    </div>
+
+
+                    <!-- Terms & Conditions -->
+                    <div class="flex items-start gap-2">
+                        <input type="checkbox" id="terms" class="mt-1 w-4 h-4 rounded" style="accent-color: #7B2CBF;">
+                        <label for="terms" class="text-sm text-gray-600">
+                            I agree to the 
+                            <a href="#" class="font-medium hover:underline" style="color: #7B2CBF;">Terms of Service</a> 
+                            and 
+                            <a href="#" class="font-medium hover:underline" style="color: #0b8482;">Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <!-- Sign Up button -->
+                    <button class="w-full text-white font-semibold py-3.5 px-4 rounded-xl hover:shadow-lg transition duration-200 flex items-center justify-center gap-2 text-base sm:text-lg mt-2"
+                            style="background: linear-gradient(135deg, #7B2CBF, #0b8482);">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </button>
+
+                    <!-- Divider "or" -->
+                    <div class="relative my-6">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t" style="border-color: #7B2CBF20;"></div>
+                        </div>
+                        <div class="relative flex justify-center text-xs sm:text-sm">
+                            <span class="px-4 bg-white text-gray-500 font-medium">or sign up with</span>
+                        </div>
+                    </div>
+
+                    <!-- Social buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button class="flex-1 flex items-center justify-center gap-2 border rounded-xl transition-all py-3 px-4 hover:scale-105"
+                                style="border-color: #7B2CBF40; background: white; color: #4A4A4A;">
+                            <i class="fab fa-facebook-f" style="color: #1877F2;"></i>
+                            <span class="text-sm">Facebook</span>
+                        </button>
+                        <button class="flex-1 flex items-center justify-center gap-2 border rounded-xl transition-all py-3 px-4 hover:scale-105"
+                                style="border-color: #7B2CBF40; background: white; color: #4A4A4A;">
+                            <i class="fab fa-google" style="color: #DB4437;"></i>
+                            <span class="text-sm">Google</span>
+                        </button>
+                    </div>
+
+                    <!-- Login link -->
+                    <p class="text-center text-gray-600 pt-2 text-sm sm:text-base">
+                        Already have an account? 
+                        <a href="login.html" class="font-bold hover:underline underline-offset-2 transition" style="color: #7B2CBF;">Log in</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- RIGHT SIDE: Craft welcome -->
+            <div class="craft-side w-full lg:w-1/2 p-6 sm:p-8 md:p-10 flex flex-col justify-center relative overflow-hidden"
+                 id="welcome-panel" style="background: linear-gradient(135deg, #7B2CBF, #0b8482);">
+                
+                <!-- floating craft icons -->
+                <i class="fas fa-paint-brush absolute top-10 right-10 text-white opacity-20 text-4xl"></i>
+                <i class="fas fa-cut absolute bottom-10 left-10 text-white opacity-20 text-4xl"></i>
+                <i class="fas fa-tshirt absolute top-20 left-20 text-white opacity-10 text-3xl"></i>
+                <i class="fas fa-gem absolute bottom-20 right-20 text-white opacity-10 text-3xl"></i>
+                <i class="fas fa-palette absolute top-40 right-20 text-white opacity-10 text-3xl"></i>
+                <i class="fas fa-ruler-combined absolute bottom-40 left-20 text-white opacity-10 text-3xl"></i>
+                
+                <!-- content -->
+                <div class="relative z-10 text-white text-center lg:text-left">
+                    <!-- craft badge -->
+                    <div class="inline-block px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-6">
+                        <span class="text-sm font-medium text-white"><i class="fas fa-star mr-1"></i> 50,000+ Makers</span>
+                    </div>
+                    
+                    <h3 class="text-3xl sm:text-4xl font-bold mb-4 drop-shadow-md">Start Your Creative Journey</h3>
+                    
+                    <div class="space-y-4 text-white/90 text-base sm:text-lg mb-8 max-w-md mx-auto lg:mx-0">
+                        <p class="flex items-start gap-2">
+                            <i class="fas fa-gift mt-1 text-white/80"></i>
+                            <span><span class="font-bold text-violet-300">15% off</span> your first purchase</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <i class="fas fa-video mt-1 text-white/80"></i>
+                            <span>Free access to 5 beginner workshops</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <i class="fas fa-heart mt-1 text-white/80"></i>
+                            <span>Save unlimited projects & ideas</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <i class="fas fa-users mt-1 text-white/80"></i>
+                            <span>Join exclusive maker community</span>
+                        </p>
+                    </div>
+
+                    <!-- Feature badges -->
+                    <div class="flex flex-wrap gap-2 justify-center lg:justify-start mb-6">
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-xs border border-white/30">Free Shipping</span>
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-xs border border-white/30">24/7 Support</span>
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-xs border border-white/30">30-Day Returns</span>
+                    </div>
+
+                    <div class="bg-white/20 backdrop-blur-sm inline-block px-6 py-3 rounded-full text-white font-medium shadow-lg border border-white/30">
+                        <i class="fas fa-paint-roller mr-2"></i>
+                        Join free - No credit card required
+                    </div>
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // ----- DARK/LIGHT THEME TOGGLE -----
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const body = document.getElementById('theme-body');
+            const mainCard = document.getElementById('main-card');
+            const signupPanel = document.getElementById('signup-panel');
+            const controlButtons = document.querySelectorAll('#control-panel button');
+            
+            function setTheme(isDark) {
+                if (isDark) {
+                    // Add dark class
+                    body.classList.add('dark');
+                    
+                    // Update body background
+                    body.classList.remove('bg-white', 'craft-dots');
+                    body.classList.add('bg-gray-900', 'dark-craft-dots');
+                    
+                    // Update main card
+                    mainCard.classList.remove('bg-white/95');
+                    mainCard.classList.add('bg-gray-900/95');
+                    mainCard.style.backgroundColor = '#111827';
+                    
+                    // Update signup panel
+                    signupPanel.classList.remove('bg-white');
+                    signupPanel.classList.add('bg-gray-900');
+                    signupPanel.style.backgroundColor = '#111827';
+                    
+                    // Update text colors in signup panel
+                    document.querySelectorAll('#signup-panel .text-gray-800, #signup-panel .text-gray-700').forEach(el => {
+                        el.classList.add('text-gray-100');
+                        el.classList.remove('text-gray-800', 'text-gray-700');
+                    });
+                    
+                    document.querySelectorAll('#signup-panel .text-gray-500, #signup-panel .text-gray-600').forEach(el => {
+                        el.classList.add('text-gray-400');
+                        el.classList.remove('text-gray-500', 'text-gray-600');
+                    });
+                    
+                    // Update input backgrounds
+                    document.querySelectorAll('#signup-panel input, #signup-panel select').forEach(el => {
+                        el.classList.remove('bg-gray-50');
+                        el.classList.add('bg-gray-800');
+                        el.classList.add('text-white');
+                        el.classList.remove('text-gray-800');
+                        el.style.borderColor = '#4B5563';
+                    });
+                    
+                    // Update "or" divider background
+                    document.querySelectorAll('#signup-panel .bg-white.text-gray-500').forEach(el => {
+                        el.classList.remove('bg-white');
+                        el.classList.add('bg-gray-900');
+                        el.style.backgroundColor = '#111827';
+                    });
+                    
+                    // Update social buttons
+                    document.querySelectorAll('#signup-panel button.border').forEach(el => {
+                        if (!el.classList.contains('bg-gradient-to-r')) {
+                            el.classList.remove('bg-white');
+                            el.classList.add('bg-gray-800');
+                            el.style.backgroundColor = '#1f2937';
+                            el.style.color = '#e5e7eb';
+                        }
+                    });
+                    
+                    // Update control buttons
+                    controlButtons.forEach(btn => {
+                        btn.classList.remove('bg-white');
+                        btn.classList.add('bg-gray-800');
+                        btn.style.backgroundColor = '#1f2937';
+                        btn.style.borderColor = '#7B2CBF';
+                    });
+                    
+                    // Update theme icon
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    themeIcon.style.color = '#FFC300';
+                    
+                } else {
+                    // Remove dark class
+                    body.classList.remove('dark');
+                    
+                    // Restore body background
+                    body.classList.remove('bg-gray-900', 'dark-craft-dots');
+                    body.classList.add('bg-white', 'craft-dots');
+                    
+                    // Restore main card
+                    mainCard.classList.remove('bg-gray-900/95');
+                    mainCard.classList.add('bg-white/95');
+                    mainCard.style.backgroundColor = '';
+                    
+                    // Restore signup panel
+                    signupPanel.classList.remove('bg-gray-900');
+                    signupPanel.classList.add('bg-white');
+                    signupPanel.style.backgroundColor = '';
+                    
+                    // Restore text colors
+                    document.querySelectorAll('#signup-panel .text-gray-100').forEach(el => {
+                        el.classList.remove('text-gray-100');
+                        el.classList.add('text-gray-800');
+                    });
+                    
+                    document.querySelectorAll('#signup-panel .text-gray-400').forEach(el => {
+                        el.classList.remove('text-gray-400');
+                        el.classList.add('text-gray-600');
+                    });
+                    
+                    // Restore input backgrounds
+                    document.querySelectorAll('#signup-panel input, #signup-panel select').forEach(el => {
+                        el.classList.remove('bg-gray-800');
+                        el.classList.add('bg-gray-50');
+                        el.classList.remove('text-white');
+                        el.classList.add('text-gray-800');
+                        el.style.borderColor = '#e5e7eb';
+                    });
+                    
+                    // Restore "or" divider background
+                    document.querySelectorAll('#signup-panel .bg-gray-900.text-gray-400').forEach(el => {
+                        el.classList.remove('bg-gray-900');
+                        el.classList.add('bg-white');
+                        el.style.backgroundColor = '';
+                    });
+                    
+                    // Restore social buttons
+                    document.querySelectorAll('#signup-panel button.bg-gray-800').forEach(el => {
+                        el.classList.remove('bg-gray-800');
+                        el.classList.add('bg-white');
+                        el.style.backgroundColor = '';
+                        el.style.color = '#4A4A4A';
+                    });
+                    
+                    // Restore control buttons
+                    controlButtons.forEach(btn => {
+                        btn.classList.remove('bg-gray-800');
+                        btn.classList.add('bg-white');
+                        btn.style.backgroundColor = '';
+                        btn.style.borderColor = '#7B2CBF40';
+                    });
+                    
+                    // Restore theme icon
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    themeIcon.style.color = '#7B2CBF';
+                }
+            }
+
+            // Initial state: light
+            setTheme(false);
+
+            // Theme toggle click handler
+            themeToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const isDark = !body.classList.contains('dark');
+                setTheme(isDark);
+                localStorage.setItem('craftTheme', isDark ? 'dark' : 'light');
+            });
+
+            // Load saved theme
+            const savedTheme = localStorage.getItem('craftTheme');
+            if (savedTheme === 'dark') {
+                setTheme(true);
+            }
+
+            // ----- RTL / LTR TOGGLE -----
+            const rtlToggle = document.getElementById('rtl-toggle');
+            const htmlEl = document.documentElement;
+            
+            function setRTL(isRTL) {
+                if (isRTL) {
+                    htmlEl.setAttribute('dir', 'rtl');
+                } else {
+                    htmlEl.setAttribute('dir', 'ltr');
+                }
+            }
+
+            // Initial RTL state
+            setRTL(false);
+
+            rtlToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const isRTL = htmlEl.getAttribute('dir') === 'rtl';
+                setRTL(!isRTL);
+                localStorage.setItem('craftRTL', !isRTL ? 'rtl' : 'ltr');
+            });
+
+            // Load saved RTL preference
+            const savedRTL = localStorage.getItem('craftRTL');
+            if (savedRTL === 'rtl') {
+                setRTL(true);
+            }
+
+            // ----- PASSWORD STRENGTH INDICATOR -----
+            const passwordInput = document.getElementById('password');
+            const strength1 = document.getElementById('strength-1');
+            const strength2 = document.getElementById('strength-2');
+            const strength3 = document.getElementById('strength-3');
+
+            if (passwordInput) {
+                passwordInput.addEventListener('input', function() {
+                    const password = this.value;
+                    let strength = 0;
+                    
+                    if (password.length >= 8) strength += 1;
+                    if (password.match(/[A-Z]/)) strength += 1;
+                    if (password.match(/[0-9]/) || password.match(/[^A-Za-z0-9]/)) strength += 1;
+                    
+                    // Reset
+                    strength1.style.backgroundColor = '#e5e7eb';
+                    strength2.style.backgroundColor = '#e5e7eb';
+                    strength3.style.backgroundColor = '#e5e7eb';
+                    
+                    if (strength >= 1) strength1.style.backgroundColor = '#ff4d4d';
+                    if (strength >= 2) strength2.style.backgroundColor = '#ffc107';
+                    if (strength >= 3) strength3.style.backgroundColor = '#28a745';
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services-GrowwCare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+             <link rel="icon" href="growwpark_logo.jpg">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+
+</head>
+<body>
+       <div id="navbar"></div>
+
+
+    <style>
+      
+        
+        /* Theme Colors */
+        .bg-purple { background-color: #7B2CBF; }
+        .text-purple { color: #7B2CBF; }
+        .border-purple { border-color: #7B2CBF; }
+        
+        .bg-teal { background-color: #0b8482; }
+        .text-teal { color: #0b8482; }
+        .border-teal { border-color: #0b8482; }
+        
+        /* Dark mode variables */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        body.dark-mode .bg-white,
+        body.dark-mode .bg-white\/90,
+        body.dark-mode .bg-white\/80 {
+            background-color: #1e1e1e !important;
+            border-color: #7B2CBF40 !important;
+        }
+        body.dark-mode .bg-gray-50 {
+            background-color: #2a2a2a !important;
+        }
+        body.dark-mode .text-gray-900 {
+            color: #f0f0f0 !important;
+        }
+        body.dark-mode .text-gray-700 {
+            color: #d0d0d0 !important;
+        }
+        body.dark-mode .text-gray-600 {
+            color: #b0b0b0 !important;
+        }
+        body.dark-mode .text-gray-500 {
+            color: #909090 !important;
+        }
+        body.dark-mode .border-gray-200 {
+            border-color: #7B2CBF40 !important;
+        }
+        
+        /* RTL support */
+        body.rtl-mode {
+            direction: rtl;
+            text-align: right;
+        }
+        body.rtl-mode .ml-3 {
+            margin-left: 0 !important;
+            margin-right: 0.75rem !important;
+        }
+        body.rtl-mode .mr-2 {
+            margin-right: 0 !important;
+            margin-left: 0.5rem !important;
+        }
+        body.rtl-mode .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+            --tw-space-x-reverse: 1;
+        }
+       
+        
+        /* Service card hover */
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(123, 44, 191, 0.2);
+        }
+        
+        /* toggle buttons */
+        .toggle-base {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .rtl-active {
+            background: #7B2CBF;
+            color: white;
+            border-color: #7B2CBF;
+        }
+        
+        .dark-active {
+            background: #1e1e1e;
+            color: #FFC300;
+            border-color: #7B2CBF;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden bg-white">
+
+    <!-- Navbar placeholder (your navbar.js will inject here) -->
+    <div id="navbar"></div>
+
+    <!-- SERVICES HERO BANNER - Creative Workshop Style -->
+    <section class="relative pt-24 pb-16 md:pt-32 md:pb-20 overflow-hidden">
+        <!-- Background with Artistic Texture -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[#7B2CBF] via-[#9d4edd] to-[#0b8482]"></div>
+        
+        <!-- Creative Pattern Overlay -->
+        <div class="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="services-pattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+                        <circle cx="40" cy="40" r="8" stroke="white" stroke-width="2" fill="none" opacity="0.3"/>
+                        <circle cx="20" cy="20" r="4" fill="white" opacity="0.2"/>
+                        <circle cx="60" cy="60" r="4" fill="white" opacity="0.2"/>
+                        <path d="M40 20 L45 35 L60 35 L48 45 L52 60 L40 50 L28 60 L32 45 L20 35 L35 35 Z" fill="white" opacity="0.15"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#services-pattern)"/>
+            </svg>
+        </div>
+
+       
+      
+   
+      
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Column - Text Content -->
+                <div class="text-center lg:text-left">
+                    <!-- Creative Badge -->
+                    <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/20 backdrop-blur-md border-2 border-white/40 mb-6 transform hover:scale-105 transition-transform">
+                        <span class="text-sm font-medium text-white tracking-wider"> CRAFT SERVICES </span>
+                    </div>
+
+                    <!-- Artistic Heading with Decorative Elements -->
+                    <h1 class="relative">
+                        <span class="text-5xl md:text-6xl lg:text-7xl font-bold text-white block leading-tight">
+                            <span class="relative inline-block">
+                                Creative
+                            </span>
+                        </span>
+                        <span class="text-5xl md:text-6xl lg:text-7xl font-bold text-white block leading-tight mt-2">
+                            <span class="relative inline-block">
+                                Services
+                            </span>
+                        </span>
+                        <span class="text-5xl md:text-6xl lg:text-7xl font-bold block leading-tight mt-2" style="color: #00BFA6;">
+                            For Makers
+                        </span>
+                    </h1>
+
+                    <!-- Creative Description -->
+                    <div class="relative max-w-xl mx-auto lg:mx-0 my-8">
+                     
+                    </div>
+
+                    <!-- Service Highlights -->
+                    <div class="grid grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0 mb-8">
+                        <div class="text-center p-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30">
+                            <div class="text-2xl font-bold text-white">500+</div>
+                            <div class="text-xs text-white/80">Projects Completed</div>
+                        </div>
+                        <div class="text-center p-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30">
+                            <div class="text-2xl font-bold text-white">50+</div>
+                            <div class="text-xs text-white/80">Expert Artisans</div>
+                        </div>
+                    </div>
+
+                
+
+                    <!-- Trust Badges -->
+                    <div class="flex items-center gap-4 mt-8 justify-center lg:justify-start bg-white/10 backdrop-blur-sm p-3 rounded-xl border border-white/20">
+                        <div class="flex items-center gap-1">
+                            <i class="fas fa-star text-[#FFC300]"></i>
+                            <span class="text-sm text-white">4.9 Rating</span>
+                        </div>
+                        <div class="w-px h-4 bg-white/30"></div>
+                        <div class="flex items-center gap-1">
+                            <i class="fas fa-clock text-white"></i>
+                            <span class="text-sm text-white">Fast Turnaround</span>
+                        </div>
+                        <div class="w-px h-4 bg-white/30"></div>
+                        <div class="flex items-center gap-1">
+                            <i class="fas fa-shield-alt text-white"></i>
+                            <span class="text-sm text-white">Guaranteed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Service Cards Showcase -->
+                <div class="relative hidden lg:block">
+                    <!-- Main Service Card -->
+                    <div class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-3xl p-6 shadow-2xl transform hover:scale-105 transition-all duration-500 border-2 border-white/50">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #7B2CBF, #0b8482);">
+                                <i class="fas fa-crown text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 dark:text-white">Premium Services</h3>
+                                <p class="text-xs text-gray-500">Custom solutions for every maker</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Service List -->
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-[#7B2CBF20] flex items-center justify-center">
+                                        <i class="fas fa-paint-roller text-sm" style="color: #7B2CBF;"></i>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-800 dark:text-white">Custom Framing</span>
+                                </div>
+                                <span class="text-xs px-2 py-1 rounded-full" style="background: #7B2CBF; color: white;">Popular</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-[#0b848220] flex items-center justify-center">
+                                        <i class="fas fa-chalkboard-teacher text-sm" style="color: #0b8482;"></i>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-800 dark:text-white">Private Workshops</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-[#7B2CBF20] flex items-center justify-center">
+                                        <i class="fas fa-tools text-sm" style="color: #7B2CBF;"></i>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-800 dark:text-white">Equipment Rental</span>
+                                </div>
+                                <span class="text-xs px-2 py-1 rounded-full" style="background: #0b8482; color: white;">New</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-[#0b848220] flex items-center justify-center">
+                                        <i class="fas fa-pencil-ruler text-sm" style="color: #0b8482;"></i>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-800 dark:text-white">Project Consultation</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-all" style="color: #7B2CBF;">
+                            View All Services <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Wave Divider (Custom Shape) -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" class="w-full h-auto" preserveAspectRatio="none">
+                <path fill="white" fill-opacity="0.3" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
+                <path fill="white" fill-opacity="0.1" d="M0,80L80,74.7C160,69,320,59,480,58.7C640,59,800,69,960,74.7C1120,80,1280,80,1360,80L1440,80L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
+            </svg>
+        </div>
+    </section>
+    <!-- Services Section -->
+<section class="py-24 bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-20">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Our Craft Services
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        We provide everything you need to learn, create, and grow your passion for handmade crafts.
+      </p>
+    </div>
+
+    <!-- Services Layout -->
+    <div class="space-y-16">
+
+      <!-- Service 1 -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+            DIY Workshop Programs
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+            Join our hands-on creative workshops designed for beginners and advanced hobbyists. 
+            Learn techniques in resin art, scrapbooking, candle making, and more.
+          </p>
+          <button class="px-6 py-3 bg-[#7B2CBF] text-white rounded-full 
+                         transition duration-300 hover:opacity-90 hover:scale-105">
+                     <a href="servicedetails.html"> Explore More</a>
+
+          </button>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl shadow-md 
+                    transition duration-300 hover:scale-[1.02]">
+          <img src="images\program.avif"
+               alt="DIY Workshop"
+               class="w-full h-80 object-cover">
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="grid md:grid-cols-2 gap-10 items-center md:flex-row-reverse">
+        <div class="order-2 md:order-1 overflow-hidden rounded-2xl shadow-md 
+                    transition duration-300 hover:scale-[1.02]">
+          <img src="images\kits.avif"
+               alt="Custom Craft Kits"
+               class="w-full h-80 object-cover">
+        </div>
+
+        <div class="order-1 md:order-2">
+          <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+            Custom Craft Kits
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+            Get curated craft kits delivered to your doorstep. Each kit includes 
+            premium materials and step-by-step instructions to complete your project.
+          </p>
+          <button class="px-6 py-3 bg-[#0b8482] text-white rounded-full 
+                         transition duration-300 hover:opacity-90 hover:scale-105">
+                    <a href="servicedetails.html"> Explore More</a>
+
+          </button>
+        </div>
+      </div>
+      
+
+      <!-- Service 3 -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+            Bulk Supplies for Creators
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+            Running a small handmade business? We offer bulk discounts 
+            and high-quality supplies to help scale your creative journey.
+          </p>
+          <button class="px-6 py-3 bg-[#7B2CBF] text-white rounded-full 
+                         transition duration-300 hover:opacity-90 hover:scale-105">
+                     <a href="servicedetails.html"> Explore More</a>
+
+          </button>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl shadow-md 
+                    transition duration-300 hover:scale-[1.02]">
+          <img src="images\bulk.avif"
+               alt="Craft Supplies"
+               class="w-full h-80 object-cover">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+    <!-- Services Section -->
+<section class="py-24 bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    
+
+    <!-- Services Layout -->
+    <div class="space-y-6">
+
+     
+
+      <!-- Service 2 -->
+      <div class="grid md:grid-cols-2 gap-10 items-center md:flex-row-reverse">
+        <div class="order-2 md:order-1 overflow-hidden rounded-2xl shadow-md 
+                    transition duration-300 hover:scale-[1.02]">
+          <img src="images\our story.avif"
+               alt="Custom Craft Kits"
+               class="w-full h-80 object-cover">
+        </div>
+
+        <div class="order-1 md:order-2">
+          <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+            Beginner Friendly Classes
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+            Get curated craft kits delivered to your doorstep. Each kit includes 
+            premium materials and step-by-step instructions to complete your project.
+          </p>
+          <button class="px-6 py-3 bg-[#0b8482] text-white rounded-full 
+                         transition duration-300 hover:opacity-90 hover:scale-105">
+                    <a href="servicedetails.html"> Explore More</a>
+
+          </button>
+        </div>
+      </div>
+      
+
+      <!-- Service 3 -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+            Books and Guides
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+            Running a small handmade business? We offer bulk discounts 
+            and high-quality supplies to help scale your creative journey.
+          </p>
+          <button class="px-6 py-3 bg-[#7B2CBF] text-white rounded-full 
+                         transition duration-300 hover:opacity-90 hover:scale-105">
+                     <a href="servicedetails.html"> Explore More</a>
+
+          </button>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl shadow-md 
+                    transition duration-300 hover:scale-[1.02]">
+          <img src="images\craft15.webp"
+               alt="Craft Supplies"
+               class="w-full h-80 object-cover">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24 bg-gray-50 dark:bg-[#0c0c18] transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Flexible Plans for Every Creator
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Choose a plan that fits your crafting journey — whether you're a beginner or a professional artist.
+      </p>
+    </div>
+
+    <!-- Pricing Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Basic Plan -->
+      <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-md 
+                  hover:shadow-xl transition-all duration-300 
+                  border border-gray-200 dark:border-gray-700">
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+          Starter
+        </h3>
+
+        <p class="text-4xl font-bold text-[#7B2CBF] mb-6">
+          $19<span class="text-lg text-gray-500 dark:text-gray-400">/month</span>
+        </p>
+
+        <ul class="space-y-4 mb-8 text-gray-600 dark:text-gray-400">
+          <li>✔ Access to basic tutorials</li>
+          <li>✔ Monthly DIY project guide</li>
+          <li>✔ Community access</li>
+        </ul>
+
+        <button class="w-full py-3 rounded-xl bg-[#7B2CBF] text-white 
+                       hover:bg-[#6823a8] transition-all duration-300">
+          Get Started
+        </button>
+      </div>
+
+      <!-- Popular Plan -->
+      <div class="relative bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg 
+                  hover:shadow-2xl transition-all duration-300 
+                  border-2 border-[#0b8482] scale-105">
+
+        <!-- Badge -->
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 
+                     bg-[#0b8482] text-white text-xs px-4 py-1 rounded-full">
+          Most Popular
+        </span>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+          Pro Creator
+        </h3>
+
+        <p class="text-4xl font-bold text-[#0b8482] mb-6">
+          $39<span class="text-lg text-gray-500 dark:text-gray-400">/month</span>
+        </p>
+
+        <ul class="space-y-4 mb-8 text-gray-600 dark:text-gray-400">
+          <li>✔ All Starter features</li>
+          <li>✔ Premium workshops</li>
+          <li>✔ Exclusive craft kits</li>
+          <li>✔ Priority support</li>
+        </ul>
+
+        <button class="w-full py-3 rounded-xl bg-[#0b8482] text-white 
+                       hover:bg-[#09706e] transition-all duration-300">
+          Upgrade Now
+        </button>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-md 
+                  hover:shadow-xl transition-all duration-300 
+                  border border-gray-200 dark:border-gray-700">
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+          Business
+        </h3>
+
+        <p class="text-4xl font-bold text-[#7B2CBF] mb-6">
+          $79<span class="text-lg text-gray-500 dark:text-gray-400">/month</span>
+        </p>
+
+        <ul class="space-y-4 mb-8 text-gray-600 dark:text-gray-400">
+          <li>✔ Bulk craft supplies</li>
+          <li>✔ Private workshops</li>
+          <li>✔ Custom branding kits</li>
+          <li>✔ Dedicated support</li>
+        </ul>
+
+        <button class="w-full py-3 rounded-xl bg-[#7B2CBF] text-white 
+                       hover:bg-[#6823a8] transition-all duration-300">
+          Contact Us
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- SERVICES GRID SECTION -->
+    <section class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-4" style="background: #7B2CBF20; color: #7B2CBF;">
+                    <i class="fas fa-crown"></i> What We Offer
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Expert Services for <span style="color: #0b8482;">Every Crafter</span></h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">From beginners to professional artisans, we have the services you need to bring your creative vision to life.</p>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border hover:shadow-xl" style="border-color: #7B2CBF40;">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4" style="background: #7B2CBF20;">
+                        <i class="fas fa-paint-roller text-2xl" style="color: #7B2CBF;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Custom Framing</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Preserve your masterpieces with our custom framing service. Choose from 50+ frame styles.</p>
+                    <a href="servicedetails.html" class="text-sm font-medium hover:underline" style="color: #7B2CBF;">Learn more →</a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border hover:shadow-xl" style="border-color: #0b848240;">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4" style="background: #0b848220;">
+                        <i class="fas fa-chalkboard-teacher text-2xl" style="color: #0b8482;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Private Workshops</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">One-on-one or group sessions with expert artists. Perfect for birthdays and team events.</p>
+                    <a href="servicedetails.html" class="text-sm font-medium hover:underline" style="color: #0b8482;">Learn more →</a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border hover:shadow-xl" style="border-color: #7B2CBF40;">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4" style="background: #7B2CBF20;">
+                        <i class="fas fa-tools text-2xl" style="color: #7B2CBF;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Equipment Rental</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Try before you buy! Rent professional equipment for your projects at affordable rates.</p>
+                    <a href="servicedetails.html" class="text-sm font-medium hover:underline" style="color: #7B2CBF;">Learn more →</a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border hover:shadow-xl" style="border-color: #0b848240;">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4" style="background: #0b848220;">
+                        <i class="fas fa-pencil-ruler text-2xl" style="color: #0b8482;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Project Consultation</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Get expert advice on materials, techniques, and design for your next big project.</p>
+                    <a href="servicedetails.html" class="text-sm font-medium hover:underline" style="color: #0b8482;">Learn more →</a>
+                </div>
+            </div>
+            
+            <!-- CTA Banner -->
+            <div class="mt-12 bg-gradient-to-r from-[#7B2CBF] to-[#0b8482] rounded-3xl p-8 text-center">
+                <h3 class="text-2xl font-bold text-white mb-2">Need a Custom Solution?</h3>
+                <p class="text-white/90 mb-4">Tell us about your project and we'll create a personalized service package just for you.</p>
+                <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-[#00BFA6] text-[#1A1A2E] font-semibold rounded-xl hover:bg-white transition-all duration-300">
+                    <i class="fas fa-headset"></i>
+                    Talk to Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+  
+
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const body = document.body;
+        
+        function setDarkMode(isDark) {
+            if (isDark) {
+                body.classList.add('dark-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                themeIcon.style.color = '#FFC300';
+                darkToggle.style.background = '#1e1e1e';
+            } else {
+                body.classList.remove('dark-mode');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                themeIcon.style.color = '#7B2CBF';
+                darkToggle.style.background = 'white';
+            }
+        }
+        
+        // Check for saved preference
+        const savedDark = localStorage.getItem('craft-services-dark') === 'true';
+        setDarkMode(savedDark);
+        
+        darkToggle.addEventListener('click', function() {
+            const isDark = !body.classList.contains('dark-mode');
+            setDarkMode(isDark);
+            localStorage.setItem('craft-services-dark', isDark);
+        });
+        
+        // RTL Toggle
+        const rtlToggle = document.getElementById('rtlToggle');
+        
+        function setRTL(isRTL) {
+            if (isRTL) {
+                body.classList.add('rtl-mode');
+                document.documentElement.setAttribute('dir', 'rtl');
+            } else {
+                body.classList.remove('rtl-mode');
+                document.documentElement.setAttribute('dir', 'ltr');
+            }
+        }
+        
+        const savedRTL = localStorage.getItem('craft-services-rtl') === 'true';
+        setRTL(savedRTL);
+        
+        rtlToggle.addEventListener('click', function() {
+            const isRTL = body.classList.contains('rtl-mode');
+            setRTL(!isRTL);
+            localStorage.setItem('craft-services-rtl', !isRTL);
+        });
+    </script>
+
+
+       
+              <div id="footer"></div>
+      <script src="navbar.js"> </script>
+        <script src="footer.js"> </script>
+</body>
+</html>

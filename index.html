@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home1-GrowwCare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+             <link rel="icon" href="growwpark_logo.jpg">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+
+</head>
+<body>
+       <div id="navbar"></div>
+<!-- Hero Banner - Hobbyist Craft Supply Store -->
+<div class="relative bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] overflow-hidden">
+  <!-- Decorative Background Pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="craft-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+          <circle cx="20" cy="20" r="2" fill="#FFFFFF" />
+          <circle cx="10" cy="10" r="1.5" fill="#FFFFFF" />
+          <circle cx="30" cy="30" r="1.5" fill="#FFFFFF" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#craft-pattern)" />
+    </svg>
+  </div>
+
+  <!-- Main Container -->
+  <div class="relative mt-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Column - Text Content -->
+      <div class="text-center lg:text-left space-y-6">
+        <!-- Welcome Badge -->
+        <div class="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
+          <span class="text-white text-sm font-medium"> YOUR CREATIVE JOURNEY BEGINS HERE</span>
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          <span class="block">Unleash Your</span>
+          <span class="block mt-2">
+            <span class="text-[#00BFA6]">Inner Artist</span>
+            <span class="block text-2xl md:text-3xl text-white/90 mt-2">with Premium Craft Supplies</span>
+          </span>
+        </h1>
+
+        <!-- Description -->
+        <p class="text-lg text-white/90 max-w-xl mx-auto lg:mx-0">
+          Discover thousands of high-quality materials, tools, and inspiration for knitting, painting, jewelry making, and more.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+          <a href="services.html" 
+             class="px-8 py-4 bg-[#00BFA6] text-[#1A1A2E] font-bold rounded-xl hover:bg-white transition-all duration-300 hover:scale-105 shadow-lg text-center">
+             Shop Now
+          </a>
+          <a href="blog.html" 
+             class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-[#7B2CBF] transition-all duration-300 hover:scale-105 text-center">
+             Browse Catalog
+          </a>
+        </div>
+
+        <!-- Trust Indicators -->
+        <div class="flex flex-wrap gap-6 justify-center lg:justify-start pt-8">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-[#0b8482] flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span class="text-white font-medium">10,000+ Products</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-[#0b8482] flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span class="text-white font-medium">Free Shipping Over $50</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - Visual Showcase -->
+      <div class="relative hidden lg:block">
+        
+        <!-- Main Image Card -->
+        <div class="relative bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
+          <!-- Image Placeholder - Replace with your craft image -->
+          <div class="h-64 bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] p-6">
+            <div class="w-full h-full bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                <img 
+  src="images\img bg.avif" 
+  alt=""
+  class="w-full h-full object-cover"
+/>
+            </div>
+          </div>
+          
+          <!-- Product Tags -->
+          <div class="p-6 bg-white">
+            <h3 class="text-[#00BFA6] font-bold text-xl mb-4">Weekly Favorites</h3>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex items-center gap-2 p-2 rounded-lg bg-gray-50">
+                <div class="w-8 h-8 rounded-full bg-[#7B2CBF] flex items-center justify-center">
+                  <i class="fas fa-paint-brush text-white text-sm"></i>
+                </div>
+                <span class="text-[#4A4A4A] text-sm">Paint Sets</span>
+              </div>
+              <div class="flex items-center gap-2 p-2 rounded-lg bg-gray-50">
+                <div class="w-8 h-8 rounded-full bg-[#0b8482] flex items-center justify-center">
+                  <i class="fas fa-tshirt text-white text-sm"></i>
+                </div>
+                <span class="text-[#4A4A4A] text-sm">Yarn & Wool</span>
+              </div>
+              <div class="flex items-center gap-2 p-2 rounded-lg bg-gray-50">
+                <div class="w-8 h-8 rounded-full bg-[#7B2CBF] flex items-center justify-center">
+                  <i class="fas fa-gem text-white text-sm"></i>
+                </div>
+                <span class="text-[#4A4A4A] text-sm">Beads</span>
+              </div>
+              <div class="flex items-center gap-2 p-2 rounded-lg bg-gray-50">
+                <div class="w-8 h-8 rounded-full bg-[#0b8482] flex items-center justify-center">
+                  <i class="fas fa-cut text-white text-sm"></i>
+                </div>
+                <span class="text-[#4A4A4A] text-sm">Tools</span>
+              </div>
+            </div>
+            
+            <!-- Offer Badge -->
+            <div class="mt-4 p-3 bg-[#7B2CBF] rounded-lg text-center">
+              <span class="text-white font-bold"> 20% OFF First Order</span>
+            </div>
+          </div>
+        </div>
+
+    
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Wave -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" class="w-full h-auto" preserveAspectRatio="none">
+      <path fill="#FFFFFF" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+    </svg>
+  </div>
+</div>
+
+
+<!-- Add simple animations -->
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .grid {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+</style>
+
+<!-- ================= SHOP BY CATEGORY SECTION ================= -->
+<!-- SECTION -->
+<section class="py-20 bg-white dark:bg-[#0f172a] relative overflow-hidden transition-colors duration-500">
+
+  <!-- Decorative Gradient Blur -->
+  <div class="absolute -top-20 -left-20 w-72 h-72 bg-[#7B2CBF]/20 dark:bg-[#7B2CBF]/30 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-20 -right-20 w-72 h-72 bg-[#0b8482]/20 dark:bg-[#0b8482]/30 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="text-[#0b8482] dark:text-[#38bdf8] font-semibold uppercase tracking-widest text-sm">
+        Explore Categories
+      </span>
+
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1A1A2E] dark:text-white mt-3 transition-colors duration-300">
+        Find Everything You Need to Create
+      </h2>
+
+      <p class="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto transition-colors duration-300">
+        Discover premium craft materials curated for passionate hobbyists and creators.
+      </p>
+    </div>
+
+    <!-- Category Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- CARD 1 -->
+      <div class="group bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] p-[2px] rounded-2xl hover:scale-105 transition-all duration-300">
+        <div class="bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden h-full transition-colors duration-300">
+          <img src="images/craft2.avif" alt="Painting Supplies"
+            class="w-full h-52 object-cover transition duration-500 group-hover:scale-110"/>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#1A1A2E] dark:text-white mb-2">Painting</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">
+              Acrylics, canvases, brushes & vibrant color palettes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="group bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] p-[2px] rounded-2xl hover:scale-105 transition-all duration-300">
+        <div class="bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden h-full transition-colors duration-300">
+          <img src="images/craft4.jpg" alt="Knitting Yarn"
+            class="w-full h-52 object-cover transition duration-500 group-hover:scale-110"/>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#1A1A2E] dark:text-white mb-2">Knitting & Yarn</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">
+              Soft wool, crochet hooks & cozy knitting supplies.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="group bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] p-[2px] rounded-2xl hover:scale-105 transition-all duration-300">
+        <div class="bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden h-full transition-colors duration-300">
+          <img src="images\craft8.jpg" alt="Jewelry Making"
+            class="w-full h-52 object-cover transition duration-500 group-hover:scale-110"/>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#1A1A2E] dark:text-white mb-2">Jewelry Making</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">
+              Beads, gemstones & custom handmade accessories.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="group bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] p-[2px] rounded-2xl hover:scale-105 transition-all duration-300">
+        <div class="bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden h-full transition-colors duration-300">
+          <img src="images/craft1.jpg" alt="DIY Tools"
+            class="w-full h-52 object-cover transition duration-500 group-hover:scale-110"/>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#1A1A2E] dark:text-white mb-2">DIY Tools</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">
+              Glue guns, scissors & precision cutting tools.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="group bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] p-[2px] rounded-2xl hover:scale-105 transition-all duration-300">
+        <div class="bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden h-full transition-colors duration-300">
+          <img src="images/craft5.jpg" alt="Craft Books"
+            class="w-full h-52 object-cover transition duration-500 group-hover:scale-110"/>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#1A1A2E] dark:text-white mb-2">Craft Books</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">
+              Step-by-step tutorials & creative inspiration guides.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="group bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] p-[2px] rounded-2xl hover:scale-105 transition-all duration-300">
+        <div class="bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden h-full transition-colors duration-300">
+          <img src="images\craft18.webp"
+            alt="Starter Kits"
+            class="w-full h-52 object-cover transition duration-500 group-hover:scale-110"/>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#1A1A2E] dark:text-white mb-2">Starter Kits</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">
+              All-in-one craft kits perfect for beginners.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA Button -->
+    <div class="text-center mt-16">
+      <a href="blog.html"
+         class="inline-block px-10 py-4 bg-[#7B2CBF] text-white font-bold rounded-xl hover:bg-[#0b8482] transition-all duration-300 hover:scale-105 shadow-lg">
+        View All Categories
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- WHY CHOOSE US SECTION -->
+<section class="py-20 bg-gray-50 dark:bg-[#111827] transition-colors duration-500">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="text-[#0b8482] dark:text-[#38bdf8] font-semibold uppercase tracking-widest text-sm">
+        Why Choose Us
+      </span>
+
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1A1A2E] dark:text-white mt-3">
+        Your Creative Partner in Every Project
+      </h2>
+
+      <p class="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
+        We provide high-quality craft materials and tools to help hobbyists turn imagination into reality.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Feature 1 -->
+      <div class="bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 text-center">
+        <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] text-white text-2xl mb-6">
+          <i class="bi bi-table"></i>
+        </div>
+        <h3 class="text-lg font-bold text-[#1A1A2E] dark:text-white mb-3">
+          Premium Materials
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Carefully selected paints, fabrics, beads, and tools for lasting results.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 text-center">
+        <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] text-white text-2xl mb-6">
+          <i class="bi bi-truck"></i>
+        </div>
+        <h3 class="text-lg font-bold text-[#1A1A2E] dark:text-white mb-3">
+          So Fastest Delivery
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Quick and secure shipping to ensure your projects never slow down.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 text-center">
+        <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] text-white text-2xl mb-6">
+          <i class="bi bi-palette-fill"></i>
+        </div>
+        <h3 class="text-lg font-bold text-[#1A1A2E] dark:text-white mb-3">
+          Creative Inspiration
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Tutorials, guides, and expert tips to spark your creativity.
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 text-center">
+        <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] text-white text-2xl mb-6">
+          <i class="bi bi-hand-thumbs-up-fill"></i>
+        </div>
+        <h3 class="text-lg font-bold text-[#1A1A2E] dark:text-white mb-3">
+          Community Support
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Join a passionate community of hobbyists and creators.
+        </p>
+      </div>
+
+    </div>
+
+  
+
+  </div>
+
+</section>
+<!-- ============================================================ -->
+<!-- Featured Categories - Hobbyist Craft Supply Store -->
+<section class="bg-white dark:bg-[#0f172a] py-16 md:py-24 transition-colors duration-500">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <span class="text-[#7B2CBF] dark:text-[#38bdf8] font-semibold text-sm uppercase tracking-wider">
+        Shop by category
+      </span>
+
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1A1A2E] dark:text-white mt-2 mb-4 transition-colors duration-300">
+        Explore Our Most Popular Categories
+      </h2>
+
+      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
+        From painting to knitting, discover everything you need for your next masterpiece
+      </p>
+    </div>
+
+    <!-- Categories Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+      
+      <!-- Category 1 -->
+      <a href="#" class="group">
+        <div class="bg-white dark:bg-[#1e293b] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 overflow-hidden">
+          
+          <img src="images\img1.jpeg"
+               class="w-full h-28 object-cover group-hover:scale-110 transition duration-500" />
+
+          <div class="p-5">
+            <h3 class="text-center font-bold text-[#1A1A2E] dark:text-white">
+              Painting
+            </h3>
+            <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-1">
+              120+ items
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Category 2 -->
+      <a href="#" class="group">
+        <div class="bg-white dark:bg-[#1e293b] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 overflow-hidden">
+          
+          <img src="images\knit.jpeg"
+               class="w-full h-28 object-cover group-hover:scale-110 transition duration-500" />
+
+          <div class="p-5">
+            <h3 class="text-center font-bold text-[#1A1A2E] dark:text-white">
+              Knitting
+            </h3>
+            <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-1">
+              85+ items
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Category 3 -->
+      <a href="#" class="group">
+        <div class="bg-white dark:bg-[#1e293b] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 overflow-hidden">
+          
+          <img src="images\jewel.jpeg"
+               class="w-full h-28 object-cover group-hover:scale-110 transition duration-500" />
+
+          <div class="p-5">
+            <h3 class="text-center font-bold text-[#1A1A2E] dark:text-white">
+              Jewelry
+            </h3>
+            <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-1">
+              65+ items
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Category 4 -->
+      <a href="#" class="group">
+        <div class="bg-white dark:bg-[#1e293b] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 overflow-hidden">
+          
+          <img src="images\paper craft.jpeg"
+               class="w-full h-28 object-cover group-hover:scale-110 transition duration-500" />
+
+          <div class="p-5">
+            <h3 class="text-center font-bold text-[#1A1A2E] dark:text-white">
+              Paper Crafts
+            </h3>
+            <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-1">
+              95+ items
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Category 5 -->
+      <a href="#" class="group">
+        <div class="bg-white dark:bg-[#1e293b] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 overflow-hidden">
+          
+          <img src="images\calli.png"
+               class="w-full h-28 object-cover group-hover:scale-110 transition duration-500" />
+
+          <div class="p-5">
+            <h3 class="text-center font-bold text-[#1A1A2E] dark:text-white">
+              Calligraphy
+            </h3>
+            <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-1">
+              45+ items
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Category 6 -->
+      <a href="#" class="group">
+        <div class="bg-white dark:bg-[#1e293b] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 overflow-hidden">
+          
+          <img src="images\pot.jpeg"
+               class="w-full h-28 object-cover group-hover:scale-110 transition duration-500" />
+
+          <div class="p-5">
+            <h3 class="text-center font-bold text-[#1A1A2E] dark:text-white">
+              Pottery
+            </h3>
+            <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-1">
+              35+ items
+            </p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+
+
+  </div>
+</section>
+<!-- ============================================================ -->
+<!-- Featured Products Section -->
+<section class="py-20 bg-gray-50 dark:bg-[#111827] transition-colors duration-500">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="text-[#0b8482] dark:text-[#38bdf8] font-semibold uppercase tracking-widest text-sm">
+        Featured Products
+      </span>
+
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1A1A2E] dark:text-white mt-3">
+        Top Picks for Creative Minds
+      </h2>
+
+      <p class="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
+        Discover our best-selling craft supplies loved by hobbyists and creators.
+      </p>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Product 1 -->
+      <div class="group bg-white dark:bg-[#1e293b] rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+        <div class="overflow-hidden">
+          <img src="images\craft3.jpg"
+               class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-bold text-[#1A1A2E] dark:text-white">
+            Acrylic Paint Set
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+            24 vibrant colors for canvas & DIY projects.
+          </p>
+          <div class="flex items-center justify-between mt-4">
+            <span class="text-[#7B2CBF] font-bold text-lg">$29.99</span>
+            <button class="px-4 py-2 bg-[#7B2CBF] text-white text-sm rounded-lg hover:bg-[#0b8482] transition">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="group bg-white dark:bg-[#1e293b] rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+        <div class="overflow-hidden">
+          <img src="images\craft4.jpg"
+               class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-bold text-[#1A1A2E] dark:text-white">
+            Premium Yarn 
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+            Soft wool yarn perfect for knitting & crochet.
+          </p>
+          <div class="flex items-center justify-between mt-4">
+            <span class="text-[#7B2CBF] font-bold text-lg">$19.99</span>
+            <button class="px-4 py-2 bg-[#7B2CBF] text-white text-sm rounded-lg hover:bg-[#0b8482] transition">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="group bg-white dark:bg-[#1e293b] rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+        <div class="overflow-hidden">
+          <img src="images\craft 7.jpg"
+               class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-bold text-[#1A1A2E] dark:text-white">
+            Jewelry Making Kit
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+            Beads, charms & tools for handmade accessories.
+          </p>
+          <div class="flex items-center justify-between mt-4">
+            <span class="text-[#7B2CBF] font-bold text-lg">$24.99</span>
+            <button class="px-4 py-2 bg-[#7B2CBF] text-white text-sm rounded-lg hover:bg-[#0b8482] transition">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="group bg-white dark:bg-[#1e293b] rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+        <div class="overflow-hidden">
+          <img src="images\craft19.jpg"
+               class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-bold text-[#1A1A2E] dark:text-white">
+            Beginner Craft Kit
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+            All-in-one set to kickstart your creative journey.
+          </p>
+          <div class="flex items-center justify-between mt-4">
+            <span class="text-[#7B2CBF] font-bold text-lg">$39.99</span>
+            <button class="px-4 py-2 bg-[#7B2CBF] text-white text-sm rounded-lg hover:bg-[#0b8482] transition">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+ 
+
+  </div>
+
+</section>
+<!-- ============================================================ -->
+<!-- Testimonials Section -->
+<section class="py-20 bg-white dark:bg-[#0f172a] transition-colors duration-500">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="text-[#0b8482] dark:text-[#38bdf8] font-semibold uppercase tracking-widest text-sm">
+        Testimonials
+      </span>
+
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1A1A2E] dark:text-white mt-3">
+        What Our Creative Community Says
+      </h2>
+
+      <p class="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
+        Thousands of hobbyists trust us for quality craft supplies and inspiration.
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Testimonial 1 -->
+      <div class="bg-gray-50 dark:bg-[#1e293b] p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <img src="images\profile1.avif"
+               class="w-14 h-14 rounded-full object-cover border-2 border-[#7B2CBF]">
+          <div class="ml-4">
+            <h4 class="font-bold text-[#1A1A2E] dark:text-white">Sophia Miller</h4>
+            <p class="text-sm text-gray-500 dark:text-gray-400">DIY Enthusiast</p>
+          </div>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          “The quality of the paints and brushes is outstanding. My art projects have improved so much since I started shopping here!”
+        </p>
+        <div class="mt-4 text-yellow-400">
+          ★★★★★
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-gray-50 dark:bg-[#1e293b] p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <img src="images\profile2.webp"
+               class="w-14 h-14 rounded-full object-cover border-2 border-[#0b8482]">
+          <div class="ml-4">
+            <h4 class="font-bold text-[#1A1A2E] dark:text-white">Daniel Carter</h4>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Knitting Hobbyist</p>
+          </div>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          “Fast delivery and premium yarn quality.The quality is outstanding. I love the variety of colors available for my crochet projects.”
+        </p>
+        <div class="mt-4 text-yellow-400">
+          ★★★★★
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-gray-50 dark:bg-[#1e293b] p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <img src="images\profile4.avif"
+               class="w-14 h-14 rounded-full object-cover border-2 border-[#7B2CBF]">
+          <div class="ml-4">
+            <h4 class="font-bold text-[#1A1A2E] dark:text-white">Emily Johnson</h4>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Jewelry Designer</p>
+          </div>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          “Their jewelry kits are perfect for beginners and professionals alike. Great quality and beautiful packaging!”
+        </p>
+        <div class="mt-4 text-yellow-400">
+          ★★★★★
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ============================================================ -->
+<!-- Benefits Section -->
+<section class="bg-white dark:bg-[#0f172a] py-16 transition-colors duration-500">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Benefit 1 -->
+      <div class="text-center bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-[#7B2CBF]/10 to-[#0b8482]/10 dark:from-[#7B2CBF]/20 dark:to-[#0b8482]/20 rounded-2xl flex items-center justify-center mb-4">
+          <svg class="w-8 h-8 text-[#7B2CBF] dark:text-[#c084fc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+        <h3 class="font-bold text-[#1A1A2E] dark:text-white mb-2">
+          Quality Guaranteed
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Premium materials from trusted brands
+        </p>
+      </div>
+
+      <!-- Benefit 2 -->
+      <div class="text-center bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-[#7B2CBF]/10 to-[#0b8482]/10 dark:from-[#7B2CBF]/20 dark:to-[#0b8482]/20 rounded-2xl flex items-center justify-center mb-4">
+          <svg class="w-8 h-8 text-[#0b8482] dark:text-[#2dd4bf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="font-bold text-[#1A1A2E] dark:text-white mb-2">
+          Fast Shipping
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Free shipping on orders over $50
+        </p>
+      </div>
+
+      <!-- Benefit 3 -->
+      <div class="text-center bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-[#7B2CBF]/10 to-[#0b8482]/10 dark:from-[#7B2CBF]/20 dark:to-[#0b8482]/20 rounded-2xl flex items-center justify-center mb-4">
+          <svg class="w-8 h-8 text-[#7B2CBF] dark:text-[#c084fc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+          </svg>
+        </div>
+        <h3 class="font-bold text-[#1A1A2E] dark:text-white mb-2">
+          Huge Selection
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Over 10,000 products in stock
+        </p>
+      </div>
+
+      <!-- Benefit 4 -->
+      <div class="text-center bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-[#7B2CBF]/10 to-[#0b8482]/10 dark:from-[#7B2CBF]/20 dark:to-[#0b8482]/20 rounded-2xl flex items-center justify-center mb-4">
+          <svg class="w-8 h-8 text-[#0b8482] dark:text-[#2dd4bf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+          </svg>
+        </div>
+        <h3 class="font-bold text-[#1A1A2E] dark:text-white mb-2">
+          Trust Guaranteed
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          30-day money-back guarantee
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Add animation styles -->
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .grid > *, .flex > * {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .grid > *:nth-child(1) { animation-delay: 0.1s; }
+  .grid > *:nth-child(2) { animation-delay: 0.2s; }
+  .grid > *:nth-child(3) { animation-delay: 0.3s; }
+  .grid > *:nth-child(4) { animation-delay: 0.4s; }
+  .grid > *:nth-child(5) { animation-delay: 0.5s; }
+  .grid > *:nth-child(6) { animation-delay: 0.6s; }
+</style>
+
+
+
+
+
+
+
+
+
+       <div id="footer"></div>
+      <script src="navbar.js"> </script>
+        <script src="footer.js"> </script>
+</body>
+</html>

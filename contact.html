@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-GrowwCare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+             <link rel="icon" href="growwpark_logo.jpg">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+
+</head>
+<body>
+           <div id="navbar"></div>
+
+
+    <style>
+     
+        
+        /* Theme Colors */
+        .bg-purple { background-color: #7B2CBF; }
+        .text-purple { color: #7B2CBF; }
+        .border-purple { border-color: #7B2CBF; }
+        .hover-bg-purple:hover { background-color: #5a1e8f; }
+        
+        .bg-teal { background-color: #0b8482; }
+        .text-teal { color: #0b8482; }
+        .border-teal { border-color: #0b8482; }
+        
+        /* Dark mode variables */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        body.dark-mode .bg-white,
+        body.dark-mode .bg-white\/90,
+        body.dark-mode .bg-white\/80 {
+            background-color: #1e1e1e !important;
+            border-color: #7B2CBF40 !important;
+        }
+        body.dark-mode .text-gray-800,
+        body.dark-mode .text-gray-700 {
+            color: #e0e0e0 !important;
+        }
+        body.dark-mode .text-gray-500,
+        body.dark-mode .text-gray-600 {
+            color: #b0b0b0 !important;
+        }
+        body.dark-mode .border-gray-200 {
+            border-color: #7B2CBF40 !important;
+        }
+        body.dark-mode .bg-gray-50 {
+            background-color: #2a2a2a !important;
+        }
+        
+        /* RTL support */
+        body.rtl-mode {
+            direction: rtl;
+            text-align: right;
+        }
+        body.rtl-mode .ml-auto {
+            margin-left: 0 !important;
+            margin-right: auto !important;
+        }
+        body.rtl-mode .ml-3 {
+            margin-left: 0 !important;
+            margin-right: 0.75rem !important;
+        }
+        body.rtl-mode .mr-2 {
+            margin-right: 0 !important;
+            margin-left: 0.5rem !important;
+        }
+        body.rtl-mode .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+            --tw-space-x-reverse: 1;
+        }
+        
+        /* Custom craft elements */
+        .craft-shadow {
+            box-shadow: 0 10px 30px -5px rgba(123, 44, 191, 0.2);
+        }
+        
+      
+        
+        /* toggle buttons base style */
+        .toggle-base {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        /* RTL toggle active state */
+        .rtl-active {
+            background: #7B2CBF;
+            color: white;
+            border-color: #7B2CBF;
+        }
+        
+        /* Dark mode toggle active state */
+        .dark-active {
+            background: #1e1e1e;
+            color: #FFC300;
+            border-color: #7B2CBF;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden bg-white">
+
+    <!-- Navbar placeholder (your navbar.js will inject here) -->
+    <div id="navbar"></div>
+
+   <!-- CONTACT HERO BANNER - Clean & Professional -->
+<section class="relative pt-24 pb-16 md:pt-52 md:pb-20 overflow-hidden bg-white dark:bg-gray-900">
+    <!-- Simple Background - Solid Purple to Teal Gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[#7B2CBF] to-[#0b8482]"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Centered Content -->
+        <div class="text-center mb-20 max-w-4xl mx-auto">
+            <!-- Simple Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-6">
+                <i class="fas fa-headset text-white text-sm"></i>
+                <span class="text-white font-medium">Get in Touch</span>
+            </div>
+
+            <!-- Main Heading - Clean & Bold -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+                We'd Love to Hear From You
+            </h1>
+
+            <!-- Subheading -->
+            <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10">
+                Have questions about our products, need help with an order, or want to collaborate? Our team is here to help.
+            </p>
+
+            <!-- Contact Options - Simple Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-colors">
+                    <i class="fas fa-phone text-2xl text-white mb-2"></i>
+                    <h3 class="font-semibold text-white">Call Us</h3>
+                    <p class="text-white/80 text-sm">Mon-Fri, 9-6</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-colors">
+                    <i class="fas fa-envelope text-2xl text-white mb-2"></i>
+                    <h3 class="font-semibold text-white">Email</h3>
+                    <p class="text-white/80 text-sm">24/7 Support</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-colors">
+                    <i class="fas fa-comment text-2xl text-white mb-2"></i>
+                    <h3 class="font-semibold text-white">Live Chat</h3>
+                    <p class="text-white/80 text-sm">Avg 2 min</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-colors">
+                    <i class="fab fa-whatsapp text-2xl text-white mb-2"></i>
+                    <h3 class="font-semibold text-white">WhatsApp</h3>
+                    <p class="text-white/80 text-sm">Quick reply</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Wave -->
+    <div class="absolute bottom-0 left-0 right-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" class="w-full h-auto" preserveAspectRatio="none">
+            <path fill="white" d="M0,32L80,37.3C160,43,320,53,480,48C640,43,800,21,960,16C1120,11,1280,21,1360,26.7L1440,32L1440,60L1360,60C1280,60,1120,60,960,60C800,60,640,60,480,60C320,60,160,60,80,60L0,60Z"></path>
+        </svg>
+    </div>
+</section>
+
+
+
+
+
+
+<script>
+    // Dark Mode Toggle
+    const darkToggle = document.getElementById('darkToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+    
+    function setDarkMode(isDark) {
+        if (isDark) {
+            body.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+            themeIcon.style.color = '#FFC300';
+        } else {
+            body.classList.remove('dark-mode');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+            themeIcon.style.color = '#7B2CBF';
+        }
+    }
+    
+    const savedDark = localStorage.getItem('craft-contact-dark') === 'true';
+    setDarkMode(savedDark);
+    
+    darkToggle.addEventListener('click', function() {
+        const isDark = !body.classList.contains('dark-mode');
+        setDarkMode(isDark);
+        localStorage.setItem('craft-contact-dark', isDark);
+    });
+    
+    // RTL Toggle
+    const rtlToggle = document.getElementById('rtlToggle');
+    
+    function setRTL(isRTL) {
+        if (isRTL) {
+            body.classList.add('rtl-mode');
+            document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+            body.classList.remove('rtl-mode');
+            document.documentElement.setAttribute('dir', 'ltr');
+        }
+    }
+    
+    const savedRTL = localStorage.getItem('craft-contact-rtl') === 'true';
+    setRTL(savedRTL);
+    
+    rtlToggle.addEventListener('click', function() {
+        const isRTL = body.classList.contains('rtl-mode');
+        setRTL(!isRTL);
+        localStorage.setItem('craft-contact-rtl', !isRTL);
+    });
+</script>
+
+<style>
+    /* Dark mode styles */
+    body.dark-mode {
+        background-color: #121212;
+    }
+    body.dark-mode .bg-white {
+        background-color: #1e1e1e !important;
+    }
+    body.dark-mode .bg-gray-50 {
+        background-color: #2a2a2a !important;
+    }
+    body.dark-mode .text-gray-900 {
+        color: #f0f0f0 !important;
+    }
+    body.dark-mode .text-gray-600 {
+        color: #b0b0b0 !important;
+    }
+    
+    /* RTL styles */
+    body.rtl-mode .ml-3 {
+        margin-left: 0 !important;
+        margin-right: 0.75rem !important;
+    }
+    body.rtl-mode .mr-2 {
+        margin-right: 0 !important;
+        margin-left: 0.5rem !important;
+    }
+</style>
+
+    <!-- CONTACT INFO & FORM SECTION -->
+    <section class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid lg:grid-cols-2 gap-10">
+                <!-- LEFT: Contact Information Cards -->
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">Let's <span style="color: #7B2CBF;">Connect</span></h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">Reach out through any of these channels — we typically respond within 2 hours during business hours.</p>
+                    
+                    <!-- Contact Info Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <!-- Visit Us -->
+                        <div class="p-5 rounded-2xl border hover:shadow-lg transition-all" style="border-color: #7B2CBF40;">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-3" style="background: #7B2CBF20;">
+                                <i class="fas fa-store text-xl" style="color: #7B2CBF;"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 dark:text-white mb-1">Visit Our Studio</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">123 Craft Lane<br>Creative District, CA 90210</p>
+                            <a href="#" class="text-xs font-medium mt-2 inline-block" style="color: #7B2CBF;">Get Directions <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                        
+                        <!-- Call Us -->
+                        <div class="p-5 rounded-2xl border hover:shadow-lg transition-all" style="border-color: #7B2CBF40;">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-3" style="background: #0b848220;">
+                                <i class="fas fa-phone-volume text-xl" style="color: #0b8482;"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 dark:text-white mb-1">Call Us</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Mon-Fri, 9am-6pm</p>
+                            <p class="font-semibold mt-1" style="color: #7B2CBF;">+1 (555) 123-4567</p>
+                        </div>
+                        
+                        <!-- Email Us -->
+                        <div class="p-5 rounded-2xl border hover:shadow-lg transition-all" style="border-color: #7B2CBF40;">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-3" style="background: #7B2CBF20;">
+                                <i class="fas fa-envelope text-xl" style="color: #7B2CBF;"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 dark:text-white mb-1">Email Us</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">24/7 support</p>
+                            <p class="font-semibold mt-1" style="color: #0b8482;">hello@crafthaven.com</p>
+                        </div>
+                        
+                        <!-- Chat -->
+                        <div class="p-5 rounded-2xl border hover:shadow-lg transition-all" style="border-color: #7B2CBF40;">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-3" style="background: #0b848220;">
+                                <i class="fas fa-comment-dots text-xl" style="color: #0b8482;"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 dark:text-white mb-1">Live Chat</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Average response: 2 min</p>
+                            <button class="text-xs font-medium mt-2 px-3 py-1 rounded-full" style="background: #7B2CBF; color: white;">Start Chat</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 border" style="border-color: #7B2CBF40;">
+                        <h3 class="font-bold text-gray-800 dark:text-white mb-3">Follow Our Creative Journey</h3>
+                        <div class="flex gap-3">
+                            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center border" style="background: #7B2CBF10; border-color: #7B2CBF40; color: #7B2CBF;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center border" style="background: #0b848210; border-color: #0b848240; color: #0b8482;">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center border" style="background: #7B2CBF10; border-color: #7B2CBF40; color: #7B2CBF;">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center border" style="background: #0b848210; border-color: #0b848240; color: #0b8482;">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center border" style="background: #7B2CBF10; border-color: #7B2CBF40; color: #7B2CBF;">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RIGHT: Contact Form -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-8 border shadow-lg" style="border-color: #7B2CBF40;">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">Send Us a Message</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">We'll get back to you within 24 hours</p>
+                    
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">First Name</label>
+                                <input type="text" placeholder="Sarah" 
+                                       class="w-full px-4 py-3 border rounded-xl transition-all bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 focus:border-[#7B2CBF] focus:ring-2 focus:ring-[#7B2CBF20] outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Last Name</label>
+                                <input type="text" placeholder="Chen" 
+                                       class="w-full px-4 py-3 border rounded-xl transition-all bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 focus:border-[#7B2CBF] focus:ring-2 focus:ring-[#7B2CBF20] outline-none">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                            <input type="email" placeholder="sarah@creative.com" 
+                                   class="w-full px-4 py-3 border rounded-xl transition-all bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 focus:border-[#7B2CBF] focus:ring-2 focus:ring-[#7B2CBF20] outline-none">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+                            <select class="w-full px-4 py-3 border rounded-xl transition-all bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 focus:border-[#7B2CBF] focus:ring-2 focus:ring-[#7B2CBF20] outline-none">
+                                <option>General Inquiry</option>
+                                <option>Order Support</option>
+                                <option>Product Question</option>
+                                <option>Workshop Registration</option>
+                                <option>Wholesale / Collaboration</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                            <textarea rows="4" placeholder="Tell us how we can help..." 
+                                      class="w-full px-4 py-3 border rounded-xl transition-all bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 focus:border-[#7B2CBF] focus:ring-2 focus:ring-[#7B2CBF20] outline-none"></textarea>
+                        </div>
+                        
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="newsletter" class="w-4 h-4 rounded" style="accent-color: #7B2CBF;">
+                            <label for="newsletter" class="text-sm text-gray-600 dark:text-gray-400">Subscribe to crafty newsletter</label>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full py-4 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                                style="background: linear-gradient(135deg, #7B2CBF, #0b8482);">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP SECTION (Placeholder) -->
+    <section class="py-12 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="rounded-3xl overflow-hidden h-80 relative border-4" style="border-color: #7B2CBF40;">
+                <!-- Map Placeholder with gradient overlay -->
+                <div class="absolute inset-0" style="background: linear-gradient(135deg, #7B2CBF20, #0b848220);"></div>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-73.98510768458424!3d40.75889697932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; filter: grayscale(0.5) contrast(1.1);" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+                
+                <!-- Map Overlay Badge -->
+                <div class="absolute bottom-4 left-4 bg-white dark:bg-gray-900 px-4 py-2 rounded-full shadow-lg border-2 flex items-center gap-2" style="border-color: #7B2CBF;">
+                    <i class="fas fa-map-pin" style="color: #7B2CBF;"></i>
+                    <span class="text-sm font-medium text-gray-800 dark:text-white">123 Craft Lane, Creative District</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ TEASER SECTION -->
+    <section class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-4" style="background: #7B2CBF20; color: #7B2CBF;">
+                    <i class="fas fa-question-circle"></i> Quick Answers
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked <span style="color: #0b8482;">Questions</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-4 rounded-xl border text-center hover:shadow-lg transition-all cursor-pointer" style="border-color: #7B2CBF40;">
+                    <i class="fas fa-truck text-2xl mb-2" style="color: #7B2CBF;"></i>
+                    <h3 class="font-semibold text-gray-800 dark:text-white">Shipping Times</h3>
+                    <p class="text-xs text-gray-500">2-5 business days</p>
+                </div>
+                <div class="p-4 rounded-xl border text-center hover:shadow-lg transition-all cursor-pointer" style="border-color: #7B2CBF40;">
+                    <i class="fas fa-undo-alt text-2xl mb-2" style="color: #0b8482;"></i>
+                    <h3 class="font-semibold text-gray-800 dark:text-white">Returns</h3>
+                    <p class="text-xs text-gray-500">30-day policy</p>
+                </div>
+                <div class="p-4 rounded-xl border text-center hover:shadow-lg transition-all cursor-pointer" style="border-color: #7B2CBF40;">
+                    <i class="fas fa-credit-card text-2xl mb-2" style="color: #7B2CBF;"></i>
+                    <h3 class="font-semibold text-gray-800 dark:text-white">Payment</h3>
+                    <p class="text-xs text-gray-500">All major cards</p>
+                </div>
+                <div class="p-4 rounded-xl border text-center hover:shadow-lg transition-all cursor-pointer" style="border-color: #7B2CBF40;">
+                    <i class="fas fa-gift text-2xl mb-2" style="color: #0b8482;"></i>
+                    <h3 class="font-semibold text-gray-800 dark:text-white">Workshops</h3>
+                    <p class="text-xs text-gray-500">Free for members</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" class="inline-flex items-center gap-2 font-medium hover:underline" style="color: #7B2CBF;">
+                    View all FAQs <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="py-12 px-4" style="background: linear-gradient(135deg, #7B2CBF, #0b8482);">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Join Our Maker Community</h3>
+            <p class="text-white/90 mb-6">Get 15% off your first order when you sign up for our newsletter</p>
+            <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-1 px-4 py-3 rounded-xl border-0 focus:ring-2 focus:ring-white">
+                <button class="px-6 py-3 bg-[#00BFA6] text-[#1A1A2E] font-semibold rounded-xl hover:bg-white transition-all duration-300">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer placeholder (your footer.js will inject here) -->
+    <div id="footer"></div>
+
+   
+
+    <script>
+        (function() {
+            // Dark Mode Toggle
+            const darkToggle = document.getElementById('darkToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const body = document.body;
+            
+            function setDarkMode(isDark) {
+                if (isDark) {
+                    body.classList.add('dark-mode');
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    themeIcon.style.color = '#FFC300';
+                    darkToggle.style.background = '#1e1e1e';
+                } else {
+                    body.classList.remove('dark-mode');
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    themeIcon.style.color = '#7B2CBF';
+                    darkToggle.style.background = 'white';
+                }
+            }
+            
+            // Check for saved preference
+            const savedDark = localStorage.getItem('craft-contact-dark') === 'true';
+            setDarkMode(savedDark);
+            
+            darkToggle.addEventListener('click', function() {
+                const isDark = !body.classList.contains('dark-mode');
+                setDarkMode(isDark);
+                localStorage.setItem('craft-contact-dark', isDark);
+            });
+            
+            // RTL Toggle
+            const rtlToggle = document.getElementById('rtlToggle');
+            
+            function setRTL(isRTL) {
+                if (isRTL) {
+                    body.classList.add('rtl-mode');
+                    document.documentElement.setAttribute('dir', 'rtl');
+                } else {
+                    body.classList.remove('rtl-mode');
+                    document.documentElement.setAttribute('dir', 'ltr');
+                }
+            }
+            
+            const savedRTL = localStorage.getItem('craft-contact-rtl') === 'true';
+            setRTL(savedRTL);
+            
+            rtlToggle.addEventListener('click', function() {
+                const isRTL = body.classList.contains('rtl-mode');
+                setRTL(!isRTL);
+                localStorage.setItem('craft-contact-rtl', !isRTL);
+            });
+        })();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+           
+              <div id="footer"></div>
+      <script src="navbar.js"> </script>
+        <script src="footer.js"> </script>
+</body>
+</html>

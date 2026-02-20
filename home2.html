@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home2-GrowwCare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+             <link rel="icon" href="growwpark_logo.jpg">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+
+</head>
+<body>
+       <div id="navbar"></div>
+<!-- Hero Banner - Home Page 2 (Creative Workshop Theme) -->
+<section class="relative min-h-screen bg-white dark:bg-black overflow-hidden">
+  <!-- Background Image with Theme Gradient Overlay (Same as Home 1) -->
+  <div class="absolute inset-0 z-0">
+    <!-- Main Background Image -->
+ 
+    
+    <!-- Gradient Overlay - Same as Home 1 (Purple to Teal) -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] opacity-90"></div>
+    
+    <!-- Additional Soft Overlay for Texture -->
+    <div class="absolute inset-0 bg-black/20"></div>
+  </div>
+
+  <!-- Background Pattern Overlay (Lighter for visibility) -->
+  <div class="absolute inset-0 opacity-10 z-0 mix-blend-overlay">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="workshop-pattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+          <circle cx="30" cy="30" r="2" fill="white"/>
+          <circle cx="10" cy="10" r="1.5" fill="white"/>
+          <circle cx="50" cy="50" r="1.5" fill="white"/>
+          <path d="M30 15 L33 25 L43 25 L35 32 L38 42 L30 36 L22 42 L25 32 L17 25 L27 25 Z" fill="white" opacity="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#workshop-pattern)"/>
+    </svg>
+  </div>
+
+ 
+
+
+  <!-- Main Content Container -->
+  <div class="main relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+    <div class="grid lg:grid-cols-2 gap-12 items-center py-20">
+      
+      <!-- Left Column - Text Content (All White Text on Gradient) -->
+      <div class="text-center lg:text-left order-2 lg:order-1">
+        <!-- Welcome Badge - White with transparent background -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 bg-white/20 backdrop-blur-sm border border-white/40">
+          <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+          <span class="text-sm font-medium text-white">Welcome to Craft Workshop 2026</span>
+        </div>
+
+        <!-- Main Heading - All White -->
+        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
+          <span class="block text-white">Create &</span>
+          <span class="block mt-2 relative">
+            <span class="text-white">Inspire</span>
+            <span class="text-[#00BFA6]"> Together</span>
+          </span>
+        </h1>
+
+
+        <!-- Stats with Icons - White theme -->
+        <div class="grid grid-cols-3 gap-4 mb-8 max-w-md mx-auto lg:mx-0">
+          <div class="text-center p-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30">
+            <div class="text-2xl md:text-3xl font-bold text-white">500+</div>
+            <div class="text-xs text-white/80">Video Tutorials</div>
+          </div>
+          <div class="text-center p-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30">
+            <div class="text-2xl md:text-3xl font-bold text-white">50+</div>
+            <div class="text-xs text-white/80">Live Workshops</div>
+          </div>
+          <div class="text-center p-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30">
+            <div class="text-2xl md:text-3xl font-bold text-white">10k+</div>
+            <div class="text-xs text-white/80">Happy Makers</div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons - Adjusted for gradient background -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="services.html" 
+             class="group relative px-8 py-4 bg-white text-[#7B2CBF] font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <span class="relative z-10 flex items-center justify-center gap-2">
+              Start Creating
+              <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </span>
+          </a>
+          
+          <a href="blogdetails.html" 
+             class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-[#7B2CBF] transition-all duration-300 hover:scale-105">
+            <i class="fas fa-play-circle mr-2"></i>
+            Watch Demo
+          </a>
+        </div>
+
+        <!-- Trust Badges - White theme -->
+        <div class="flex items-center gap-4 mt-8 justify-center lg:justify-start bg-black/20 backdrop-blur-sm p-3 rounded-xl">
+          <div class="flex items-center gap-1">
+            <i class="fas fa-shield-alt text-white"></i>
+            <span class="text-sm text-white">Secure</span>
+          </div>
+          <div class="w-px h-4 bg-white/40"></div>
+          <div class="flex items-center gap-1">
+            <i class="fas fa-truck text-white"></i>
+            <span class="text-sm text-white">Free Shipping</span>
+          </div>
+          <div class="w-px h-4 bg-white/40"></div>
+          <div class="flex items-center gap-1">
+            <i class="fas fa-undo-alt text-white"></i>
+            <span class="text-sm text-white">30-Day Returns</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - Interactive Workshop Preview (Card with white theme) -->
+      <div class="relative order-1 lg:order-2">
+        <!-- Main Workshop Card - Transparent with white borders -->
+        <div class="relative bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-500 border-2 border-white/30">
+          <!-- Video Thumbnail with Play Button -->
+          <div class="relative h-64 md:h-80">
+            <img src="images/craft11.jpg" 
+                 alt="Craft workshop in progress"
+                 class="w-full h-full object-cover">
+            
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            
+            <!-- Live Badge -->
+            <div class="absolute top-4 left-4 flex items-center gap-2 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/50">
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+              <span class="text-white text-sm font-medium">LIVE WORKSHOP</span>
+            </div>
+            
+            <!-- Play Button - Purple to match theme -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <a href="#" class="w-16 h-16 md:w-20 md:h-20 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center border-2 border-white hover:scale-110 transition-transform group">
+                <i class="fas fa-play text-2xl md:text-3xl text-white group-hover:text-white transition-colors"></i>
+              </a>
+            </div>
+            
+            <!-- Workshop Info -->
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <h3 class="font-bold text-lg md:text-xl drop-shadow-lg">Watercolor Basics Workshop</h3>
+              <p class="text-sm opacity-90 drop-shadow">Join 234 makers • Starts in 2h</p>
+            </div>
+          </div>
+
+          <!-- Workshop Details - White text on transparent -->
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2">
+                <img src="images/profile2.webp" 
+                     alt="Instructor"
+                     class="w-8 h-8 rounded-full object-cover border-2 border-white">
+                <div>
+                  <p class="text-sm font-medium text-white">Sarah Chen</p>
+                  <p class="text-xs text-white/80">Master Artist</p>
+                </div>
+              </div>
+              <span class="text-sm font-semibold text-white bg-white/20 px-3 py-1 rounded-full">Free</span>
+            </div>
+
+            <!-- Attendees Avatars -->
+            <div class="flex items-center justify-between">
+              <div class="flex -space-x-2">
+                <img src="images/profile1.avif" class="w-6 h-6 rounded-full border-2 border-white">
+                <img src="images/profile2.webp" class="w-6 h-6 rounded-full border-2 border-white">
+                <img src="images/profile4.avif" class="w-6 h-6 rounded-full border-2 border-white">
+                <span class="w-6 h-6 rounded-full bg-white text-[#7B2CBF] text-xs flex items-center justify-center border-2 border-white font-bold">+1</span>
+              </div>
+              <button class="px-4 py-2 bg-white text-[#7B2CBF] font-medium rounded-lg hover:shadow-xl transition-all hover:scale-105">
+                Join Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Wave Divider - White with opacity -->
+  <div class="absolute bottom-0 left-0 right-0 z-10">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" class="w-full h-auto" preserveAspectRatio="none">
+      <path fill="white" fill-opacity="0.2" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+      <path fill="white" fill-opacity="0.1" d="M0,96L80,90.7C160,85,320,75,480,74.7C640,75,800,85,960,90.7C1120,96,1280,96,1360,96L1440,96L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+    </svg>
+  </div>
+</section>
+
+<style>
+  @media (max-width:1024px){
+    .main{
+            margin-left: 70px !important;
+    }
+  }
+</style>
+  <!-- Bottom Wave Divider -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" class="w-full h-auto" preserveAspectRatio="none">
+      <path fill="#7B2CBF" fill-opacity="0.05" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+    </svg>
+  </div>
+</section>
+
+
+<!-- Featured Categories - Home 2 -->
+<section class="py-20 
+                bg-white 
+                dark:bg-[#0f0f1a] 
+                transition-colors duration-300">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold 
+                 text-gray-900 dark:text-white mb-4">
+        Explore Our Craft Categories
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        From painting to DIY décor, discover premium supplies curated for every creative passion.
+      </p>
+    </div>
+
+    <!-- Categories Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Category 1 -->
+      <div class="group relative rounded-2xl overflow-hidden 
+                  bg-gray-50 dark:bg-gray-900 
+                  border border-gray-200 dark:border-gray-800 
+                  hover:shadow-2xl transition-all duration-500">
+
+        <div class="h-56 overflow-hidden">
+          <img src="images\craft12.jpg"
+               alt="Painting Supplies"
+               class="w-full h-full object-cover 
+                      group-hover:scale-110 transition-transform duration-500">
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-lg font-semibold 
+                     text-gray-900 dark:text-white mb-2">
+            Painting Supplies
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            Acrylics, watercolors, brushes & canvas essentials.
+          </p>
+          <a href="blog.html" 
+             class="text-[#7B2CBF] dark:text-purple-400 font-medium 
+                    hover:text-[#0b8482] transition-colors">
+            See More →
+          </a>
+        </div>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="group relative rounded-2xl overflow-hidden 
+                  bg-gray-50 dark:bg-gray-900 
+                  border border-gray-200 dark:border-gray-800 
+                  hover:shadow-2xl transition-all duration-500">
+
+        <div class="h-56 overflow-hidden">
+          <img src="images\craft6.jpg"
+               alt="Knitting & Yarn"
+               class="w-full h-full object-cover 
+                      group-hover:scale-110 transition-transform duration-500">
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-lg font-semibold 
+                     text-gray-900 dark:text-white mb-2">
+            Knitting & Yarn
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            Premium yarns, needles & crochet kits.
+          </p>
+          <a href="blog.html" 
+             class="text-[#7B2CBF] dark:text-purple-400 font-medium 
+                    hover:text-[#0b8482] transition-colors">
+            See More →
+          </a>
+        </div>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="group relative rounded-2xl overflow-hidden 
+                  bg-gray-50 dark:bg-gray-900 
+                  border border-gray-200 dark:border-gray-800 
+                  hover:shadow-2xl transition-all duration-500">
+
+        <div class="h-56 overflow-hidden">
+          <img src="images\craft14.jpg"
+               alt="DIY Home Decor"
+               class="w-full h-full object-cover 
+                      group-hover:scale-110 transition-transform duration-500">
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-lg font-semibold 
+                     text-gray-900 dark:text-white mb-2">
+            DIY Home Decor
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            Creative décor kits & handmade craft tools.
+          </p>
+          <a href="blog.html" 
+             class="text-[#7B2CBF] dark:text-purple-400 font-medium 
+                    hover:text-[#0b8482] transition-colors">
+            See More →
+          </a>
+        </div>
+      </div>
+
+      <!-- Category 4 -->
+      <div class="group relative rounded-2xl overflow-hidden 
+                  bg-gray-50 dark:bg-gray-900 
+                  border border-gray-200 dark:border-gray-800 
+                  hover:shadow-2xl transition-all duration-500">
+
+        <div class="h-56 overflow-hidden">
+          <img src="images\craft15.webp"
+               alt="Scrapbooking"
+               class="w-full h-full object-cover 
+                      group-hover:scale-110 transition-transform duration-500">
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-lg font-semibold 
+                     text-gray-900 dark:text-white mb-2">
+            Scrapbooking
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            Papers, stickers & creative journaling tools.
+          </p>
+          <a href="blog.html" 
+             class="text-[#7B2CBF] dark:text-purple-400 font-medium 
+                    hover:text-[#0b8482] transition-colors">
+            See More →
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- Creative Inspiration Section - Home 2 -->
+<section class="relative py-24 
+                bg-gradient-to-r 
+                from-white via-purple-50 to-teal-50 
+                dark:from-[#0f0f1a] dark:via-[#111827] dark:to-[#001f1f] 
+                transition-colors duration-300 overflow-hidden">
+
+  <!-- Decorative Background Shapes -->
+  <div class="absolute top-0 left-0 w-72 h-72 bg-[#7B2CBF] opacity-10 dark:opacity-5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#0b8482] opacity-10 dark:opacity-5 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left Content -->
+      <div class="text-center lg:text-left">
+
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold 
+                   text-gray-900 dark:text-white mb-6 leading-tight">
+          Turn Your Ideas Into 
+          <span class="text-[#7B2CBF]">Beautiful Creations</span>
+        </h2>
+
+        <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0">
+          Whether you're a beginner or a seasoned maker, our premium supplies
+          and creative resources help bring your imagination to life.
+          Start your next masterpiece today.
+        </p>
+
+        <!-- Feature List (No Cards) -->
+        <div class="space-y-4 mb-10">
+
+          <div class="flex items-center justify-center lg:justify-start gap-3">
+            <span class="w-6 h-6 flex items-center justify-center 
+                         bg-[#7B2CBF] text-white rounded-full text-sm">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">
+              High-quality materials for lasting results
+            </span>
+          </div>
+
+          <div class="flex items-center justify-center lg:justify-start gap-3">
+            <span class="w-6 h-6 flex items-center justify-center 
+                         bg-[#0b8482] text-white rounded-full text-sm">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">
+              Step-by-step tutorials & live workshops
+            </span>
+          </div>
+
+          <div class="flex items-center justify-center lg:justify-start gap-3">
+            <span class="w-6 h-6 flex items-center justify-center 
+                         bg-[#7B2CBF] text-white rounded-full text-sm">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">
+              Fastest delivery in places & easy returns
+            </span>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+          <a href="services.html"
+             class="px-8 py-4 
+                    bg-[#7B2CBF] hover:bg-[#0b8482] 
+                    text-white font-semibold rounded-xl 
+                    transition-all duration-300 shadow-lg hover:shadow-xl">
+            Explore Supplies
+          </a>
+
+          <a href="blogdetails.html"
+             class="px-8 py-4 
+                    border-2 border-[#7B2CBF] 
+                    text-[#7B2CBF] dark:text-purple-400 
+                    rounded-xl font-semibold
+                    hover:bg-[#7B2CBF] hover:text-white
+                    transition-all duration-300">
+            Join Workshop
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Right Image -->
+      <div class="relative">
+
+        <img src="images\craft3.jpg"
+             alt="Creative Crafting"
+             class="rounded-3xl shadow-2xl w-full object-cover">
+
+   
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- Creative Process Section - Home 2 -->
+<section class="py-24 
+                bg-white 
+                dark:bg-[#0f0f1a] 
+                transition-colors duration-300">
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-20">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold 
+                 text-gray-900 dark:text-white mb-4">
+        From Idea to Masterpiece
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        We make crafting simple, inspiring, and accessible for everyone.
+      </p>
+    </div>
+
+    <!-- Timeline Wrapper -->
+    <div class="relative">
+
+      <!-- Vertical Line -->
+      <div class="hidden md:block absolute left-1/2 top-0 
+                  transform -translate-x-1/2 
+                  w-1 h-full 
+                  bg-gradient-to-b from-[#7B2CBF] to-[#0b8482]">
+      </div>
+
+      <div class="space-y-16">
+
+        <!-- Step 1 -->
+        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+          
+          <!-- Text -->
+          <div class="md:text-right">
+            <h3 class="text-2xl font-bold text-[#7B2CBF] mb-4">
+              01. Discover Inspiration
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Browse thousands of creative ideas, tutorials, and community
+              projects to spark your imagination.
+            </p>
+          </div>
+
+          <!-- Dot -->
+          <div class="hidden md:flex justify-center">
+          </div>
+
+        </div>
+
+        <!-- Step 2 -->
+        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+          
+          <div class="hidden md:flex justify-center order-1">
+          </div>
+
+          <div class="order-2">
+            <h3 class="text-2xl font-bold text-[#0b8482] mb-4">
+              02. Choose Your Supplies
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Select premium tools and materials curated for both beginners
+              and experienced hobbyists.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Step 3 -->
+        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+          
+          <div class="md:text-right">
+            <h3 class="text-2xl font-bold text-[#7B2CBF] mb-4">
+              03. Create with Confidence
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Follow guided workshops or design freely. Our resources help
+              you craft with confidence.
+            </p>
+          </div>
+
+          <div class="hidden md:flex justify-center">
+          </div>
+
+        </div>
+
+        <!-- Step 4 -->
+        <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+          
+          <div class="hidden md:flex justify-center order-1">
+          </div>
+
+          <div class="order-2">
+            <h3 class="text-2xl font-bold text-[#0b8482] mb-4">
+              04. Share & Inspire
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Showcase your creations, connect with fellow makers,
+              and inspire the community.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-20">
+      <a href="#"
+         class="inline-block px-10 py-4 
+                bg-gradient-to-r from-[#7B2CBF] to-[#0b8482]
+                text-white font-semibold rounded-xl
+                hover:scale-105 transition-all duration-300 shadow-lg">
+        Start Your Creative Journey
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- Inspiration Gallery Section - Home 2 -->
+<section class="py-24 
+                bg-gray-50 
+                dark:bg-[#0b0b14] 
+                transition-colors duration-300">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold 
+                 text-gray-900 dark:text-white mb-4">
+        Community Creations
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Explore inspiring projects made by our creative community.
+      </p>
+    </div>
+
+    <!-- Masonry Grid -->
+    <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+
+      <!-- Image Item -->
+      <div class="relative group overflow-hidden rounded-2xl">
+        <img src="images\watercolor.webp" 
+             alt="Watercolor Art"
+             class="w-full rounded-2xl object-cover 
+                    group-hover:scale-105 transition-transform duration-500">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 
+                    bg-gradient-to-t from-black/70 via-transparent 
+                    opacity-0 group-hover:opacity-100 
+                    transition-opacity duration-500 
+                    flex items-end p-6">
+          <div>
+            <h3 class="text-white font-semibold text-lg">Watercolor Florals</h3>
+            <p class="text-gray-200 text-sm">Made by Emma R.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="relative group overflow-hidden rounded-2xl">
+        <img src="images\DIY decor.webp" 
+             alt="DIY Decor"
+             class="w-full rounded-2xl object-cover 
+                    group-hover:scale-105 transition-transform duration-500">
+
+        <div class="absolute inset-0 
+                    bg-gradient-to-t from-black/70 via-transparent 
+                    opacity-0 group-hover:opacity-100 
+                    transition-opacity duration-500 
+                    flex items-end p-6">
+          <div>
+            <h3 class="text-white font-semibold text-lg">DIY Wall Decor</h3>
+            <p class="text-gray-200 text-sm">Made by Sarah M.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="relative group overflow-hidden rounded-2xl">
+        <img src="images\handmade candles.webp" 
+             alt="Handmade Candles"
+             class="w-full rounded-2xl object-cover 
+                    group-hover:scale-105 transition-transform duration-500">
+
+        <div class="absolute inset-0 
+                    bg-gradient-to-t from-black/70 via-transparent 
+                    opacity-0 group-hover:opacity-100 
+                    transition-opacity duration-500 
+                    flex items-end p-6">
+          <div>
+            <h3 class="text-white font-semibold text-lg">Handmade Candles</h3>
+            <p class="text-gray-200 text-sm">Made by Lily A.</p>
+          </div>
+        </div>
+      </div>
+
+     
+
+    </div>
+
+
+  </div>
+</section>
+<!-- Special Offer + Newsletter Section -->
+<section class="relative py-24 overflow-hidden 
+                bg-gradient-to-r 
+                from-[#7B2CBF] via-[#6a1bb0] to-[#0b8482] 
+                dark:from-[#140a2a] dark:via-[#1a1035] dark:to-[#001f1f] 
+                transition-colors duration-300">
+
+  <!-- Decorative Glow -->
+  <div class="absolute -top-20 -left-20 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-black opacity-20 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+
+    <!-- Offer Badge -->
+    <div class="inline-block mb-6 px-4 py-2 
+                bg-white/20 backdrop-blur-md 
+                rounded-full text-sm font-medium">
+       Limited Time Offer
+    </div>
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+      Get 15% Off Your First Craft Order
+    </h2>
+
+    <!-- Description -->
+    <p class="text-lg text-white/90 max-w-2xl mx-auto mb-10">
+      Subscribe to our newsletter and receive exclusive discounts,
+      early workshop access, and creative inspiration delivered monthly.
+    </p>
+
+    <!-- Email Form -->
+    <form class="flex flex-col sm:flex-row 
+                 items-center justify-center 
+                 gap-4 max-w-xl mx-auto">
+
+      <input type="email" 
+             placeholder="Enter your email address"
+             class="w-full sm:flex-1 px-6 py-4 
+                    rounded-xl 
+                    text-gray-900 
+                    focus:outline-none focus:ring-2 focus:ring-white">
+
+      <button type="submit"
+              class="px-8 py-4 
+                     bg-white text-[#7B2CBF] 
+                     font-semibold rounded-xl 
+                     hover:bg-gray-200 
+                     transition-all duration-300 
+                     shadow-lg hover:shadow-xl">
+        Subscribe Now
+      </button>
+
+    </form>
+
+    <!-- Trust Text -->
+    <p class="mt-6 text-sm text-white/70">
+      No spam. Unsubscribe anytime.
+    </p>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+              <div id="footer"></div>
+      <script src="navbar.js"> </script>
+        <script src="footer.js"> </script>
+        </body>
+        </html>

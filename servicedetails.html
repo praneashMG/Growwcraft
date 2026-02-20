@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicedetails-GrowwCare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+             <link rel="icon" href="growwpark_logo.jpg">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+
+</head>
+<body>
+       <div id="navbar"></div>
+
+
+    <style>
+      
+        
+        /* Theme Colors */
+        .bg-purple { background-color: #7B2CBF; }
+        .text-purple { color: #7B2CBF; }
+        .border-purple { border-color: #7B2CBF; }
+        
+        .bg-teal { background-color: #0b8482; }
+        .text-teal { color: #0b8482; }
+        .border-teal { border-color: #0b8482; }
+        
+        /* Dark mode variables */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        body.dark-mode .bg-white,
+        body.dark-mode .bg-white\/90,
+        body.dark-mode .bg-white\/80 {
+            background-color: #1e1e1e !important;
+            border-color: #7B2CBF40 !important;
+        }
+        body.dark-mode .bg-gray-50 {
+            background-color: #2a2a2a !important;
+        }
+        body.dark-mode .text-gray-900 {
+            color: #f0f0f0 !important;
+        }
+        body.dark-mode .text-gray-700 {
+            color: #d0d0d0 !important;
+        }
+        body.dark-mode .text-gray-600 {
+            color: #b0b0b0 !important;
+        }
+        body.dark-mode .text-gray-500 {
+            color: #909090 !important;
+        }
+        body.dark-mode .border-gray-200 {
+            border-color: #7B2CBF40 !important;
+        }
+        
+        /* RTL support */
+        body.rtl-mode {
+            direction: rtl;
+            text-align: right;
+        }
+        body.rtl-mode .ml-3 {
+            margin-left: 0 !important;
+            margin-right: 0.75rem !important;
+        }
+        body.rtl-mode .mr-2 {
+            margin-right: 0 !important;
+            margin-left: 0.5rem !important;
+        }
+        body.rtl-mode .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+            --tw-space-x-reverse: 1;
+        }
+  
+        
+        /* Service detail card */
+        .detail-card {
+            transition: all 0.3s ease;
+        }
+        .detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(123, 44, 191, 0.2);
+        }
+        
+        /* toggle buttons */
+        .toggle-base {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .rtl-active {
+            background: #7B2CBF;
+            color: white;
+            border-color: #7B2CBF;
+        }
+        
+        .dark-active {
+            background: #1e1e1e;
+            color: #FFC300;
+            border-color: #7B2CBF;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden bg-white">
+
+    <!-- Navbar placeholder (your navbar.js will inject here) -->
+    <div id="navbar"></div>
+<!-- SERVICE DETAILS HERO BANNER - Premium Studio Style with Background Image -->
+<section class="relative pt-24 pb-16 md:pt-32 md:pb-20 overflow-hidden">
+    <!-- Background Image with Overlay - This stays the same in dark mode -->
+    <div class="absolute inset-0">
+        <!-- You can add a background image here if desired -->
+        <!-- <img src="your-background-image.jpg" alt="" class="w-full h-full object-cover"> -->
+        
+        <!-- Gradient Overlay - Purple to Teal - This will NOT change in dark mode -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#7B2CBF] to-[#0b8482]"></div>
+        
+        <!-- Subtle Pattern Overlay -->
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 20 L50 20 L40 30 L45 45 L30 35 L15 45 L20 30 L10 20 L25 20 Z' fill='%23FFFFFF' opacity='0.2'/%3E%3C/svg%3E'); background-size: 60px 60px;"></div>
+    </div>
+
+    <!-- Soft Light Effect - This stays the same -->
+    <div class="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Left Column - Service Details -->
+            <div class="max-w-xl">
+                <!-- Badge - Always light style -->
+                <div class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider mb-6 bg-white/20 backdrop-blur-sm border border-white/30 text-white">
+                    SIGNATURE SERVICE
+                </div>
+
+                <!-- Heading - Always white -->
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                    Custom <span class="text-[#00BFA6]">Framing</span>
+                </h1>
+
+                <!-- Tagline - Always white with teal border -->
+                <p class="text-lg text-white/90 mb-6 border-l-4 pl-4" style="border-left-color: #00BFA6;">
+                    Museum-quality preservation for your cherished pieces
+                </p>
+
+                <!-- Stats - Always white -->
+                <div class="flex gap-8 mb-8">
+                    <div>
+                        <div class="text-3xl font-bold text-white">50+</div>
+                        <div class="text-sm text-white/70">Frame Styles</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-white">100+</div>
+                        <div class="text-sm text-white/70">Mat Colors</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-white">48h</div>
+                        <div class="text-sm text-white/70">Express</div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons - Fixed colors that don't change -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="contact.html" class="px-8 py-4 text-[#1A1A2E] font-medium rounded-xl transition-all hover:shadow-xl flex items-center justify-center gap-2 bg-[#00BFA6] hover:bg-white">
+                        <i class="fas fa-calendar-check"></i>
+                        Book Consultation
+                    </a>
+                    <a href="gallery.html" class="px-8 py-4 border-2 border-white text-white font-medium rounded-xl transition-all hover:bg-white hover:text-[#7B2CBF] flex items-center justify-center gap-2">
+                        <i class="fas fa-images"></i>
+                        View Gallery
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column - Visual -->
+            <div class="relative">
+                <!-- Main Image Card -->
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
+                    <img src="images/handmade candles.webp" 
+                         alt="Custom framed artwork" 
+                         class="w-full h-[400px] object-cover">
+                    
+                    <!-- Gradient Overlay - Always purple -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#7B2CBF]/80 via-transparent to-transparent"></div>
+                    
+                    <!-- Price Tag - Always white background -->
+                    <div class="absolute top-6 right-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border-2 border-[#FFC300]">
+                        <span class="text-2xl font-bold text-[#7B2CBF]">$49</span>
+                        <span class="text-sm text-gray-600 ml-1">starting at</span>
+                    </div>
+
+                    <!-- Frame Info Card - Always white background -->
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <div class="bg-white/95 backdrop-blur-sm rounded-xl p-4 border-l-4" style="border-left-color: #0b8482;">
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <span class="text-xs text-gray-500">Frame</span>
+                                    <p class="font-semibold text-gray-900">Oak, Walnut, Maple</p>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-gray-500">Mat Board</span>
+                                    <p class="font-semibold text-gray-900">Acid-free Cotton</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Wave - Always white -->
+    <div class="absolute bottom-0 left-0 right-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" class="w-full h-auto" preserveAspectRatio="none">
+            <path fill="#FFFFFF" fill-opacity="0.2" d="M0,32L80,37.3C160,43,320,53,480,48C640,43,800,21,960,16C1120,11,1280,21,1360,26.7L1440,32L1440,80L1360,80C1280,80,1120,80,960,80C800,80,640,80,480,80C320,80,160,80,80,80L0,80Z"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- Add this CSS to ensure dark mode doesn't affect this section -->
+<style>
+    /* This prevents dark mode from changing anything inside this section */
+    body.dark-mode .relative.pt-24,
+    body.dark-mode .relative.pt-24 * {
+        background-color: transparent !important;
+        color: inherit !important;
+    }
+    
+    /* Ensure the gradient background stays the same */
+    body.dark-mode .absolute.inset-0 .bg-gradient-to-r {
+        background-image: linear-gradient(to right, #7B2CBF, #0b8482) !important;
+    }
+    
+    /* Keep all text white */
+    body.dark-mode .text-white,
+    body.dark-mode .text-white\/90,
+    body.dark-mode .text-white\/80,
+    body.dark-mode .text-white\/70 {
+        color: white !important;
+    }
+    
+    /* Keep white backgrounds white */
+    body.dark-mode .bg-white\/95,
+    body.dark-mode .bg-white\/20,
+    body.dark-mode .bg-white\/30 {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+    }
+    
+    /* Keep button colors */
+    body.dark-mode .bg-\[\#00BFA6\] {
+        background-color: #00BFA6 !important;
+    }
+    
+    body.dark-mode .border-white {
+        border-color: white !important;
+    }
+    
+    /* Keep price tag text */
+    body.dark-mode .text-\[\#7B2CBF\] {
+        color: #7B2CBF !important;
+    }
+    
+    body.dark-mode .text-gray-600 {
+        color: #4b5563 !important;
+    }
+    
+    body.dark-mode .text-gray-900 {
+        color: #111827 !important;
+    }
+    
+    body.dark-mode .text-gray-500 {
+        color: #6b7280 !important;
+    }
+</style>
+
+
+<!-- Service Details - What's Included -->
+<section class="py-24 bg-white dark:bg-[#0f0f1a] transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-20">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        What’s Included in This Service
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Everything you need to confidently complete your creative project from start to finish.
+      </p>
+    </div>
+
+    <!-- Content Layout -->
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left - Image -->
+      <div class="relative">
+        <img src="images\craft5.jpg" 
+             alt="Craft supplies layout"
+             class="rounded-3xl shadow-xl object-cover w-full h-[450px]">
+
+        <!-- Decorative Accent -->
+        <div class="absolute -bottom-6 -right-6 w-32 h-32 
+                    bg-gradient-to-br from-[#7B2CBF] to-[#0b8482] 
+                    opacity-20 rounded-3xl blur-2xl">
+        </div>
+      </div>
+
+      <!-- Right - Included List -->
+      <div class="space-y-8">
+
+        <!-- Item 1 -->
+        <div class="flex items-start gap-4 group">
+          <div class="w-12 h-12 flex items-center justify-center 
+                      rounded-xl bg-[#7B2CBF]/10 
+                      text-[#7B2CBF] font-bold text-lg
+                      group-hover:scale-110 transition-transform duration-300">
+            ✓
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              Premium Craft Materials
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              High-quality tools and supplies curated for durability and professional results.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="flex items-start gap-4 group">
+          <div class="w-12 h-12 flex items-center justify-center 
+                      rounded-xl bg-[#0b8482]/10 
+                      text-[#0b8482] font-bold text-lg
+                      group-hover:scale-110 transition-transform duration-300">
+            ✓
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              Step-by-Step Tutorials
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Easy-to-follow video or live guidance suitable for beginners and advanced makers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="flex items-start gap-4 group">
+          <div class="w-12 h-12 flex items-center justify-center 
+                      rounded-xl bg-[#7B2CBF]/10 
+                      text-[#7B2CBF] font-bold text-lg
+                      group-hover:scale-110 transition-transform duration-300">
+            ✓
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              Community Support
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Access to our creative community for feedback, inspiration, and collaboration.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="flex items-start gap-4 group">
+          <div class="w-12 h-12 flex items-center justify-center 
+                      rounded-xl bg-[#0b8482]/10 
+                      text-[#0b8482] font-bold text-lg
+                      group-hover:scale-110 transition-transform duration-300">
+            ✓
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              Satisfaction Guarantee
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              30-day support and easy assistance to ensure your creative success.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="mt-20 text-center">
+      <button class="px-10 py-4 rounded-xl 
+                     bg-gradient-to-r from-[#7B2CBF] to-[#0b8482] 
+                     text-white font-semibold 
+                     hover:scale-105 transition-all duration-300 shadow-lg">
+        <a href="services.html">Look into Services Once</a>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+    <!-- SERVICE DETAILS CONTENT SECTION -->
+    <section class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Main Content - Left Column (2/3) -->
+                <div class="lg:col-span-2">
+                    <!-- Section: Overview -->
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                        <span class="w-1 h-6 rounded-full bg-[#7B2CBF]"></span>
+                        Service Overview
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                        At Craft Haven, we believe that every piece of art deserves to be presented beautifully. Our custom framing service combines traditional craftsmanship with modern techniques to create frames that not only protect your artwork but enhance its visual appeal.
+                    </p>
+                    
+                    <!-- Feature Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="detail-card bg-gray-50 dark:bg-gray-800 rounded-xl p-4 border" style="border-color: #7B2CBF40;">
+                            <i class="fas fa-tree text-xl mb-2" style="color: #7B2CBF;"></i>
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Premium Woods</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Oak, walnut, maple, and sustainable options</p>
+                        </div>
+                        <div class="detail-card bg-gray-50 dark:bg-gray-800 rounded-xl p-4 border" style="border-color: #0b848240;">
+                            <i class="fas fa-palette text-xl mb-2" style="color: #0b8482;"></i>
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Custom Mats</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">100+ colors, double mats, and decorative cuts</p>
+                        </div>
+                        <div class="detail-card bg-gray-50 dark:bg-gray-800 rounded-xl p-4 border" style="border-color: #7B2CBF40;">
+                            <i class="fas fa-shield-alt text-xl mb-2" style="color: #7B2CBF;"></i>
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-1">UV Protection</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Museum-grade glass with 99% UV filtration</p>
+                        </div>
+                        <div class="detail-card bg-gray-50 dark:bg-gray-800 rounded-xl p-4 border" style="border-color: #0b848240;">
+                            <i class="fas fa-tools text-xl mb-2" style="color: #0b8482;"></i>
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Conservation</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Acid-free, reversible mounting techniques</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Section: Process -->
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                        <span class="w-1 h-6 rounded-full bg-[#0b8482]"></span>
+                        Our Process
+                    </h2>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold" style="background: #7B2CBF;">1</div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Consultation</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Bring in your piece or send photos. We'll discuss style, materials, and budget.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold" style="background: #0b8482;">2</div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Design</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">We create a digital mockup showing frame, mat, and glazing combinations.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold" style="background: #7B2CBF;">3</div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Fabrication</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Master craftsmen hand-cut mats and assemble your frame with precision.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold" style="background: #0b8482;">4</div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Finishing</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Final inspection, fitting, and delivery to your home or studio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Section: Gallery -->
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                        <span class="w-1 h-6 rounded-full bg-[#7B2CBF]"></span>
+                        Recent Projects
+                    </h2>
+                    
+                    <div class="grid grid-cols-3 gap-3 mb-6">
+                        <img src="images\scarf.avif" alt="Framed art" class="rounded-xl w-full h-24 object-cover border-2" style="border-color: #7B2CBF40;">
+                        <img src="images\kits.avif" alt="Framed art" class="rounded-xl w-full h-24 object-cover border-2" style="border-color: #0b848240;">
+                        <img src="images\our story.avif" alt="Framed art" class="rounded-xl w-full h-24 object-cover border-2" style="border-color: #7B2CBF40;">
+                    </div>
+                </div>
+                
+                <!-- Sidebar - Right Column (1/3) -->
+                <div class="lg:col-span-1">
+                    <!-- Pricing Card -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 mb-6 border" style="border-color: #7B2CBF40;">
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                            <i class="fas fa-tag" style="color: #7B2CBF;"></i> Pricing Guide
+                        </h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Small (up to 11x14")</span>
+                                <span class="font-semibold text-gray-900 dark:text-white">$49 - $79</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Medium (up to 18x24")</span>
+                                <span class="font-semibold text-gray-900 dark:text-white">$89 - $149</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Large (up to 24x36")</span>
+                                <span class="font-semibold text-gray-900 dark:text-white">$159 - $249</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Oversized (36x48"+")</span>
+                                <span class="font-semibold text-gray-900 dark:text-white">Custom quote</span>
+                            </li>
+                        </ul>
+                        <div class="border-t border-gray-200 dark:border-gray-700 mt-4 pt-4">
+                            <p class="text-xs text-gray-500">All prices include basic frame and single mat. Additional charges for premium woods, double mats, and specialty glass.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Card -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 mb-6 border" style="border-color: #0b848240;">
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                            <i class="fas fa-question-circle" style="color: #0b8482;"></i> Quick FAQs
+                        </h3>
+                        <div class="space-y-3">
+                            <div>
+                                <p class="font-medium text-gray-900 dark:text-white text-sm">How long does it take?</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">Standard: 5-7 business days. Express: 48 hours (+50%).</p>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-900 dark:text-white text-sm">Do you offer shadow boxes?</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">Yes, for 3D items like medals, textiles, and keepsakes.</p>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-900 dark:text-white text-sm">Can you frame canvases?</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">Absolutely! We offer floater frames for gallery-wrap canvases.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Now Card -->
+                    <div class="bg-gradient-to-r from-[#7B2CBF] to-[#0b8482] rounded-2xl p-6 text-white">
+                        <h3 class="font-bold text-lg mb-2">Ready to frame your masterpiece?</h3>
+                        <p class="text-sm text-white/90 mb-4">Book a free consultation with our framing experts.</p>
+                        <a href="#" class="block w-full bg-[#00BFA6] text-[#1A1A2E] text-center font-semibold py-3 rounded-xl hover:bg-white transition-colors">
+                            Schedule Now
+                        </a>
+                        <p class="text-xs text-white/80 mt-3 text-center">Or call us: +1 (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Details - FAQ Section -->
+<section class="py-24 bg-gray-50 dark:bg-[#0c0c18] transition-colors duration-300">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Frequently Asked Questions
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400">
+        Everything you need to know before joining our creative service.
+      </p>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="space-y-6">
+
+      <!-- FAQ Item -->
+      <div class="group border border-gray-200 dark:border-gray-700 rounded-2xl bg-white dark:bg-[#151528] overflow-hidden transition-all duration-300 hover:shadow-md dark:hover:shadow-lg">
+        <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none"
+                onclick="toggleFAQ(this)">
+          <span class="font-semibold text-gray-900 dark:text-white">
+            Do I need prior experience to join?
+          </span>
+          <span class="text-[#7B2CBF] text-xl transition-transform duration-300">+</span>
+        </button>
+        <div class="px-6 pb-5 hidden text-gray-600 dark:text-gray-400">
+          No experience is required. Our tutorials and workshops are beginner-friendly while still offering advanced techniques for experienced makers.
+        </div>
+      </div>
+
+      <!-- FAQ Item -->
+      <div class="group border border-gray-200 dark:border-gray-700 rounded-2xl bg-white dark:bg-[#151528] overflow-hidden transition-all duration-300 hover:shadow-md dark:hover:shadow-lg">
+        <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none"
+                onclick="toggleFAQ(this)">
+          <span class="font-semibold text-gray-900 dark:text-white">
+            Are materials included in the service?
+          </span>
+          <span class="text-[#0b8482] text-xl transition-transform duration-300">+</span>
+        </button>
+        <div class="px-6 pb-5 hidden text-gray-600 dark:text-gray-400">
+          Yes! Selected premium materials are included, and additional supplies can be purchased directly from our store.
+        </div>
+      </div>
+
+      <!-- FAQ Item -->
+      <div class="group border border-gray-200 dark:border-gray-700 rounded-2xl bg-white dark:bg-[#151528] overflow-hidden transition-all duration-300 hover:shadow-md dark:hover:shadow-lg">
+        <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none"
+                onclick="toggleFAQ(this)">
+          <span class="font-semibold text-gray-900 dark:text-white">
+            Can I access workshop recordings later?
+          </span>
+          <span class="text-[#7B2CBF] text-xl transition-transform duration-300">+</span>
+        </button>
+        <div class="px-6 pb-5 hidden text-gray-600 dark:text-gray-400">
+          Absolutely. All live workshops are recorded and available for replay anytime from your dashboard.
+        </div>
+      </div>
+
+      <!-- FAQ Item -->
+      <div class="group border border-gray-200 dark:border-gray-700 rounded-2xl bg-white dark:bg-[#151528] overflow-hidden transition-all duration-300 hover:shadow-md dark:hover:shadow-lg">
+        <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none"
+                onclick="toggleFAQ(this)">
+          <span class="font-semibold text-gray-900 dark:text-white">
+            What if I’m not satisfied?
+          </span>
+          <span class="text-[#0b8482] text-xl transition-transform duration-300">+</span>
+        </button>
+        <div class="px-6 pb-5 hidden text-gray-600 dark:text-gray-400">
+          We offer a 30-day satisfaction guarantee. If you're not happy, our support team will assist you promptly.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ Toggle Script -->
+<script>
+  function toggleFAQ(button) {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector("span:last-child");
+
+    content.classList.toggle("hidden");
+    icon.textContent = content.classList.contains("hidden") ? "+" : "−";
+  }
+</script>
+
+
+ 
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const body = document.body;
+        
+        function setDarkMode(isDark) {
+            if (isDark) {
+                body.classList.add('dark-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                themeIcon.style.color = '#FFC300';
+                darkToggle.style.background = '#1e1e1e';
+            } else {
+                body.classList.remove('dark-mode');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                themeIcon.style.color = '#7B2CBF';
+                darkToggle.style.background = 'white';
+            }
+        }
+        
+        // Check for saved preference
+        const savedDark = localStorage.getItem('craft-servicedetails-dark') === 'true';
+        setDarkMode(savedDark);
+        
+        darkToggle.addEventListener('click', function() {
+            const isDark = !body.classList.contains('dark-mode');
+            setDarkMode(isDark);
+            localStorage.setItem('craft-servicedetails-dark', isDark);
+        });
+        
+        // RTL Toggle
+        const rtlToggle = document.getElementById('rtlToggle');
+        
+        function setRTL(isRTL) {
+            if (isRTL) {
+                body.classList.add('rtl-mode');
+                document.documentElement.setAttribute('dir', 'rtl');
+            } else {
+                body.classList.remove('rtl-mode');
+                document.documentElement.setAttribute('dir', 'ltr');
+            }
+        }
+        
+        const savedRTL = localStorage.getItem('craft-servicedetails-rtl') === 'true';
+        setRTL(savedRTL);
+        
+        rtlToggle.addEventListener('click', function() {
+            const isRTL = body.classList.contains('rtl-mode');
+            setRTL(!isRTL);
+            localStorage.setItem('craft-servicedetails-rtl', !isRTL);
+        });
+    </script>
+
+
+
+
+
+
+
+
+       
+              <div id="footer"></div>
+      <script src="navbar.js"> </script>
+        <script src="footer.js"> </script>
+</body>
+</html>

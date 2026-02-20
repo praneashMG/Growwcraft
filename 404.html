@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 error-GrowwCare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+             <link rel="icon" href="growwpark_logo.jpg">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+
+</head>
+<body>
+
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            transition: background-color 0.3s, color 0.2s;
+        }
+        
+        /* Theme Colors */
+        .bg-purple { background-color: #7B2CBF; }
+        .text-purple { color: #7B2CBF; }
+        .border-purple { border-color: #7B2CBF; }
+        
+        .bg-teal { background-color: #0b8482; }
+        .text-teal { color: #0b8482; }
+        .border-teal { border-color: #0b8482; }
+        
+        /* Dark mode variables - only for footer/nav */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        body.dark-mode .bg-white {
+            background-color: #1e1e1e !important;
+        }
+        body.dark-mode .bg-gray-50 {
+            background-color: #2a2a2a !important;
+        }
+        
+        /* RTL support */
+        body.rtl-mode {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        /* Floating animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-25px); }
+        }
+        .animate-float-slow {
+            animation: float-slow 7s ease-in-out infinite;
+        }
+        
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 3s ease-in-out infinite;
+        }
+        
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+        }
+        .animate-wiggle {
+            animation: wiggle 2s ease-in-out infinite;
+        }
+        
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 12s linear infinite;
+        }
+        
+        /* toggle buttons */
+        .toggle-base {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .rtl-active {
+            background: #7B2CBF;
+            color: white;
+            border-color: #7B2CBF;
+        }
+        
+        .dark-active {
+            background: #1e1e1e;
+            color: #FFC300;
+            border-color: #7B2CBF;
+        }
+        
+        /* Hand-drawn style for the 404 */
+        .hand-drawn {
+            text-shadow: 4px 4px 0 #0b8482, 8px 8px 0 rgba(123, 44, 191, 0.3);
+            transform: rotate(-2deg);
+        }
+        
+        /* Yarn ball path */
+        .yarn-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 3s ease-in-out forwards infinite;
+        }
+        
+        @keyframes draw {
+            to { stroke-dashoffset: 0; }
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden bg-white">
+
+  
+
+    <!-- 404 HERO - CRAFT STUDIO THEME -->
+    <section class="relative min-h-[80vh] flex py-40 items-center justify-center overflow-hidden bg-gradient-to-br from-[#7B2CBF] via-[#9d4edd] to-[#0b8482]">
+        
+        <!-- Craft Paper Texture Overlay -->
+        <div class="absolute inset-0 opacity-20 mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.2'/%3E%3C/svg%3E');"></div>
+        
+        <!-- Scattered Craft Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <!-- Yarn balls -->
+            <div class="absolute top-[15%] left-[10%] animate-bounce-slow">
+                <div class="relative">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#FFC300] to-[#FF6B6B] opacity-60 blur-sm"></div>
+                    <i class="fas fa-circle absolute inset-0 flex items-center justify-center text-white text-2xl">🧶</i>
+                </div>
+            </div>
+            
+            <!-- Paint splatters -->
+            <div class="absolute bottom-[20%] right-[15%] animate-wiggle">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="20" fill="#FFC300" fill-opacity="0.2"/>
+                    <circle cx="30" cy="30" r="8" fill="#7B2CBF" fill-opacity="0.3"/>
+                    <circle cx="55" cy="45" r="12" fill="#0b8482" fill-opacity="0.25"/>
+                </svg>
+            </div>
+            
+            <!-- Scissors -->
+            <div class="absolute top-[40%] right-[5%] animate-float-slow">
+                <i class="fas fa-cut text-5xl text-white opacity-30 transform rotate-45"></i>
+            </div>
+            
+            <!-- Buttons -->
+            <div class="absolute bottom-[30%] left-[5%] flex gap-2 animate-float">
+                <div class="w-6 h-6 rounded-full bg-[#FFC300] opacity-40"></div>
+                <div class="w-8 h-8 rounded-full bg-[#7B2CBF] opacity-30"></div>
+                <div class="w-5 h-5 rounded-full bg-[#0b8482] opacity-40"></div>
+            </div>
+            
+            <!-- Thread spool -->
+            <div class="absolute top-[60%] left-[20%] animate-spin-slow">
+                <i class="fas fa-thread text-4xl text-white opacity-30"></i>
+            </div>
+        </div>
+
+        <!-- Main Content Container -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Column - Visual 404 with Craft Elements -->
+                <div class="relative">
+                    <!-- Main 404 Display -->
+                    <div class="relative flex justify-center lg:justify-end items-center">
+                        <!-- 4 - Left -->
+                        <div class="relative transform -rotate-6 hover:rotate-0 transition-transform duration-500">
+                            <span class="text-[180px] md:text-[220px] font-bold text-white hand-drawn">4</span>
+                            <div class="absolute -top-4 -right-4 w-12 h-12 bg-[#FFC300] rounded-full flex items-center justify-center text-[#1A1A2E] font-bold text-xl shadow-xl">
+                                ✦
+                            </div>
+                        </div>
+                        
+                        <!-- 0 - Creative Yarn Ball -->
+                        <div class="relative mx-4 animate-bounce-slow">
+                            <div class="w-40 h-40 md:w-52 md:h-52 rounded-full bg-gradient-to-br from-[#FFC300] to-[#FF6B6B] shadow-2xl flex items-center justify-center relative">
+                                <!-- Yarn texture -->
+                                <div class="absolute inset-2 rounded-full bg-gradient-to-tr from-white/30 to-transparent"></div>
+                                <!-- Wrapping yarn effect -->
+                                <div class="absolute inset-0 rounded-full border-4 border-white/30 border-dashed animate-spin-slow"></div>
+                                <!-- Center -->
+                                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white flex items-center justify-center">
+                                    <span class="text-5xl md:text-6xl font-bold text-[#7B2CBF]">0</span>
+                                </div>
+                            </div>
+                            <!-- Yarn needle -->
+                            <div class="absolute -top-4 -right-4 transform rotate-12">
+                                <i class="fas fa-needle text-3xl text-white"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- 4 - Right -->
+                        <div class="relative transform rotate-6 hover:rotate-0 transition-transform duration-500">
+                            <span class="text-[180px] md:text-[220px] font-bold text-white hand-drawn">4</span>
+                            <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-[#0b8482] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-xl">
+                                ✧
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Connecting Line (Yarn) -->
+                    <svg class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-32 opacity-30 hidden lg:block" viewBox="0 0 200 50">
+                        <path d="M10,25 Q50,10 90,25 T170,25" stroke="white" stroke-width="3" fill="none" stroke-dasharray="8 8" class="yarn-path"/>
+                    </svg>
+                </div>
+
+                <!-- Right Column - Text Content -->
+                <div class="text-center lg:text-left">
+                    <!-- Creative Badge -->
+                    <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/20 backdrop-blur-md border-2 border-white/40 mb-6 transform hover:scale-105 transition-transform">
+                        <span class="w-2 h-2 bg-[#FFC300] rounded-full animate-pulse"></span>
+                        <span class="text-sm font-medium text-white tracking-wider">✦ OOPSIE DAISY ✦</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                        This page got<br>
+                        <span class="relative inline-block mt-2">
+                            <span class="relative z-10">tangled up</span>
+                        </span>
+                    </h2>
+
+                    <!-- Description with Craft Analogy -->
+                    <p class="text-xl text-white/90 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                        Like a dropped stitch or a misplaced button, this page seems to have wandered off. But don't worry – we'll help you find your way back to the creative fun!
+                    </p>
+
+                   
+
+                    <!-- Navigation Pills -->
+                    <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+                        <a href="index.html" class="group px-5 py-2.5 bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-full text-white font-medium hover:bg-white hover:text-[#7B2CBF] transition-all hover:scale-105 flex items-center gap-2">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </a>
+                        <a href="services.html" class="group px-5 py-2.5 bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-full text-white font-medium hover:bg-white hover:text-[#0b8482] transition-all hover:scale-105 flex items-center gap-2">
+                            <i class="fas fa-tools"></i>
+                            Services
+                        </a>
+                        <a href="blog.html" class="group px-5 py-2.5 bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-full text-white font-medium hover:bg-white hover:text-[#7B2CBF] transition-all hover:scale-105 flex items-center gap-2">
+                            <i class="fas fa-pen"></i>
+                            Blog
+                        </a>
+                        <a href="contact.html" class="group px-5 py-2.5 bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-full text-white font-medium hover:bg-white hover:text-[#0b8482] transition-all hover:scale-105 flex items-center gap-2">
+                            <i class="fas fa-headset"></i>
+                            Contact
+                        </a>
+                    </div>
+
+                    <!-- Fun Craft Quote -->
+                    <div class="mt-8 flex items-center gap-3 justify-center lg:justify-start">
+                        <i class="fas fa-quote-left text-2xl text-[#FFC300]"></i>
+                        <p class="text-white/80 italic text-sm">Every mistake is just a creative detour</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Scalloped Edge (like craft paper) -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" class="w-full h-auto" preserveAspectRatio="none">
+                <path fill="white" d="M0,40L60,35C120,30,240,20,360,20C480,20,600,30,720,35C840,40,960,40,1080,35C1200,30,1320,20,1380,15L1440,10L1440,60L1380,60C1320,60,1200,60,1080,60C960,60,840,60,720,60C600,60,480,60,360,60C240,60,120,60,60,60L0,60Z"></path>
+            </svg>
+        </div>
+    </section>
+
+
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const body = document.body;
+        
+        function setDarkMode(isDark) {
+            if (isDark) {
+                body.classList.add('dark-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                themeIcon.style.color = '#FFC300';
+                darkToggle.style.background = '#1e1e1e';
+            } else {
+                body.classList.remove('dark-mode');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                themeIcon.style.color = '#7B2CBF';
+                darkToggle.style.background = 'white';
+            }
+        }
+        
+        const savedDark = localStorage.getItem('craft-404-dark') === 'true';
+        setDarkMode(savedDark);
+        
+        darkToggle.addEventListener('click', function() {
+            const isDark = !body.classList.contains('dark-mode');
+            setDarkMode(isDark);
+            localStorage.setItem('craft-404-dark', isDark);
+        });
+        
+        // RTL Toggle
+        const rtlToggle = document.getElementById('rtlToggle');
+        
+        function setRTL(isRTL) {
+            if (isRTL) {
+                body.classList.add('rtl-mode');
+                document.documentElement.setAttribute('dir', 'rtl');
+            } else {
+                body.classList.remove('rtl-mode');
+                document.documentElement.setAttribute('dir', 'ltr');
+            }
+        }
+        
+        const savedRTL = localStorage.getItem('craft-404-rtl') === 'true';
+        setRTL(savedRTL);
+        
+        rtlToggle.addEventListener('click', function() {
+            const isRTL = body.classList.contains('rtl-mode');
+            setRTL(!isRTL);
+            localStorage.setItem('craft-404-rtl', !isRTL);
+        });
+    </script>
+
+    <style>
+        /* Prevent dark mode from affecting the 404 hero */
+        body.dark-mode .relative.min-h-\[80vh\] {
+            background: linear-gradient(to bottom right, #7B2CBF, #9d4edd, #0b8482) !important;
+        }
+        body.dark-mode .relative.min-h-\[80vh\] * {
+            color: white !important;
+        }
+        body.dark-mode .bg-white\/20 {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+        }
+        body.dark-mode .border-white\/30 {
+            border-color: rgba(255, 255, 255, 0.3) !important;
+        }
+        body.dark-mode .bg-\[\#FFC300\] {
+            background-color: #FFC300 !important;
+        }
+        body.dark-mode .text-\[\#1A1A2E\] {
+            color: #1A1A2E !important;
+        }
+    </style>
+</body>
+</html>

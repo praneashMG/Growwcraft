@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-GrowwCare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+             <link rel="icon" href="growwpark_logo.jpg">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+
+</head>
+
+
+
+
+    <style>
+      
+        /* Theme Colors */
+        .bg-purple { background-color: #7B2CBF; }
+        .text-purple { color: #7B2CBF; }
+        .border-purple { border-color: #7B2CBF; }
+        
+        .bg-teal { background-color: #0b8482; }
+        .text-teal { color: #0b8482; }
+        .border-teal { border-color: #0b8482; }
+        
+        /* Dark mode variables */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        body.dark-mode .bg-white,
+        body.dark-mode .bg-white\/90,
+        body.dark-mode .bg-white\/80 {
+            background-color: #1e1e1e !important;
+            border-color: #7B2CBF40 !important;
+        }
+        body.dark-mode .bg-gray-50 {
+            background-color: #2a2a2a !important;
+        }
+        body.dark-mode .text-gray-900 {
+            color: #f0f0f0 !important;
+        }
+        body.dark-mode .text-gray-600 {
+            color: #b0b0b0 !important;
+        }
+        body.dark-mode .text-gray-500 {
+            color: #909090 !important;
+        }
+        body.dark-mode .border-gray-200 {
+            border-color: #7B2CBF40 !important;
+        }
+        
+        /* RTL support */
+        body.rtl-mode {
+            direction: rtl;
+            text-align: right;
+        }
+        body.rtl-mode .ml-3 {
+            margin-left: 0 !important;
+            margin-right: 0.75rem !important;
+        }
+        body.rtl-mode .mr-2 {
+            margin-right: 0 !important;
+            margin-left: 0.5rem !important;
+        }
+        body.rtl-mode .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+            --tw-space-x-reverse: 1;
+        }
+        
+        /* Blog card styles */
+        .blog-card {
+            transition: all 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(123, 44, 191, 0.15);
+        }
+        
+        /* Category pills */
+        .category-pill {
+            transition: all 0.2s ease;
+        }
+        .category-pill:hover {
+            transform: scale(1.05);
+        }
+        
+        /* toggle buttons */
+        .toggle-base {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .rtl-active {
+            background: #7B2CBF;
+            color: white;
+            border-color: #7B2CBF;
+        }
+        
+        .dark-active {
+            background: #1e1e1e;
+            color: #FFC300;
+            border-color: #7B2CBF;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden bg-white">
+
+    <!-- Navbar placeholder (your navbar.js will inject here) -->
+    <div id="navbar"></div>
+
+<!-- BLOG HERO BANNER - Creative Studio Style -->
+<section class="relative pt-24 pb-16  md:pt-62 md:pb-20 overflow-hidden">
+    <!-- Creative Background with Texture -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[#7B2CBF] via-[#9d4edd] to-[#0b8482]"></div>
+    
+    <!-- Hand-drawn Pattern Overlay -->
+    <div class="absolute inset-0 opacity-10">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="blog-pattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                    <path d="M15 30 Q30 15, 45 30 Q30 45, 15 30" stroke="white" fill="none" stroke-width="2"/>
+                    <circle cx="30" cy="30" r="4" fill="white"/>
+                    <circle cx="15" cy="15" r="2" fill="white"/>
+                    <circle cx="45" cy="45" r="2" fill="white"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#blog-pattern)"/>
+        </svg>
+    </div>
+
+   
+    
+    <div class="absolute top-40 right-[15%] animate-float-fast" style="animation-delay: 2s;">
+        <i class="fas fa-book-open text-4xl text-white opacity-20"></i>
+    </div>
+    
+    <div class="absolute bottom-40 left-[10%] animate-float-medium" style="animation-delay: 1.5s;">
+        <i class="fas fa-scroll text-4xl text-white opacity-20"></i>
+    </div>
+
+    <!-- Decorative Circles -->
+    <div class="absolute top-20 right-20 w-64 h-64 rounded-full bg-white opacity-5 blur-3xl"></div>
+    <div class="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-[#FFC300] opacity-5 blur-3xl"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 mt-[-40px] sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Column - Text Content -->
+            <div class="text-center py-20 lg:text-left">
+
+
+                <!-- Artistic Heading with Decorative Elements -->
+                <h1 class="relative">
+                    <span class="text-5xl md:text-6xl lg:text-7xl font-bold text-white block leading-tight">
+                        <span class="relative inline-block">
+                            Ideas
+                        </span>
+                    </span>
+                    <span class="text-5xl md:text-6xl lg:text-7xl font-bold text-white block leading-tight mt-2">
+                        <span class="relative inline-block">
+                            & Inspiration
+                        </span>
+                    </span>
+                    <span class="text-5xl md:text-6xl lg:text-7xl font-bold block leading-tight mt-2" style="color: #00BFA6;">
+                        For Makers
+                    </span>
+                </h1>
+
+                <!-- Creative Description with Quote Style -->
+                <div class="relative max-w-xl mx-auto lg:mx-0 my-8">
+                    <p class="text-lg md:text-xl text-white/90 leading-relaxed">
+                    Dive into a world of creativity — from beginner tutorials to artist interviews, project ideas to material guides. Your next inspiration is just a scroll away.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Right Column - Featured Post Preview -->
+            <div class="relative hidden mb-20 lg:block">
+                <!-- Featured Post Card -->
+                <div class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-3xl p-6 shadow-2xl transform hover:scale-105 transition-all duration-500 border-2 border-white/50">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background: #7B2CBF; color: white;">Featured</span>
+                        <span class="px-3 py-1 rounded-full text-xs" style="background: #0b8482; color: white;">New</span>
+                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-auto">5 min read</span>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Watercolor Techniques: A Beginner's Guide</h3>
+                    
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        Learn the essential techniques to start your watercolor journey — from wet-on-wet to dry brush, and everything in between.
+                    </p>
+                    
+                  
+                    
+                    <!-- Post Preview Image -->
+                    <div class="rounded-xl overflow-hidden mb-4">
+                        <img src="images\our story.avif" 
+                             alt="Watercolor painting"
+                             class="w-full h-32 object-cover">
+                    </div>
+                    
+                   
+                </div>
+
+              
+        </div>
+    </div>
+
+  
+</section>
+
+
+
+   
+
+    <!-- FEATURED POST SECTION -->
+    <section class="py-12 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Featured Article</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+                <!-- Featured Image -->
+                <div class="rounded-2xl overflow-hidden shadow-xl border-4" style="border-color: #7B2CBF40;">
+                    <img src="images\craft12.jpg" 
+                         alt="Featured blog post" 
+                         class="w-full h-[300px] md:h-[400px] object-cover">
+                </div>
+                
+                <!-- Featured Content -->
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-xs px-3 py-1 rounded-full" style="background: #7B2CBF20; color: #7B2CBF;">Tutorial</span>
+                        <span class="text-xs px-3 py-1 rounded-full" style="background: #0b848220; color: #0b8482;">Beginner Friendly</span>
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">Watercolor Techniques: A Beginner's Guide</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Learn the essential techniques to start your watercolor journey — from wet-on-wet to dry brush, and everything in between.</p>
+                    
+                    <!-- Author Info -->
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="images\profile4.avif" 
+                             alt="Author" 
+                             class="w-10 h-10 rounded-full object-cover border-2" style="border-color: #7B2CBF;">
+                        <div>
+                            <p class="font-semibold text-gray-900 dark:text-white">Sarah Chen</p>
+                            <p class="text-xs text-gray-500">5 min read · Apr 8, 2026</p>
+                        </div>
+                    </div>
+                    
+                    <a href="blogdetails.html" class="inline-flex items-center gap-2 font-semibold hover:gap-3 transition-all" style="color: #7B2CBF;">
+                        Read Full Blog <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG POSTS GRID -->
+    <section class="py-12 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Latest Articles</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Blog Post 1 -->
+                <div class="blog-card bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-md border" style="border-color: #7B2CBF20;">
+                    <img src="images\craft6.jpg" 
+                         alt="Blog post" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xs px-2 py-1 rounded-full" style="background: #7B2CBF20; color: #7B2CBF;">Knitting</span>
+                            <span class="text-xs text-gray-500">4 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">10+ ideas to make Cozy Knitting Patterns for Fall</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">From scarves to sweaters, these patterns will keep you crafting all season long.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">By Emma Watson</span>
+<a href="blogdetails.html"
+   class="inline-block px-6 py-3 
+          text-sm font-semibold 
+          text-white rounded-lg
+          bg-gradient-to-r 
+          from-[#7B2CBF] to-[#0b8482]
+          transition-all duration-300
+          hover:scale-105 hover:shadow-lg">
+   Read More →
+</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="blog-card bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-md border" style="border-color: #7B2CBF20;">
+                    <img src="images\craft 7.jpg" 
+                         alt="Blog post" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xs px-2 py-1 rounded-full" style="background: #0b848220; color: #0b8482;">Jewelry</span>
+                            <span class="text-xs text-gray-500">6 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">How to Start Making Beaded Jewelry</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Essential tools, basic techniques, and project ideas for beginners.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">By Maria Garcia</span>
+<a href="blogdetails.html"
+   class="inline-block px-6 py-3 
+          text-sm font-semibold 
+          text-white rounded-lg
+          bg-gradient-to-r 
+          from-[#7B2CBF] to-[#0b8482]
+          transition-all duration-300
+          hover:scale-105 hover:shadow-lg">
+   Read More →
+</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="blog-card bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-md border" style="border-color: #7B2CBF20;">
+                    <img src="images\craft5.jpg" 
+                         alt="Blog post" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xs px-2 py-1 rounded-full" style="background: #7B2CBF20; color: #7B2CBF;">Scrapbooking</span>
+                            <span class="text-xs text-gray-500">5 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Preserving Memories: Scrapbooking 101</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Tips for creating beautiful layouts that tell your family's story.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">By David Kim</span>
+<a href="blogdetails.html"
+   class="inline-block px-6 py-3 
+          text-sm font-semibold 
+          text-white rounded-lg
+          bg-gradient-to-r 
+          from-[#7B2CBF] to-[#0b8482]
+          transition-all duration-300
+          hover:scale-105 hover:shadow-lg">
+   Read More →
+</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 4 -->
+                <div class="blog-card bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-md border" style="border-color: #7B2CBF20;">
+                    <img src="images\craft3.jpg" 
+                         alt="Blog post" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xs px-2 py-1 rounded-full" style="background: #0b848220; color: #0b8482;">Painting</span>
+                            <span class="text-xs text-gray-500">7 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Choosing the Right Paint: Acrylic vs Watercolor</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">A comprehensive guide to help you decide which medium suits your style.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">By James Wilson</span>
+<a href="blogdetails.html"
+   class="inline-block px-6 py-3 
+          text-sm font-semibold 
+          text-white rounded-lg
+          bg-gradient-to-r 
+          from-[#7B2CBF] to-[#0b8482]
+          transition-all duration-300
+          hover:scale-105 hover:shadow-lg">
+   Read More →
+</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 5 -->
+                <div class="blog-card bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-md border" style="border-color: #7B2CBF20;">
+                    <img src="images\craft4.jpg" 
+                         alt="Blog post" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xs px-2 py-1 rounded-full" style="background: #7B2CBF20; color: #7B2CBF;">Yarn</span>
+                            <span class="text-xs text-gray-500">4 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Yarn Weights Explained: A Complete Guide</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Never get confused by yarn labels again with this simple breakdown.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">By Lisa Thompson</span>
+<a href="blogdetails.html"
+   class="inline-block px-6 py-3 
+          text-sm font-semibold 
+          text-white rounded-lg
+          bg-gradient-to-r 
+          from-[#7B2CBF] to-[#0b8482]
+          transition-all duration-300
+          hover:scale-105 hover:shadow-lg">
+   Read More →
+</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 6 -->
+                <div class="blog-card bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-md border" style="border-color: #7B2CBF20;">
+                    <img src="images\craft11.jpg" 
+                         alt="Blog post" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xs px-2 py-1 rounded-full" style="background: #0b848220; color: #0b8482;">Business</span>
+                            <span class="text-xs text-gray-500">8 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Selling Your Crafts: A Step by Step Guide</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Tips for photography, pricing, and marketing your handmade creations.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">By Alex Rivera</span>
+<a href="blogdetails.html"
+   class="inline-block px-6 py-3 
+          text-sm font-semibold 
+          text-white rounded-lg
+          bg-gradient-to-r 
+          from-[#7B2CBF] to-[#0b8482]
+          transition-all duration-300
+          hover:scale-105 hover:shadow-lg">
+   Read More →
+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Testimonials Section -->
+<section class="py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+        What Our Readers Say
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Hear from our creative community who love exploring DIY crafts and handmade ideas.
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Testimonial 1 -->
+      <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl shadow-sm 
+                  transition duration-300 hover:shadow-lg hover:-translate-y-1">
+
+        <p class="text-gray-600 dark:text-gray-300 mb-6 text-sm leading-relaxed">
+          “This blog completely transformed my weekends! The step-by-step guides are so easy to follow.”
+        </p>
+
+        <div class="flex items-center gap-4">
+          <img src="images\profile1.avif"
+               class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <h4 class="text-sm font-semibold text-gray-800 dark:text-white">
+              Ananya R.
+            </h4>
+            <span class="text-xs text-gray-500">DIY Enthusiast</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl shadow-sm 
+                  transition duration-300 hover:shadow-lg hover:-translate-y-1">
+
+        <p class="text-gray-600 dark:text-gray-300 mb-6 text-sm leading-relaxed">
+          “I started selling handmade bookmarks after following the resin tutorials. Truly inspiring!”
+        </p>
+
+        <div class="flex items-center gap-4">
+          <img src="images\profile2.webp"
+               class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <h4 class="text-sm font-semibold text-gray-800 dark:text-white">
+              Rahul K.
+            </h4>
+            <span class="text-xs text-gray-500">Craft Seller</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl shadow-sm 
+                  transition duration-300 hover:shadow-lg hover:-translate-y-1">
+
+        <p class="text-gray-600 dark:text-gray-300 mb-6 text-sm leading-relaxed">
+          “Beautiful ideas and modern aesthetics. I love how minimal and elegant everything looks.”
+        </p>
+
+        <div class="flex items-center gap-4">
+          <img src="images\profile4.avif"
+               class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <h4 class="text-sm font-semibold text-gray-800 dark:text-white">
+              Meera S.
+            </h4>
+            <span class="text-xs text-gray-500">Home Decor Lover</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="py-12" style="background: linear-gradient(135deg, #7B2CBF, #0b8482);">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <i class="fas fa-envelope-open-text text-4xl text-white mb-4"></i>
+            <h2 class="text-3xl font-bold text-white mb-2">Get Crafty in Your Inbox</h2>
+            <p class="text-white/90 mb-6">Weekly tutorials, project ideas, and exclusive deals</p>
+            <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-1 px-4 py-3 rounded-xl border-0 focus:ring-2 focus:ring-white">
+                <button class="px-6 py-3 bg-[#00BFA6] text-[#1A1A2E] font-semibold rounded-xl hover:bg-white transition-all duration-300">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer placeholder (your footer.js will inject here) -->
+    <div id="footer"></div>
+
+  
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const body = document.body;
+        
+        function setDarkMode(isDark) {
+            if (isDark) {
+                body.classList.add('dark-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                themeIcon.style.color = '#FFC300';
+                darkToggle.style.background = '#1e1e1e';
+            } else {
+                body.classList.remove('dark-mode');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                themeIcon.style.color = '#7B2CBF';
+                darkToggle.style.background = 'white';
+            }
+        }
+        
+        // Check for saved preference
+        const savedDark = localStorage.getItem('craft-blog-dark') === 'true';
+        setDarkMode(savedDark);
+        
+        darkToggle.addEventListener('click', function() {
+            const isDark = !body.classList.contains('dark-mode');
+            setDarkMode(isDark);
+            localStorage.setItem('craft-blog-dark', isDark);
+        });
+        
+        // RTL Toggle
+        const rtlToggle = document.getElementById('rtlToggle');
+        
+        function setRTL(isRTL) {
+            if (isRTL) {
+                body.classList.add('rtl-mode');
+                document.documentElement.setAttribute('dir', 'rtl');
+            } else {
+                body.classList.remove('rtl-mode');
+                document.documentElement.setAttribute('dir', 'ltr');
+            }
+        }
+        
+        const savedRTL = localStorage.getItem('craft-blog-rtl') === 'true';
+        setRTL(savedRTL);
+        
+        rtlToggle.addEventListener('click', function() {
+            const isRTL = body.classList.contains('rtl-mode');
+            setRTL(!isRTL);
+            localStorage.setItem('craft-blog-rtl', !isRTL);
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+       
+              <div id="footer"></div>
+      <script src="navbar.js"> </script>
+        <script src="footer.js"> </script>
+</body>
+</html>

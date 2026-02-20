@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-GrowwCare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+             <link rel="icon" href="growwpark_logo.jpg">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+
+</head>
+<body>
+   
+    <style>
+      
+        
+        /* Theme Colors */
+        .bg-purple { background-color: #7B2CBF; }
+        .text-purple { color: #7B2CBF; }
+        .border-purple { border-color: #7B2CBF; }
+        .hover-bg-purple:hover { background-color: #5a1e8f; }
+        
+        .bg-teal { background-color: #0b8482; }
+        .text-teal { color: #0b8482; }
+        .border-teal { border-color: #0b8482; }
+        
+        /* Dark mode variables */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        body.dark-mode .bg-white,
+        body.dark-mode .bg-white\/90,
+        body.dark-mode .bg-white\/80 {
+            background-color: #1e1e1e !important;
+            border-color: #7B2CBF40 !important;
+        }
+        body.dark-mode .text-gray-800,
+        body.dark-mode .text-gray-700 {
+            color: #e0e0e0 !important;
+        }
+        body.dark-mode .text-gray-500,
+        body.dark-mode .text-gray-600 {
+            color: #b0b0b0 !important;
+        }
+        body.dark-mode .border-pink-100,
+        body.dark-mode .border-pink-200 {
+            border-color: #7B2CBF40 !important;
+        }
+        body.dark-mode .bg-pink-50,
+        body.dark-mode .bg-pink-100,
+        body.dark-mode .bg-pink-50\/60 {
+            background-color: #2a2a2a !important;
+        }
+        body.dark-mode .bg-purple-50 {
+            background-color: #2d1a3a !important;
+        }
+        body.dark-mode .bg-teal-50 {
+            background-color: #0a3a38 !important;
+        }
+        
+        /* RTL support */
+        body.rtl-mode {
+            direction: rtl;
+            text-align: right;
+        }
+        body.rtl-mode .ml-auto {
+            margin-left: 0 !important;
+            margin-right: auto !important;
+        }
+        body.rtl-mode .ml-3 {
+            margin-left: 0 !important;
+            margin-right: 0.75rem !important;
+        }
+        body.rtl-mode .mr-2 {
+            margin-right: 0 !important;
+            margin-left: 0.5rem !important;
+        }
+        body.rtl-mode .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+            --tw-space-x-reverse: 1;
+        }
+        
+        /* sidebar transition */
+        .sidebar-transition {
+            transition: transform 0.3s ease-in-out;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .dash-card { transition: transform 0.2s, box-shadow 0.2s; }
+        .dash-card:hover { transform: translateY(-2px); box-shadow: 0 20px 25px -5px rgba(123, 44, 191, 0.15); }
+        
+        /* overlay for mobile */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.3);
+            backdrop-filter: blur(2px);
+            z-index: 40;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        .overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        /* toggle buttons base style */
+        .toggle-base {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        /* RTL toggle active state */
+        .rtl-active {
+            background: #7B2CBF;
+            color: white;
+            border-color: #7B2CBF;
+        }
+        
+        /* Dark mode toggle active state */
+        .dark-active {
+            background: #1e1e1e;
+            color: #FFC300;
+            border-color: #7B2CBF;
+        }
+        
+        @media(max-width:1024px) {
+            .check{
+                display:none !important;
+            }
+        }
+        
+        /* Project progress bars */
+        .progress-purple {
+            background: linear-gradient(90deg, #7B2CBF, #9d4edd);
+        }
+        .progress-teal {
+            background: linear-gradient(90deg, #0b8482, #2aa9a7);
+        }
+        
+        /* Custom craft elements */
+        .craft-shadow {
+            box-shadow: 0 10px 30px -5px rgba(123, 44, 191, 0.2);
+        }
+        
+        /* Status badges */
+        .badge-purple {
+            background-color: #7B2CBF20;
+            color: #7B2CBF;
+            border: 1px solid #7B2CBF40;
+        }
+        .badge-teal {
+            background-color: #0b848220;
+            color: #0b8482;
+            border: 1px solid #0b848240;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden bg-gray-50/80">
+
+    <!-- overlay for mobile sidebar -->
+    <div id="overlay" class="overlay lg:hidden"></div>
+
+    <!-- MAIN DASHBOARD LAYOUT -->
+    <div class="flex h-screen overflow-hidden bg-gray-50/80 relative">
+        
+        <!-- ============ SIDEBAR (CraftHaven) - HIDDEN ON MOBILE BY DEFAULT ============= -->
+        <aside id="sidebar" class="fixed lg:static inset-y-0 left-0 w-72 flex-shrink-0 bg-white shadow-2xl flex flex-col h-full border-r z-50 sidebar-transition lg:translate-x-0 -translate-x-full" style="border-color: #7B2CBF40;">
+            
+            <!-- logo area with CraftHaven -->
+            <div class="px-6 pt-8 pb-4 flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  
+                    <span class="text-xl font-bold tracking-tight" style="color: #7B2CBF;"><a href="index.html">Groww<span style="color: #0b8482;">Care</span></a></span>
+                </div>
+                <!-- close sidebar button (mobile only) -->
+                <button id="closeSidebarBtn" class="lg:hidden w-8 h-8 rounded-full flex items-center justify-center" style="background: #7B2CBF20; color: #7B2CBF;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- TOGGLE BUTTONS INSIDE SIDEBAR - visible only on mobile -->
+            <div class="lg:hidden px-6 py-4 flex items-center gap-3 border-b" style="border-color: #7B2CBF40;">
+                <span class="text-sm font-medium text-gray-600 mr-2">Quick settings:</span>
+                <!-- TOGGLE BUTTON 1: RTL -->
+                <button id="mobileRtlToggleBtn" class="toggle-base border" style="background: #7B2CBF10; color: #7B2CBF; border-color: #7B2CBF40;" title="Toggle RTL/LTR layout">
+                    <i class="fas fa-arrow-right-arrow-left text-lg"></i>
+                </button>
+                <!-- TOGGLE BUTTON 2: DARK/LIGHT -->
+                <button id="mobileDarkToggleBtn" class="toggle-base border" style="background: #7B2CBF10; color: #7B2CBF; border-color: #7B2CBF40;" title="Toggle Dark/Light mode">
+                    <i class="fas fa-moon text-lg"></i>
+                </button>
+            </div>
+
+            <!-- navigation menu -->
+            <nav class="mt-2 flex-1 px-4 space-y-1.5 overflow-y-auto no-scrollbar">
+                <a href="#" class="flex items-center px-4 py-3.5 text-sm font-semibold rounded-2xl border-l-4" style="background: #7B2CBF10; color: #7B2CBF; border-left-color: #7B2CBF;">
+                    <i class="fas fa-paint-brush w-6 text-lg"></i>
+                    <span class="ml-3">My Projects</span>
+                    <span class="ml-auto text-xs px-2 py-1 rounded-full" style="background: #7B2CBF20; color: #7B2CBF;">4 new</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3.5 text-sm font-medium text-gray-700 rounded-2xl hover:bg-[#7B2CBF10] hover:text-[#7B2CBF] transition">
+                    <i class="fas fa-shopping-bag w-6 text-lg"></i>
+                    <span class="ml-3">Orders</span>
+                    <span class="ml-auto text-xs text-gray-400">tracking</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3.5 text-sm font-medium text-gray-700 rounded-2xl hover:bg-[#7B2CBF10] hover:text-[#7B2CBF] transition">
+                    <i class="fas fa-heart w-6 text-lg"></i>
+                    <span class="ml-3">Wishlist</span>
+                    <span class="ml-auto text-xs px-2 py-1 rounded-full" style="background: #0b848220; color: #0b8482;">12</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3.5 text-sm font-medium text-gray-700 rounded-2xl hover:bg-[#7B2CBF10] hover:text-[#7B2CBF] transition">
+                    <i class="fas fa-calendar-alt w-6 text-lg"></i>
+                    <span class="ml-3">Workshops</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3.5 text-sm font-medium text-gray-700 rounded-2xl hover:bg-[#7B2CBF10] hover:text-[#7B2CBF] transition">
+                    <i class="fas fa-comment w-6 text-lg"></i>
+                    <span class="ml-3">Messages</span>
+                    <span class="ml-auto text-white text-xs px-1.5 py-0.5 rounded-full" style="background: #7B2CBF;">3</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3.5 text-sm font-medium text-gray-700 rounded-2xl hover:bg-[#7B2CBF10] hover:text-[#7B2CBF] transition">
+                    <i class="fas fa-images w-6 text-lg"></i>
+                    <span class="ml-3">Gallery</span>
+                </a>
+                <div class="border-t my-4" style="border-color: #7B2CBF40;"></div>
+                <a href="#" class="flex items-center px-4 py-3.5 text-sm font-medium text-gray-500 rounded-2xl hover:bg-[#7B2CBF10]">
+                    <i class="fas fa-gear w-6"></i>
+                    <span class="ml-3">Settings</span>
+                </a>
+                <a href="login.html" class="flex items-center px-4 py-3.5 text-sm font-medium text-gray-500 rounded-2xl hover:bg-[#7B2CBF10]">
+                    <i class="fas fa-sign-out w-6"></i>
+                    <span class="ml-3">Log out</span>
+                </a>
+            </nav>
+
+            <!-- bottom profile summary -->
+            <div class="border-t p-5 mt-2 flex items-center" style="border-color: #7B2CBF40;">
+                <div class="relative">
+                    <img src="images\profile1.avif" alt="profile" class="w-11 h-11 rounded-full object-cover border-2" style="border-color: #7B2CBF;">
+                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full"></span>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm font-semibold text-gray-800">Alex Rivera</p>
+                    <p class="text-xs text-gray-500">maker · 42 projects</p>
+                </div>
+                <i class="fas fa-ellipsis ml-auto" style="color: #7B2CBF;"></i>
+            </div>
+        </aside>
+
+        <!-- ============ MAIN CONTENT ============= -->
+        <main class="flex-1 flex flex-col overflow-y-auto w-full lg:w-auto transition-colors">
+            
+            <!-- HEADER with HAMBURGER ON RIGHT -->
+            <header class="bg-white/90 backdrop-blur-sm border-b px-4 sm:px-6 py-3 sticky top-0 z-30 flex items-center justify-between shadow-sm" style="border-color: #7B2CBF40;">
+                
+                <!-- LEFT GROUP: welcome text -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                        <h1 class="text-lg sm:text-xl font-semibold text-gray-800 flex items-center gap-2">
+                            User Dashboard 
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- RIGHT GROUP: Desktop toggles + Hamburger (mobile only) -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <!-- DESKTOP TOGGLE BUTTONS - only visible on desktop -->
+                    <div class="hidden lg:flex items-center gap-2 sm:gap-3">
+                        <button id="desktopRtlToggleBtn" class="toggle-base border" style="background: #7B2CBF10; color: #7B2CBF; border-color: #7B2CBF40;" title="Toggle RTL/LTR layout">
+                            <i class="fas fa-arrow-right-arrow-left text-lg sm:text-xl"></i>
+                        </button>
+                        <button id="desktopDarkToggleBtn" class="toggle-base border" style="background: #7B2CBF10; color: #7B2CBF; border-color: #7B2CBF40;" title="Toggle Dark/Light mode">
+                            <i class="fas fa-moon text-lg sm:text-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- HAMBURGER BUTTON - on right side, mobile only - OPENS SIDEBAR -->
+                    <button id="hamburgerBtn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl text-white border transition shadow-md" style="background: #7B2CBF; border-color: #7B2CBF;">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- ========== DASHBOARD SECTIONS ========== -->
+            <div class="p-4 sm:p-5 md:p-6 lg:p-7 space-y-5 sm:space-y-7">
+                
+                <!-- quick stats cards -->
+                <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+                    <div class="dash-card bg-white rounded-3xl p-4 sm:p-5 border flex items-center shadow-sm" style="border-color: #7B2CBF40;">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center" style="background: #7B2CBF20;">
+                            <i class="fas fa-paint-brush text-2xl" style="color: #7B2CBF;"></i>
+                        </div>
+                        <div class="ml-3 sm:ml-4">
+                            <p class="text-xs text-gray-500 font-medium">Active Projects</p>
+                            <p class="text-lg sm:text-xl font-bold text-gray-800">8</p>
+                            <span class="text-xs font-semibold" style="color: #0b8482;">+3 this month</span>
+                        </div>
+                    </div>
+                    <div class="dash-card bg-white rounded-3xl p-4 sm:p-5 border flex items-center shadow-sm" style="border-color: #7B2CBF40;">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center" style="background: #0b848220;">
+                            <i class="fas fa-shopping-cart text-2xl" style="color: #0b8482;"></i>
+                        </div>
+                        <div class="ml-3 sm:ml-4">
+                            <p class="text-xs text-gray-500 font-medium">Orders</p>
+                            <p class="text-lg sm:text-xl font-bold text-gray-800">12</p>
+                            <span class="text-xs font-semibold" style="color: #7B2CBF;">2 in transit</span>
+                        </div>
+                    </div>
+                    <div class="dash-card bg-white rounded-3xl p-4 sm:p-5 border flex items-center shadow-sm" style="border-color: #7B2CBF40;">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center" style="background: #7B2CBF20;">
+                            <i class="fas fa-calendar-check text-2xl" style="color: #7B2CBF;"></i>
+                        </div>
+                        <div class="ml-3 sm:ml-4">
+                            <p class="text-xs text-gray-500 font-medium">Workshops</p>
+                            <p class="text-lg sm:text-xl font-bold text-gray-800">3</p>
+                            <span class="text-xs font-semibold" style="color: #0b8482;">next: Sat 10am</span>
+                        </div>
+                    </div>
+                    <div class="dash-card bg-white rounded-3xl p-4 sm:p-5 border flex items-center shadow-sm" style="border-color: #7B2CBF40;">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center" style="background: #0b848220;">
+                            <i class="fas fa-heart text-2xl" style="color: #0b8482;"></i>
+                        </div>
+                        <div class="ml-3 sm:ml-4">
+                            <p class="text-xs text-gray-500 font-medium">Followers</p>
+                            <p class="text-lg sm:text-xl font-bold text-gray-800">342</p>
+                            <span class="text-xs font-semibold" style="color: #7B2CBF;">+12 this week</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SECTION 1: PROJECTS + WORKSHOPS -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6">
+                    <!-- Projects in progress -->
+                    <div class="lg:col-span-2 bg-white rounded-3xl p-4 sm:p-5 border shadow-sm dash-card" style="border-color: #7B2CBF40;">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="font-bold text-gray-800 flex items-center gap-2 text-sm sm:text-base">
+                                <i class="fas fa-paint-brush" style="color: #7B2CBF;"></i> Projects in Progress
+                                <span class="text-white text-[10px] sm:text-xs px-2 py-0.5 rounded-full" style="background: #7B2CBF;">4 active</span>
+                            </h2>
+                            <a href="#" class="text-xs sm:text-sm font-medium" style="color: #7B2CBF;">view all <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <!-- Project 1 -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                        <img src="images\watercolor.webp" alt="project" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800 text-sm">Watercolor Landscape</p>
+                                        <p class="text-xs text-gray-500">Started Apr 5</p>
+                                    </div>
+                                </div>
+                                <div class="w-24 sm:w-32">
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span style="color: #7B2CBF;">75%</span>
+                                    </div>
+                                    <div class="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                        <div class="progress-purple h-full rounded-full" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project 2 -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                        <img src="images\knit.jpeg" alt="project" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800 text-sm">Knitted Sweater</p>
+                                        <p class="text-xs text-gray-500">Started Mar 20</p>
+                                    </div>
+                                </div>
+                                <div class="w-24 sm:w-32">
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span style="color: #0b8482;">45%</span>
+                                    </div>
+                                    <div class="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                        <div class="progress-teal h-full rounded-full" style="width: 45%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project 3 -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                        <img src="images\craft9.webp" alt="project" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800 text-sm">Beaded Bracelet Set</p>
+                                        <p class="text-xs text-gray-500">Started Apr 2</p>
+                                    </div>
+                                </div>
+                                <div class="w-24 sm:w-32">
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span style="color: #7B2CBF;">90%</span>
+                                    </div>
+                                    <div class="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                        <div class="progress-purple h-full rounded-full" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full mt-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition flex items-center justify-center gap-2" style="background: #7B2CBF10; color: #7B2CBF; border: 1px solid #7B2CBF40;">
+                            <i class="fas fa-plus-circle"></i> Add New Project
+                        </button>
+                    </div>
+                    
+                    <!-- Upcoming Workshops Card -->
+                    <div class="bg-white rounded-3xl p-4 sm:p-5 border shadow-sm dash-card" style="border-color: #7B2CBF40;">
+                        <div class="flex justify-between items-center">
+                            <h2 class="font-bold text-gray-800 flex items-center text-sm sm:text-base"> Upcoming Workshops</h2>
+                        </div>
+                        
+                        <div class="space-y-4 mt-4">
+                            <!-- Workshop 1 -->
+                            <div class="flex gap-3">
+                                <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: #7B2CBF20;">
+                                    <i class="fas fa-paint-brush" style="color: #7B2CBF;"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800 text-sm">Watercolor Basics</p>
+                                    <p class="text-xs text-gray-500">Today 7:00 PM · 12 spots left</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Workshop 2 -->
+                            <div class="flex gap-3">
+                                <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: #0b848220;">
+                                    <i class="fas fa-cut" style="color: #0b8482;"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800 text-sm">Intro to Macrame</p>
+                                    <p class="text-xs text-gray-500">Tomorrow 6:30 PM · 8 spots left</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Workshop 3 -->
+                            <div class="flex gap-3">
+                                <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: #7B2CBF20;">
+                                    <i class="fas fa-gem" style="color: #7B2CBF;"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800 text-sm">Jewelry Making 101</p>
+                                    <p class="text-xs text-gray-500">Sat 10:00 AM · 5 spots left</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full mt-4 bg-[#0b8482] text-white py-2.5 rounded-xl text-xs sm:text-sm font-medium hover:bg-[#0b8482]/90 transition flex items-center justify-center gap-2">
+                            Browse All Workshops
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- SECTION 2: RECENT ORDERS + SAVED IDEAS -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6">
+                    <!-- Recent Orders -->
+                    <div class="bg-white rounded-3xl p-4 sm:p-5 border shadow-sm dash-card lg:col-span-2" style="border-color: #7B2CBF40;">
+                        <div class="flex items-center justify-between">
+                            <h2 class="font-bold text-gray-800 flex items-center text-sm sm:text-base"><i class="fas fa-box mr-2" style="color: #7B2CBF;"></i> Recent Orders</h2>
+                            <span class="text-xs px-2 sm:px-3 py-1 rounded-full badge-teal">tracking</span>
+                        </div>
+                        
+                        <div class="space-y-4 mt-4">
+                            <!-- Order 1 -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-lg overflow-hidden border" style="border-color: #7B2CBF40;">
+                                        <img src="images\craft3.jpg" alt="product" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800 text-sm">Acrylic Paint Set (24 colors)</p>
+                                        <p class="text-xs text-gray-500">Order #C12345 · Apr 8</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-medium px-2 py-1 rounded-full" style="background: #7B2CBF20; color: #7B2CBF;">Shipped</span>
+                            </div>
+                            
+                            <!-- Order 2 -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-lg overflow-hidden border" style="border-color: #7B2CBF40;">
+                                        <img src="images\storage.avif" alt="product" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800 text-sm">Merino Wool Yarn (6 pack)</p>
+                                        <p class="text-xs text-gray-500">Order #C12346 · Apr 6</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-medium px-2 py-1 rounded-full" style="background: #0b848220; color: #0b8482;">Delivered</span>
+                            </div>
+                            
+                            <!-- Order 3 -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-lg overflow-hidden border" style="border-color: #7B2CBF40;">
+                                        <img src="images\craft9.webp" alt="product" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800 text-sm">Glass Bead Assortment</p>
+                                        <p class="text-xs text-gray-500">Order #C12347 · Apr 3</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-medium px-2 py-1 rounded-full" style="background: #7B2CBF20; color: #7B2CBF;">Processing</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="mt-4 inline-block text-xs font-medium" style="color: #7B2CBF;">View all orders <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                    
+                    <!-- Saved Ideas -->
+                    <div class="bg-white rounded-3xl p-4 sm:p-5 border shadow-sm dash-card" style="border-color: #7B2CBF40;">
+                        <div class="flex items-center gap-2">
+                            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl flex items-center justify-center" style="background: #7B2CBF;">
+                                <i class="fas fa-heart text-white text-xs sm:text-sm"></i>
+                            </div>
+                            <h2 class="font-bold text-gray-800 text-sm sm:text-base">Saved Ideas</h2>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-2 mt-4">
+                            <div class="rounded-xl overflow-hidden aspect-square border-2" style="border-color: #7B2CBF40;">
+                                <img src="images\handmade candles.webp" class="w-full h-full object-cover">
+                            </div>
+                            <div class="rounded-xl overflow-hidden aspect-square border-2" style="border-color: #7B2CBF40;">
+                                <img src="images\img bg.avif" class="w-full h-full object-cover">
+                            </div>
+                            <div class="rounded-xl overflow-hidden aspect-square border-2 relative" style="border-color: #7B2CBF40;">
+                                <img src="images\craft10.jpg" class="w-full h-full object-cover">
+                                <span class="absolute inset-0 bg-black/30 flex items-center justify-center text-white text-xs font-bold">+8</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mt-3">
+                            <p class="text-xs text-gray-600"> 24 ideas saved</p>
+                            <a href="#" class="text-xs font-medium" style="color: #7B2CBF;">view all</a>
+                        </div>
+                        
+                        <button class="w-full mt-3 border py-2 rounded-xl text-xs font-medium transition hover:bg-[#7B2CBF10]" style="border-color: #7B2CBF40; color: #7B2CBF;">
+                            <i class="fas fa-plus-circle mr-1"></i> Add New Idea
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- extra tools + inspiration -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+                    <div class="bg-white rounded-3xl p-4 sm:p-5 border flex items-center dash-card" style="border-color: #7B2CBF40;">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center border-2 p-2" style="background: #7B2CBF10; border-color: #7B2CBF40;">
+                            <i class="fas fa-ruler-combined text-3xl" style="color: #7B2CBF;"></i>
+                        </div>
+                        <div class="ml-4 sm:ml-5">
+                            <h3 class="font-bold text-gray-800 text-sm sm:text-base">Project Planner</h3>
+                            <p class="text-xs sm:text-sm text-gray-500 mt-1">Organize materials & steps</p>
+                            <button class="mt-2 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs shadow-md flex items-center gap-1 text-white" style="background: #7B2CBF;">
+                                <i class="fas fa-pen"></i> start planning
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-3xl p-4 sm:p-5 border flex items-center dash-card" style="border-color: #7B2CBF40;">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center border-2 p-2" style="background: #0b848210; border-color: #0b848240;">
+                            <i class="fas fa-lightbulb text-3xl" style="color: #0b8482;"></i>
+                        </div>
+                        <div class="ml-4 sm:ml-5">
+                            <h3 class="font-bold text-gray-800 text-sm sm:text-base">Daily Inspiration</h3>
+                            <p class="text-xs text-gray-600">5 new ideas for you</p>
+                            <span class="inline-block mt-1 text-xs px-2 py-1 rounded-full badge-teal">fresh picks</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- achievement banner -->
+                <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-5 border dash-card flex flex-wrap items-center justify-between" style="border-color: #7B2CBF40; background: linear-gradient(135deg, #7B2CBF10, #0b848210);">
+                    <div class="flex items-center gap-3 sm:gap-4">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center" style="background: #7B2CBF;">
+                            <i class="fas fa-trophy text-white text-xl sm:text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800 text-sm sm:text-base">Maker Milestone</p>
+                            <p class="text-xs sm:text-sm text-gray-600">You've completed 12 projects! 🎉</p>
+                            <div class="flex items-center gap-1 mt-1">
+                                <i class="fas fa-star text-xs" style="color: #FFC300;"></i>
+                                <i class="fas fa-star text-xs" style="color: #FFC300;"></i>
+                                <i class="fas fa-star text-xs" style="color: #FFC300;"></i>
+                                <i class="fas fa-star text-xs" style="color: #FFC300;"></i>
+                                <i class="fas fa-star-half-alt text-xs" style="color: #FFC300;"></i>
+                                <span class="text-xs text-gray-500 ml-1">4.8 rating</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 mt-2 sm:mt-0">
+                        <span class="text-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs rounded-full" style="background: #7B2CBF;">view badge</span>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="mt-auto text-center py-3 sm:py-4 text-xs border-t mx-4 sm:mx-6" style="color: #7B2CBF; border-color: #7B2CBF40;">
+                <span><i class="fas fa-paint-brush mr-1"></i> CraftHaven · where makers thrive</span>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ----- SIDEBAR / HAMBURGER - HAMBURGER OPENS SIDEBAR -----
+            const sidebar = document.getElementById('sidebar');
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+            const overlay = document.getElementById('overlay');
+
+            // Ensure sidebar is closed on mobile by default
+            function setDefaultSidebarState() {
+                if (window.innerWidth < 1024) {
+                    // Mobile: sidebar hidden
+                    sidebar.classList.add('-translate-x-full');
+                    sidebar.classList.remove('translate-x-0');
+                    if (document.body.classList.contains('rtl-mode')) {
+                        sidebar.classList.add('translate-x-full');
+                        sidebar.classList.remove('-translate-x-full');
+                    }
+                } else {
+                    // Desktop: sidebar visible
+                    sidebar.classList.add('translate-x-0');
+                    sidebar.classList.remove('-translate-x-full', 'translate-x-full');
+                }
+            }
+            
+            // Call immediately
+            setDefaultSidebarState();
+
+            function openSidebar() {
+                if (window.innerWidth < 1024) {
+                    if (document.body.classList.contains('rtl-mode')) {
+                        sidebar.classList.remove('translate-x-full');
+                        sidebar.classList.add('translate-x-0');
+                    } else {
+                        sidebar.classList.remove('-translate-x-full');
+                        sidebar.classList.add('translate-x-0');
+                    }
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            function closeSidebar() {
+                if (window.innerWidth < 1024) {
+                    if (document.body.classList.contains('rtl-mode')) {
+                        sidebar.classList.add('translate-x-full');
+                        sidebar.classList.remove('translate-x-0');
+                    } else {
+                        sidebar.classList.add('-translate-x-full');
+                        sidebar.classList.remove('translate-x-0');
+                    }
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            if (hamburgerBtn) {
+                hamburgerBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    openSidebar();
+                });
+            }
+            
+            if (closeSidebarBtn) {
+                closeSidebarBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    closeSidebar();
+                });
+            }
+            
+            if (overlay) {
+                overlay.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    closeSidebar();
+                });
+            }
+
+            // Window resize handler
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 1024) {
+                    sidebar.classList.add('translate-x-0');
+                    sidebar.classList.remove('-translate-x-full', 'translate-x-full');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                } else {
+                    if (!sidebar.classList.contains('translate-x-0')) {
+                        setDefaultSidebarState();
+                    }
+                }
+            });
+
+            // ----- RTL TOGGLE -----
+            function setupRtlToggle(btn) {
+                if (!btn) return;
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    document.body.classList.toggle('rtl-mode');
+                    
+                    const allRtlBtns = document.querySelectorAll('#desktopRtlToggleBtn, #mobileRtlToggleBtn');
+                    allRtlBtns.forEach(b => {
+                        if (document.body.classList.contains('rtl-mode')) {
+                            b.classList.add('rtl-active');
+                            b.style.background = '#7B2CBF';
+                            b.style.color = 'white';
+                        } else {
+                            b.classList.remove('rtl-active');
+                            b.style.background = '#7B2CBF10';
+                            b.style.color = '#7B2CBF';
+                        }
+                    });
+                    
+                    // Reset sidebar position based on mode
+                    if (window.innerWidth < 1024) {
+                        if (document.body.classList.contains('rtl-mode')) {
+                            sidebar.classList.add('translate-x-full');
+                            sidebar.classList.remove('-translate-x-full');
+                        } else {
+                            sidebar.classList.add('-translate-x-full');
+                            sidebar.classList.remove('translate-x-full');
+                        }
+                        sidebar.classList.remove('translate-x-0');
+                    }
+                });
+            }
+
+            // ----- DARK/LIGHT TOGGLE -----
+            function setupDarkToggle(btn) {
+                if (!btn) return;
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    document.body.classList.toggle('dark-mode');
+                    
+                    const allDarkBtns = document.querySelectorAll('#desktopDarkToggleBtn, #mobileDarkToggleBtn');
+                    allDarkBtns.forEach(b => {
+                        if (document.body.classList.contains('dark-mode')) {
+                            b.classList.add('dark-active');
+                            b.style.background = '#1e1e1e';
+                            b.style.color = '#FFC300';
+                            b.innerHTML = '<i class="fas fa-sun text-lg sm:text-xl"></i>';
+                        } else {
+                            b.classList.remove('dark-active');
+                            b.style.background = '#7B2CBF10';
+                            b.style.color = '#7B2CBF';
+                            b.innerHTML = '<i class="fas fa-moon text-lg sm:text-xl"></i>';
+                        }
+                    });
+                });
+            }
+
+            // Initialize all toggle buttons
+            setupRtlToggle(document.getElementById('desktopRtlToggleBtn'));
+            setupRtlToggle(document.getElementById('mobileRtlToggleBtn'));
+            setupDarkToggle(document.getElementById('desktopDarkToggleBtn'));
+            setupDarkToggle(document.getElementById('mobileDarkToggleBtn'));
+
+        })();
+    </script>
+    <style>
+        @media (min-width: 480px) {
+            .xs\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        body.rtl-mode .sidebar-transition {
+            transition: transform 0.3s ease-in-out;
+        }
+        body.rtl-mode .ml-3 {
+            margin-right: 0.75rem;
+            margin-left: 0;
+        }
+        body.rtl-mode .mr-2 {
+            margin-left: 0.5rem;
+            margin-right: 0;
+        }
+        body.rtl-mode .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+            --tw-space-x-reverse: 1;
+        }
+    </style>
+</body>
+</html>
