@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home2-GrowwCare</title>
+    <title>Home2-GrowwCraft</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -51,11 +51,11 @@
 
 
   <!-- Main Content Container -->
-  <div class="main relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+  <div class="content relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
     <div class="grid lg:grid-cols-2 gap-12 items-center py-20">
       
       <!-- Left Column - Text Content (All White Text on Gradient) -->
-      <div class="text-center lg:text-left order-2 lg:order-1">
+      <div class="content text-center lg:text-left order-2 lg:order-1">
         <!-- Welcome Badge - White with transparent background -->
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 bg-white/20 backdrop-blur-sm border border-white/40">
           <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
@@ -127,7 +127,7 @@
       <!-- Right Column - Interactive Workshop Preview (Card with white theme) -->
       <div class="relative order-1 lg:order-2">
         <!-- Main Workshop Card - Transparent with white borders -->
-        <div class="relative bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-500 border-2 border-white/30">
+        <div class="heroimage relative bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-500 border-2 border-white/30">
           <!-- Video Thumbnail with Play Button -->
           <div class="relative h-64 md:h-80">
             <img src="images/craft11.jpg" 
@@ -200,11 +200,24 @@
 </section>
 
 <style>
-  @media (max-width:1024px){
-    .main{
-            margin-left: 70px !important;
+  @media (max-width:820px){
+    .content,.heroimage{
+            margin-left: 77px !important;
     }
   }
+    @media (max-width:420px){
+    .heroimage{
+           display:none !important;
+    }
+  }
+    @media (max-width:420px){
+    .content,.heroimage{
+            margin-left: 0px !important;
+    }
+  }
+  
+  
+  
 </style>
   <!-- Bottom Wave Divider -->
   <div class="absolute bottom-0 left-0 right-0">
@@ -256,7 +269,7 @@
             Painting Supplies
           </h3>
           <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-            Acrylics, watercolors, brushes & canvas essentials.
+            Acrylics, brushes & canvas essentials.
           </p>
           <a href="blog.html" 
              class="text-[#7B2CBF] dark:text-purple-400 font-medium 
