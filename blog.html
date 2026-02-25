@@ -121,110 +121,95 @@
 
     <!-- Navbar placeholder (your navbar.js will inject here) -->
     <div id="navbar"></div>
+<!-- ========== BLOG HERO – PURPLE & TEAL WITH BACKGROUND IMAGE ========== -->
+<section class="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
 
-<!-- BLOG HERO BANNER - Creative Studio Style -->
-<section class="relative pt-24 pb-16  md:pt-62 md:pb-20 overflow-hidden">
-    <!-- Creative Background with Texture -->
-    <div class="absolute inset-0 bg-gradient-to-br from-[#7B2CBF] via-[#9d4edd] to-[#0b8482]"></div>
-    
-    <!-- Hand-drawn Pattern Overlay -->
-    <div class="absolute inset-0 opacity-10">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <pattern id="blog-pattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-                    <path d="M15 30 Q30 15, 45 30 Q30 45, 15 30" stroke="white" fill="none" stroke-width="2"/>
-                    <circle cx="30" cy="30" r="4" fill="white"/>
-                    <circle cx="15" cy="15" r="2" fill="white"/>
-                    <circle cx="45" cy="45" r="2" fill="white"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#blog-pattern)"/>
-        </svg>
+    <!-- Background Image (subtle, textured) -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?q=80&w=2670&auto=format&fit=crop" 
+             alt="creative texture background" 
+             class="w-full h-full object-cover">
+        <!-- Purple & Teal Gradient Overlay (NO BLUE) -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[#7B2CBF]/85 via-[#9d4edd]/70 to-[#0b8482]/80"></div>
+        <!-- Very subtle pattern on top -->
+        <div class="absolute inset-0 opacity-10 mix-blend-overlay" style="background-image: radial-gradient(circle at 20% 30%, white 1px, transparent 1px); background-size: 40px 40px;"></div>
     </div>
 
-   
-    
-    <div class="absolute top-40 right-[15%] animate-float-fast" style="animation-delay: 2s;">
-        <i class="fas fa-book-open text-4xl text-white opacity-20"></i>
+    <!-- minimal floating icons (purple/teal tones) - very light -->
+    <div class="absolute top-20 right-[10%] z-5 opacity-20">
+        <i class="fas fa-feather text-6xl text-[#0b8482]"></i>
     </div>
-    
-    <div class="absolute bottom-40 left-[10%] animate-float-medium" style="animation-delay: 1.5s;">
-        <i class="fas fa-scroll text-4xl text-white opacity-20"></i>
+    <div class="absolute bottom-20 left-[5%] z-5 opacity-20">
+        <i class="fas fa-palette text-7xl text-[#7B2CBF]"></i>
     </div>
 
-    <!-- Decorative Circles -->
-    <div class="absolute top-20 right-20 w-64 h-64 rounded-full bg-white opacity-5 blur-3xl"></div>
-    <div class="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-[#FFC300] opacity-5 blur-3xl"></div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-4 mt-[-40px] sm:px-6 lg:px-8">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             
-            <!-- Left Column - Text Content -->
-            <div class="text-center py-20 lg:text-left">
-
-
-                <!-- Artistic Heading with Decorative Elements -->
-                <h1 class="relative">
-                    <span class="text-5xl md:text-6xl lg:text-7xl font-bold text-white block leading-tight">
-                        <span class="relative inline-block">
-                            Ideas
-                        </span>
-                    </span>
-                    <span class="text-5xl md:text-6xl lg:text-7xl font-bold text-white block leading-tight mt-2">
-                        <span class="relative inline-block">
-                            & Inspiration
-                        </span>
-                    </span>
-                    <span class="text-5xl md:text-6xl lg:text-7xl font-bold block leading-tight mt-2" style="color: #00BFA6;">
-                        For Makers
-                    </span>
-                </h1>
-
-                <!-- Creative Description with Quote Style -->
-                <div class="relative max-w-xl mx-auto lg:mx-0 my-8">
-                    <p class="text-lg md:text-xl text-white/90 leading-relaxed">
-                    Dive into a world of creativity — from beginner tutorials to artist interviews, project ideas to material guides. Your next inspiration is just a scroll away.
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- Right Column - Featured Post Preview -->
-            <div class="relative hidden mb-20 lg:block">
-                <!-- Featured Post Card -->
-                <div class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-3xl p-6 shadow-2xl transform hover:scale-105 transition-all duration-500 border-2 border-white/50">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background: #7B2CBF; color: white;">Featured</span>
-                        <span class="px-3 py-1 rounded-full text-xs" style="background: #0b8482; color: white;">New</span>
-                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-auto">5 min read</span>
-                    </div>
-                    
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Watercolor Techniques: A Beginner's Guide</h3>
-                    
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                        Learn the essential techniques to start your watercolor journey — from wet-on-wet to dry brush, and everything in between.
-                    </p>
-                    
-                  
-                    
-                    <!-- Post Preview Image -->
-                    <div class="rounded-xl overflow-hidden mb-4">
-                        <img src="images\our story.avif" 
-                             alt="Watercolor painting"
-                             class="w-full h-32 object-cover">
-                    </div>
-                    
-                   
-                </div>
-
+            <!-- LEFT: text content – all white/purple/teal, no blue -->
+            <div class="text-center lg:text-left">
               
+                
+                <!-- headline – purple & teal mix (no blue) -->
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
+                    <span class="block text-white">ideas</span>
+                    <span class="block text-white">unfolded.</span>
+                </h1>
+                
+                <p class="text-lg text-white/90 mt-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Stories, tutorials, and interviews from the creative community. Fresh perspectives delivered weekly.
+                </p>
+                
+                <!-- search bar / CTA (with purple/teal accents) -->
+                <div class="flex flex-col sm:flex-row gap-3 mt-10 max-w-lg mx-auto lg:mx-0">
+                    <div class="relative flex-1">
+                        <i class="fas fa-regular fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-[#0b8482] text-sm"></i>
+                        <input type="text" placeholder="search for ideas..." 
+                               class="w-full pl-11 pr-4 py-3.5 rounded-full border border-white/30 bg-white/20 backdrop-blur-md text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-[#9d4edd]">
+                    </div>
+                    <a href="#" class="px-6 py-3.5 bg-[#0b8482] hover:bg-[#6a1f9f] text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 whitespace-nowrap border border-white/20">
+                        <i class="fas fa-arrow-right"></i> explore
+                    </a>
+                </div>
+                
+               
+            </div>
+            
+            <!-- RIGHT: simple card – with purple/teal accents -->
+            <div class="relative flex justify-center lg:justify-end mt-10 lg:mt-0">
+                <div class="relative w-full max-w-md">
+                    <!-- main card – glass effect with purple/teal borders -->
+                    <div class="bg-white/20 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border-2 border-white/30 float-element">
+                        <!-- image -->
+                        <div class="h-56 overflow-hidden">
+                            <img src="images/our story.avif" alt="creative workspace" class="w-full h-full object-cover">
+                        </div>
+                        <!-- content (white/purple text) -->
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 text-xs font-medium uppercase tracking-wider mb-2">
+                                <span class="w-1.5 h-1.5 bg-[#0b8482] rounded-full"></span>
+                                <span class="text-white/90">featured post</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Watercolor Techniques: A Beginner's Guide</h3>
+                            <p class="text-sm text-white/80 mb-4">Learn wet-on-wet, dry brush, and more — from artist Sarah Chen.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-white/70">5 min read</span>
+                                <a href="#" class="inline-flex items-center gap-1 text-[#0b8482] hover:text-[#0a6f6d] text-sm font-medium bg-white/30 backdrop-blur-sm px-3 py-1 rounded-full">
+                                    read <i class="fas fa-arrow-right text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
         </div>
     </div>
-
-  
+    
+    <!-- subtle bottom line in teal -->
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#0b8482] to-transparent"></div>
 </section>
-
-
 
    
 
@@ -248,7 +233,7 @@
                         <span class="text-xs px-3 py-1 rounded-full" style="background: #0b848220; color: #0b8482;">Beginner Friendly</span>
                     </div>
                     <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">Watercolor Techniques: A Beginner's Guide</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-4">Learn the essential techniques to start your watercolor journey — from wet-on-wet to dry brush, and everything in between.</p>
+                    <p class="text-gray-600 dark:text-gray-100 mb-4">Learn the essential techniques to start your watercolor journey — from wet-on-wet to dry brush, and everything in between.</p>
                     
                     <!-- Author Info -->
                     <div class="flex items-center gap-3 mb-6">
@@ -257,7 +242,7 @@
                              class="w-10 h-10 rounded-full object-cover border-2" style="border-color: #7B2CBF;">
                         <div>
                             <p class="font-semibold text-gray-900 dark:text-white">Sarah Chen</p>
-                            <p class="text-xs text-gray-500">5 min read · Apr 8, 2026</p>
+                            <p class="text-xs text-gray-100">5 min read · Apr 8, 2026</p>
                         </div>
                     </div>
                     
@@ -283,12 +268,12 @@
                     <div class="p-5">
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-xs px-2 py-1 rounded-full" style="background: #7B2CBF20; color: #7B2CBF;">Knitting</span>
-                            <span class="text-xs text-gray-500">4 min read</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-100">4 min read</span>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">10+ ideas to make Cozy Knitting Patterns for Fall</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">From scarves to sweaters, these patterns will keep you crafting all season long.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-100 mb-3">From scarves to sweaters, these patterns will keep you crafting all season long.</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-xs text-gray-500">By Emma Watson</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-100">By Emma Watson</span>
 <a href="blogdetails.html"
    class="inline-block px-6 py-3 
           text-sm font-semibold 
@@ -311,12 +296,12 @@
                     <div class="p-5">
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-xs px-2 py-1 rounded-full" style="background: #0b848220; color: #0b8482;">Jewelry</span>
-                            <span class="text-xs text-gray-500">6 min read</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-100">6 min read</span>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">How to Start Making Beaded Jewelry</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Essential tools, basic techniques, and project ideas for beginners.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-100 mb-3">Essential tools, basic techniques, and project ideas for beginners.</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-xs text-gray-500">By Maria Garcia</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-100">By Maria Garcia</span>
 <a href="blogdetails.html"
    class="inline-block px-6 py-3 
           text-sm font-semibold 
@@ -339,12 +324,12 @@
                     <div class="p-5">
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-xs px-2 py-1 rounded-full" style="background: #7B2CBF20; color: #7B2CBF;">Scrapbooking</span>
-                            <span class="text-xs text-gray-500">5 min read</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-100">5 min read</span>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Preserving Memories: Scrapbooking 101</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Tips for creating beautiful layouts that tell your family's story.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-100 mb-3">Tips for creating beautiful layouts that tell your family's story.</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-xs text-gray-500">By David Kim</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-100">By David Kim</span>
 <a href="blogdetails.html"
    class="inline-block px-6 py-3 
           text-sm font-semibold 
@@ -367,12 +352,12 @@
                     <div class="p-5">
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-xs px-2 py-1 rounded-full" style="background: #0b848220; color: #0b8482;">Painting</span>
-                            <span class="text-xs text-gray-500">7 min read</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-100">7 min read</span>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Choosing the Right Paint: Acrylic vs Watercolor</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">A comprehensive guide to help you decide which medium suits your style.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-100 mb-3">A comprehensive guide to help you decide which medium suits your style.</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-xs text-gray-500">By James Wilson</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-100">By James Wilson</span>
 <a href="blogdetails.html"
    class="inline-block px-6 py-3 
           text-sm font-semibold 
@@ -395,12 +380,12 @@
                     <div class="p-5">
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-xs px-2 py-1 rounded-full" style="background: #7B2CBF20; color: #7B2CBF;">Yarn</span>
-                            <span class="text-xs text-gray-500">4 min read</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-100">4 min read</span>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Yarn Weights Explained: A Complete Guide</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Never get confused by yarn labels again with this simple breakdown.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-100 mb-3">Never get confused by yarn labels again with this simple breakdown.</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-xs text-gray-500">By Lisa Thompson</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-100">By Lisa Thompson</span>
 <a href="blogdetails.html"
    class="inline-block px-6 py-3 
           text-sm font-semibold 
@@ -423,12 +408,12 @@
                     <div class="p-5">
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-xs px-2 py-1 rounded-full" style="background: #0b848220; color: #0b8482;">Business</span>
-                            <span class="text-xs text-gray-500">8 min read</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-100">8 min read</span>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Selling Your Crafts: A Step by Step Guide</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Tips for photography, pricing, and marketing your handmade creations.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-100 mb-3">Tips for photography, pricing, and marketing your handmade creations.</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-xs text-gray-500">By Alex Rivera</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-100">By Alex Rivera</span>
 <a href="blogdetails.html"
    class="inline-block px-6 py-3 
           text-sm font-semibold 
@@ -478,7 +463,7 @@
             <h4 class="text-sm font-semibold text-gray-800 dark:text-white">
               Ananya R.
             </h4>
-            <span class="text-xs text-gray-500">DIY Enthusiast</span>
+            <span class="text-xs text-gray-100">DIY Enthusiast</span>
           </div>
         </div>
       </div>
@@ -498,7 +483,7 @@
             <h4 class="text-sm font-semibold text-gray-800 dark:text-white">
               Rahul K.
             </h4>
-            <span class="text-xs text-gray-500">Craft Seller</span>
+            <span class="text-xs text-gray-100">Craft Seller</span>
           </div>
         </div>
       </div>
@@ -518,7 +503,7 @@
             <h4 class="text-sm font-semibold text-gray-800 dark:text-white">
               Meera S.
             </h4>
-            <span class="text-xs text-gray-500">Home Decor Lover</span>
+            <span class="text-xs text-gray-100">Home Decor Lover</span>
           </div>
         </div>
       </div>

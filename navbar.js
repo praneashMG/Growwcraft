@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   if (!navbar) return;
 
-  navbar.innerHTML = `
-<nav class="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-300" style="border-bottom: 3px solid #0b8482;">
+navbar.innerHTML = `
+<nav class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-white shadow-md transition-all duration-300" style="border-bottom: 3px solid #0b8482;">
   <div class="container mx-auto px-4">
     <div class="flex items-center justify-between h-16">
 
@@ -45,30 +45,38 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
 
-        <a href="login.html" class="px-4 py-2 text-white font-medium rounded-lg transition-colors" style="background:  #0b8482; hover:background: #7bdad8;">
-          Login
-        </a>
-        <a href="signup.html" class="px-4 py-2 text-white font-medium rounded-lg transition-colors" style="background: #7B2CBF; hover:background: #a578cc; ">
-          Sign Up
-        </a>
       </div>
 
       <!-- Right Controls - Desktop -->
-      <div class="flex items-center space-x-4 rtl:space-x-reverse">
-       
-
+      <div class="hidden xl:flex items-center space-x-4 rtl:space-x-reverse">
         <!-- RTL Toggle -->
-        <button id="rtlToggle" class="hidden xl:block text-sm font-semibold px-3 py-1 rounded transition-colors" style="background: #0b8482; color: #f1ebeb; hover:background: #0b8482;">
+        <button id="rtlToggle" class="text-sm font-semibold px-3 py-1 rounded transition-colors" style="background: #0b8482; color: #f1ebeb; hover:background: #0b8482;">
           RTL
         </button>
 
         <!-- Dark Mode Toggle -->
-        <button id="darkToggle" class="hidden xl:block text-xl" style="color: #7B2CBF;">
+        <button id="darkToggle" class="text-xl" style="color: #7B2CBF;">
           <i id="darkIcon" class="fas fa-moon"></i>
         </button>
 
+        <!-- Desktop Login & Signup Buttons -->
+        <a href="login.html" class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg" 
+           style="background: #7B2CBF;">
+          Login
+        </a>
+        <a href="signup.html" class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg" 
+           style="background: #0b8482;">
+          Sign Up
+        </a>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="flex xl:hidden items-center space-x-3">
+        <!-- Mobile RTL (hidden in desktop) -->
+        <button id="mobileRtlToggle" class="hidden">RTL</button>
+        
         <!-- Mobile Button with Hamburger/Close Icons -->
-        <button id="mobileBtn" class="xl:hidden text-2xl transition-all duration-300 hover:scale-110" style="color: #7B2CBF;">
+        <button id="mobileBtn" class="text-2xl transition-all duration-300 hover:scale-110" style="color: #7B2CBF;">
           <i id="mobileIcon" class="fas fa-bars"></i>
         </button>
       </div>
@@ -134,7 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="relative">
         <button id="mobileDashBtn" class="w-full flex items-center justify-between px-3 py-2 transition-colors rounded-lg hover:bg-[#0b848210]" style="color: #4A4A4A;">
           <span class="flex items-center gap-2">
-            
             Dashboard
           </span>
           <i id="mobileDashIcon" class="fas fa-chevron-down text-xs transition-transform duration-300" style="color: #0b8482;"></i>
@@ -153,15 +160,15 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
 
-      <!-- Auth Buttons Section -->
-      <div class="flex flex-col space-y-2 pt-4 border-t" style="border-color: #0b8482;">
+      <!-- Mobile Auth Buttons Section -->
+      <div class="flex flex-col space-y-2 pt-4 border-t border-gray-200">
         <a href="login.html" class="px-4 py-3 text-white font-medium rounded-xl text-center transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2" 
            style="background: #0b8482;">
           Login
         </a>
         <a href="signup.html" class="px-4 py-3 text-white font-medium rounded-xl text-center transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2" 
            style="background: #7B2CBF;">
-         Sign Up
+          Sign Up
         </a>
         
         <!-- Mobile Toggle Buttons -->
@@ -475,7 +482,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Adjust colors for dark mode
     if (isDark) {
-      document.body.style.backgroundColor = '#1A1A2E';
+      document.body.style.backgroundColor = '#161618';
       document.body.style.color = '#FFFFFF';
     } else {
       document.body.style.backgroundColor = '#FFFFFF';
@@ -508,7 +515,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const darkStyles = document.createElement('style');
   darkStyles.textContent = `
     .dark {
-      background-color: #1A1A2E;
+      background-color: #0a0a0b;
       color: #FFFFFF;
     }
     .dark nav {
@@ -519,7 +526,7 @@ document.addEventListener("DOMContentLoaded", () => {
       color: #FFFFFF !important;
     }
     .dark .bg-white {
-      background-color: #2A2A3E !important;
+      background-color: #101011 !important;
     }
     .dark .border-gray-200 {
       border-color: #7B2CBF !important;
